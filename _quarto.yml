@@ -1,0 +1,53 @@
+project:
+    type: website
+    resources:
+      - index.html
+      - media/**
+      - brand/**
+    output-dir: './docs/'
+    render:
+      - analysis/analysis.qmd
+      - workshop1/workshop1.qmd
+      - workshop1/slides1.qmd
+      - workshop1/slides2.qmd
+      - workshop1/slides3.qmd
+      - workshop2/workshop2.qmd
+      - workshop3/workshop3.qmd
+      - invitation.qmd
+      - analysisslides1.qmd
+      - analysisslides2.qmd
+      - analysisslides3.qmd
+      - pilot/pilot.qmd
+      - SRF/SRF.qmd
+
+# Declaring the brand as light-only stops Quarto generating a dark theme,
+# which is what puts the colour-scheme toggle in the top right of every page.
+brand:
+  light: _brand.yml
+
+website:
+  page-footer:
+    # Raw <img> rather than markdown images: markdown syntax turns the alt text
+    # into a visible figure caption. Sizes are inline so the footer is correct
+    # on every page, including those that do not load brand/iom.scss.
+    left: |
+      <img src="/brand/iom-logo.png" alt="IOM — UN Migration" style="height:40px;width:auto;">
+    right: |
+      <img src="/brand/eu-logo.png" alt="Co-funded by the European Union" style="height:30px;width:auto;">
+
+format:
+  html:
+    # Applied site-wide so the font, footer and section numbering are consistent
+    # on every page. HTML only — typst never sees the CSS font stack.
+    theme: [brand, brand/iom.scss]
+    include-in-header:
+          - text: |
+              <!-- Google tag (gtag.js) -->
+              <script async src="https://www.googletagmanager.com/gtag/js?id=G-EFDTPZFSG5"></script>
+              <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-EFDTPZFSG5');
+              </script>

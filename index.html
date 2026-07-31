@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>IDEHA — Interoperability Data Ecosystems for Humanitarian Assistance</title>
+<meta name="description" content="Six partner registration forms in South Sudan carry 175 field entries across only 86 distinct labels. IDEHA maps the overlap, agrees a single registration form, and tests deduplicated data exchange between partner systems." />
+<link rel="canonical" href="https://interoperabledata.xyz/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://interoperabledata.xyz/" />
+<meta property="og:title" content="IDEHA — Interoperability Data Ecosystems for Humanitarian Assistance" />
+<meta property="og:description" content="Six partner registration forms in South Sudan carry 175 field entries across only 86 distinct labels." />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Archivo+Black&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  /* ============ GLOBAL — Technical Bulletin system ============ */
+  :root{
+    /* IOM Brand Guidelines: primary = Pantone 286C / #0033A0, used as the dominant
+       colour and offset with white. One secondary only (IOM mint green #5CB8B2), used
+       sparingly and over less surface than the blue. */
+    --paper:  #FFFFFF;          /* white base                                  */
+    --paper2: #E9EBF6;          /* IOM blue, lightest shade — panel fills      */
+    --ink:    #0033A0;          /* IOM PRIMARY — rules, headings, display type */
+    --ink2:   #4066B8;          /* IOM blue shade 1 — micro labels             */
+    --dup:    #8099D0;          /* IOM blue shade 2 — de-emphasised marks      */
+    --body:   #1B1D21;          /* neutral for running text                    */
+    --accent:    #5CB8B2;       /* IOM SECONDARY (Pantone 7472C) — accent only */
+    --accent-tx: #5CB8B2;       /* accent used as TEXT. 2.4:1 on white.        */
+                                /* swap to #2E7D77 for a 4.9:1 AA pass.        */
+    --on-accent: #1B1D21;       /* text that sits on the mint (7.3:1)          */
+    --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+    --sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
+    --black: "Archivo Black", "Archivo", sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;background:var(--paper);color:var(--body);font-family:var(--sans);
+    font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+    -webkit-text-size-adjust:100%;text-size-adjust:100%;
+  }
+  /* paper grain — fixed, non-interactive, very low opacity */
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
+  ::selection{background:var(--ink);color:var(--paper)}
+  a{color:var(--ink)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--on-accent);outline-offset:2px}
+  h1,h2,h3{margin:0;color:var(--ink)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,48px)}
+  .mono{font-family:var(--mono)}
+
+  /* micro label utility */
+  .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2)}
+
+  /* ---- logos: embedded so the page renders standalone, with no asset folder.
+         Originals are also on disk in logos/ if you prefer external files;
+         swap the background-image for url("logos/<file>") to use them. ---- */
+  .logo{display:block;background-repeat:no-repeat;background-position:center;background-size:contain}
+  .logo-iom{aspect-ratio:3076/1539;background-image:url("data:image/png;base64,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")}
+  .logo-eu {aspect-ratio:1000/209; background-image:url("data:image/png;base64,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")}
+
+  /* brand bar */
+  .brandbar{border-bottom:2px solid var(--ink);background:var(--paper)}
+  .brandbar-in{display:flex;align-items:center;justify-content:space-between;gap:10px 16px;
+    flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
+  .brandbar-mark{display:flex;align-items:center;gap:14px;min-width:0}
+  .brandbar-mark .logo{height:56px}
+  .brandbar-rule{width:1px;align-self:stretch;background:var(--ink2);opacity:.5}
+  .brandbar-org{font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--ink)}
+  @media(max-width:720px){
+    .brandbar-mark .logo{height:46px}
+    .brandbar-org{font-size:10.5px;letter-spacing:.06em}
+  }
+  .brandbar-url{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--accent-tx)}
+  @media(max-width:520px){.brandbar-url{display:none}}
+
+  /* plate chrome */
+  .plate{border-top:0;padding:24px 0 64px}
+  .plate:first-of-type{padding-top:36px}
+
+  @media(max-width:720px){
+    .plate{padding:20px 0 36px}
+  }
+</style>
+<style data-plate="0">
+  /* ============ PLATE 0 — HERO ============ */
+  #plate-0 .p0-eyebrow{display:block;margin-bottom:14px;color:var(--accent-tx)}
+  #plate-0 h1{
+    font-family:var(--black);text-transform:uppercase;
+    font-size:clamp(1.9rem,4.3vw,3.2rem);line-height:.95;letter-spacing:-.02em;
+  }
+  #plate-0 .p0-sub{
+    margin:20px 0 0;max-width:62ch;font-family:var(--sans);font-weight:500;
+    font-size:16.5px;line-height:1.55;color:var(--ink);
+  }
+  #plate-0 .p0-hero{margin-top:32px}
+
+  /* ---- flow figure (the folding register) ---- */
+  #plate-0 .p0-flowfig{
+    position:relative;margin:0;border:1px solid var(--ink);background:var(--paper);
+    padding:22px clamp(14px,2.4vw,26px);overflow-x:auto;
+  }
+  #plate-0 .p0-flow{display:block;width:100%;min-width:660px;height:auto}
+  #plate-0 .p0-figbar{display:flex;justify-content:space-between;align-items:center;
+    gap:10px 16px;flex-wrap:wrap;margin:0 0 12px}
+  #plate-0 .p0-state{
+    font-family:var(--mono);font-weight:700;font-size:12px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--ink2);background:none;border:0;cursor:pointer;
+    padding:3px 0 6px;border-bottom:2px solid transparent;
+    transition:color .15s ease,border-color .15s ease;
+  }
+  #plate-0 .p0-state:hover{color:var(--ink)}
+  #plate-0 .p0-state[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+  @media(max-width:520px){
+    #plate-0 .p0-state{font-size:10px;letter-spacing:.05em}
+  }
+  #plate-0 .p0-flow .nlbl{font-family:var(--mono);font-weight:700;font-size:9px;
+    letter-spacing:.06em;fill:var(--ink2)}
+  #plate-0 .p0-flow .nkey{font-family:var(--mono);font-weight:700;font-size:13px;
+    letter-spacing:.02em;fill:var(--ink)}
+  @media(max-width:720px){#plate-0 .p0-flow .nlbl{display:none}}
+  #plate-0 .p0-flow line,#plate-0 .p0-flow rect{vector-effect:non-scaling-stroke}
+
+  .p0-videofig{
+    position:relative;margin:28px 0 0;border:1px solid var(--ink);
+    background:var(--paper);padding:22px clamp(14px,2.4vw,26px);
+  }
+  .p0-videowrap{background:var(--paper2);border:1px solid var(--ink)}
+  .p0-video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:var(--paper2)}
+  @media(max-width:720px){.p0-videofig{padding:14px 10px}}
+
+  .p0-fcap{
+    margin-top:14px;padding-top:8px;border-top:1px solid var(--ink);
+    font-family:var(--mono);font-size:10px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--ink2);
+  }
+
+  @media(max-width:760px){
+    #plate-0 .p0-flowfig{overflow-x:hidden}
+    #plate-0 .p0-flow{min-width:0}
+  }
+  @media(max-width:720px){
+    #plate-0{padding-top:24px}
+    #plate-0 h1{text-wrap:balance}
+    #plate-0 h1 br{display:none}
+    #plate-0 .p0-hero{margin-top:24px}
+    #plate-0 .p0-flowfig{padding:14px 10px}
+  }
+</style>
+<style data-plate="1">
+  /* ============ PLATE 1 — THE PROBLEM AND THE APPROACH ============ */
+  #plate-1 .p1-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+  #plate-1 h2{font-family:var(--black);text-transform:uppercase;letter-spacing:-.02em;
+    line-height:.95;font-size:clamp(1.5rem,3vw,2.1rem)}
+  #plate-1 .p1-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+    background:var(--ink);border:1px solid var(--ink)}
+  #plate-1 .p1-cell{background:var(--paper);padding:20px 22px 22px}
+  #plate-1 .p1-cell .lbl{display:block;color:var(--accent-tx);font-weight:700;margin-bottom:10px}
+  #plate-1 .p1-cell h3{font-family:var(--black);text-transform:uppercase;letter-spacing:-.01em;
+    line-height:1.05;font-size:clamp(1.05rem,1.9vw,1.25rem);margin-bottom:10px}
+  #plate-1 .p1-cell p{margin:0;font-size:15px;line-height:1.55}
+  #plate-1 .p1-cell p+p{margin-top:10px}
+  #plate-1 .p1-cell.p1-wide{grid-column:1/-1}
+  #plate-1 .p1-cell a{color:var(--ink);text-decoration-thickness:1px;text-underline-offset:2px}
+
+  /* activity strip inside the wide cell */
+  #plate-1 .p1-acts{list-style:none;margin:14px 0 0;padding:0;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--ink);border:1px solid var(--ink)}
+  #plate-1 .p1-acts li{background:var(--paper2);padding:14px 16px}
+  #plate-1 .p1-acts .k{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
+  #plate-1 .p1-acts .v{font-size:14.5px;line-height:1.45}
+
+  @media(max-width:900px){
+    #plate-1 .p1-acts{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:720px){
+    #plate-1 .p1-grid{grid-template-columns:1fr}
+    #plate-1 .p1-cell{padding:16px 16px 18px}
+    #plate-1 .p1-acts{grid-template-columns:1fr}
+  }
+</style>
+<style data-plate="2">
+  /* ============ PLATE 2 — LEARN MORE (4 columns) ============ */
+  #plate-2 .p2-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+  #plate-2 h2{font-family:var(--black);text-transform:uppercase;letter-spacing:-.02em;
+    line-height:.95;font-size:clamp(1.5rem,3vw,2.1rem)}
+  #plate-2 .p2-intro{margin:0 0 18px;max-width:70ch;font-size:15.5px;line-height:1.55}
+  #plate-2 .p2-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+    background:var(--ink);border:1px solid var(--ink)}
+  #plate-2 .p2-cell{background:var(--paper);padding:20px 20px 0;display:flex;flex-direction:column}
+  #plate-2 .p2-cell .lbl{display:block;color:var(--accent-tx);font-weight:700;margin-bottom:10px}
+  #plate-2 .p2-cell h3{font-family:var(--black);text-transform:uppercase;letter-spacing:-.01em;
+    line-height:1.05;font-size:clamp(1.05rem,1.7vw,1.2rem);margin-bottom:10px}
+  #plate-2 .p2-cell p{margin:0 0 18px;font-size:14.5px;line-height:1.55}
+  #plate-2 .p2-meta{margin-top:auto;padding:10px 0;border-top:1px solid var(--ink);
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink2);
+    display:flex;justify-content:space-between;gap:10px}
+  #plate-2 .p2-go{
+    display:block;margin:0 -20px;background:var(--paper2);border-top:1px solid var(--ink);
+    padding:14px 20px;font-family:var(--mono);font-weight:700;font-size:11px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--ink);text-decoration:none;
+    /* explicit: <button> would otherwise take line-height:normal from the UA
+       font shorthand and sit 4px shorter than the sibling <a> bars */
+    line-height:1.55;
+    transition:background .15s ease,color .15s ease;
+  }
+  #plate-2 .p2-go:hover{background:var(--ink);color:var(--paper)}
+  #plate-2 .p2-go[aria-disabled="true"]{color:var(--ink2);cursor:default}
+  #plate-2 .p2-go[aria-disabled="true"]:hover{background:var(--paper2);color:var(--ink2)}
+
+  /* ---- workshops disclosure ---- */
+  #plate-2 .p2-drop{position:relative;margin:0 -20px}
+  #plate-2 .p2-drop .p2-go{margin:0}
+  #plate-2 .p2-go-btn{
+    width:100%;text-align:left;border:0;border-top:1px solid var(--ink);cursor:pointer;
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+  }
+  #plate-2 .p2-caret{font-size:10px;line-height:1;transition:transform .15s ease}
+  #plate-2 .p2-go-btn[aria-expanded="true"]{background:var(--ink);color:var(--paper)}
+  #plate-2 .p2-go-btn[aria-expanded="true"] .p2-caret{transform:rotate(180deg)}
+
+  #plate-2 .p2-menu{list-style:none;margin:0;padding:0;background:var(--paper)}
+  #plate-2 .p2-drop.js .p2-menu{
+    position:absolute;left:0;right:0;bottom:100%;z-index:30;
+    border:1px solid var(--ink);border-bottom:0;box-shadow:0 -8px 20px rgba(0,51,160,.12);
+  }
+  #plate-2 .p2-menu a{
+    display:flex;flex-direction:column;gap:3px;padding:12px 20px;text-decoration:none;
+    border-top:1px solid var(--ink);background:var(--paper);
+    transition:background .15s ease;
+  }
+  #plate-2 .p2-menu li:first-child a{border-top:0}
+  #plate-2 .p2-menu .n{
+    font-family:var(--mono);font-weight:700;font-size:11px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--ink);
+  }
+  #plate-2 .p2-menu .t{font-size:14px;line-height:1.4;color:var(--body)}
+  #plate-2 .p2-menu a:hover,#plate-2 .p2-menu a:focus-visible{background:var(--ink)}
+  #plate-2 .p2-menu a:hover .n,#plate-2 .p2-menu a:hover .t,
+  #plate-2 .p2-menu a:focus-visible .n,#plate-2 .p2-menu a:focus-visible .t{color:var(--paper)}
+
+  @media(prefers-reduced-motion:reduce){
+    #plate-2 .p2-caret,#plate-2 .p2-menu a{transition:none}
+  }
+
+  @media(max-width:980px){
+    #plate-2 .p2-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:640px){
+    #plate-2 .p2-grid{grid-template-columns:1fr}
+    #plate-2 .p2-cell{padding:16px 16px 0}
+    #plate-2 .p2-go{margin:0 -16px;padding:14px 16px}
+    #plate-2 .p2-drop{margin:0 -16px}
+    #plate-2 .p2-menu a{padding:12px 16px}
+  }
+</style>
+<style data-plate="4">
+  /* ============ PLATE 4 — GET INVOLVED + COLOPHON ============ */
+  #plate-4 .p4-run{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:1px;
+    background:var(--ink);border:1px solid var(--ink);margin-bottom:72px;
+  }
+  #plate-4 .p4-run-l{background:var(--paper);padding:30px 32px}
+  #plate-4 .p4-run-l .lbl{display:block;margin-bottom:18px}
+  #plate-4 .p4-run-l h3{
+    font-family:var(--black);text-transform:uppercase;letter-spacing:-0.02em;
+    line-height:.95;font-size:clamp(1.7rem,3.6vw,2.5rem);margin-bottom:14px;
+  }
+  #plate-4 .p4-run-l h3 em{font-style:normal;color:var(--accent-tx)}
+  #plate-4 .p4-run-l p{margin:0 0 26px;font-size:15.5px;line-height:1.55;max-width:52ch}
+  #plate-4 .p4-btn{
+    display:inline-block;background:var(--accent);color:var(--on-accent);
+    font-family:var(--mono);font-weight:700;font-size:14px;letter-spacing:.08em;
+    text-transform:uppercase;text-decoration:none;padding:13px 22px;
+    border:2px solid var(--ink);transition:background .15s ease;
+  }
+  #plate-4 .p4-btn:hover{background:var(--ink);color:var(--paper)}
+  #plate-4 .p4-run-r{background:var(--paper2);display:flex;flex-direction:column}
+  #plate-4 .p4-cmd-head{
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+    padding:12px 16px;border-bottom:1px solid var(--ink);
+  }
+  #plate-4 .p4-copy{
+    font-family:var(--mono);font-weight:700;font-size:11px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--ink);background:var(--paper);
+    border:1px solid var(--ink);padding:5px 12px;cursor:pointer;
+    transition:background .15s ease,color .15s ease;
+  }
+  #plate-4 .p4-copy:hover{background:var(--ink);color:var(--paper)}
+  #plate-4 .p4-copy.did{background:var(--ink);color:var(--paper)}
+  #plate-4 .p4-cmd{
+    margin:0;background:var(--ink);color:var(--paper);
+    font-family:var(--mono);font-size:13px;line-height:1.65;
+    padding:18px 16px;white-space:pre-wrap;overflow-wrap:anywhere;
+  }
+  #plate-4 .p4-cmd a{color:var(--paper)}
+  #plate-4 .p4-cmd code::before{content:"> ";color:var(--paper2);font-weight:700;font-size:14px}
+  #plate-4 .p4-spec{list-style:none;margin:0;padding:0}
+  #plate-4 .p4-spec li{
+    display:flex;justify-content:space-between;gap:16px;
+    padding:10px 16px;border-top:1px solid var(--ink);
+    font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;
+  }
+  #plate-4 .p4-spec .k{color:var(--ink2)}
+  #plate-4 .p4-spec .v{color:var(--ink);text-align:right;font-variant-numeric:tabular-nums}
+  #plate-4 .p4-spec .v a{color:var(--ink);text-decoration-thickness:1px;text-underline-offset:2px}
+
+  /* ---- colophon: drawing title block ---- */
+  #plate-4 .p4-colophon{position:relative}
+  #plate-4 .p4-colophon::before,
+  #plate-4 .p4-colophon::after{
+    font-family:var(--mono);font-size:13px;color:var(--ink2);
+    position:absolute;line-height:1;
+  }
+  #plate-4 .p4-colophon::before{content:"+";top:0;left:0;transform:translate(-50%,-50%)}
+  #plate-4 .p4-colophon::after{content:"+";bottom:0;right:0;transform:translate(50%,50%)}
+  #plate-4 .p4-col-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+    background:var(--ink);border:1px solid var(--ink);
+  }
+  #plate-4 .p4-link{
+    background:var(--paper2);padding:14px 16px;display:block;
+    font-family:var(--mono);font-weight:700;font-size:11px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--ink);text-decoration:none;
+    transition:background .15s ease,color .15s ease;
+  }
+  #plate-4 .p4-link:hover{background:var(--ink);color:var(--paper)}
+  /* ---- donor / implementer logo strip ---- */
+  #plate-4 .p4-logos{
+    grid-column:1/-1;background:var(--paper);padding:26px 24px;
+    display:flex;align-items:center;flex-wrap:wrap;gap:20px 44px;
+  }
+
+  /* The two files carry very different amounts of built-in transparent margin:
+     the IOM mark fills 55% of its canvas height, the EU mark 95%. The canvas
+     heights below differ so that the two MARKS land on the same optical size
+     (~40px of ink each). Keep this in mind if either file is ever replaced. */
+  #plate-4 .p4-logos .logo-iom{height:73px}
+  #plate-4 .p4-logos .logo-eu {height:42px}
+  @media(max-width:720px){
+    #plate-4 .p4-logos{padding:18px;gap:16px 30px}
+    #plate-4 .p4-logos .logo-iom{height:60px}
+    #plate-4 .p4-logos .logo-eu {height:35px}
+  }
+
+  #plate-4 .p4-end{
+    grid-column:1/-1;background:var(--ink);color:var(--paper);
+    font-family:var(--mono);font-size:11px;letter-spacing:.3em;
+    text-transform:uppercase;text-align:center;padding:11px 8px;
+  }
+
+  @media(max-width:720px){
+    #plate-4 .p4-run{grid-template-columns:1fr;margin-bottom:52px}
+    #plate-4 .p4-run-l{padding:22px 18px}
+    #plate-4 .p4-cmd{font-size:12px}
+    #plate-4 .p4-spec li{flex-wrap:wrap}
+    #plate-4 .p4-btn{display:block;text-align:center}
+    #plate-4 .p4-col-grid{grid-template-columns:repeat(2,1fr)}
+      #plate-4 .p4-colophon::before,
+    #plate-4 .p4-colophon::after{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="brandbar">
+  <div class="wrap brandbar-in">
+    <span class="brandbar-mark">
+      <span class="logo logo-iom" role="img" aria-label="IOM &#8212; UN Migration"></span>
+      <span class="brandbar-rule" aria-hidden="true"></span>
+      <span class="brandbar-org">IDEHA Project</span>
+    </span>
+    <span class="brandbar-url">interoperabledata.xyz</span>
+  </div>
+</header>
+
+<section class="plate" id="plate-0">
+  <div class="wrap">
+
+    <span class="lbl p0-eyebrow">IOM &#183; Regional Office for the East and Horn of Africa &#183; South Sudan &#183; Registration interoperability</span>
+    <h1>IDEHA: Interoperability <br>Data Ecosystems for <br>Humanitarian Assistance</h1>
+    <p class="p0-sub">In 2025 and 2026, IOM, with the support of ECHO, conducted a pilot project, primarily focused on South Sudan, on understanding and improving the interoperability of registration and beneficiary management systems.</p>
+    <p class="p0-sub">This mini website is to: illustrate the challenge the project addresses, and its objectives; showcase key project outputs; provide a knowledge management repository for the project activities; and act as a point of reference for people and organizations interested in the interoperability of registration and beneficiary management systems.</p>
+
+    <div class="p0-hero">
+
+      <figure class="p0-flowfig">
+        <div class="p0-figbar">
+          <button class="p0-state" type="button" id="p0-btn-a" aria-pressed="true"
+                  aria-controls="p0-net">Fragmented systems</button>
+          <button class="p0-state" type="button" id="p0-btn-b" aria-pressed="false"
+                  aria-controls="p0-net">Interoperable ecosystem</button>
+        </div>
+        <svg class="p0-flow" id="p0-net" viewBox="0 28 740 262" role="img"
+          aria-label="Twelve registration and beneficiary management systems, shown first as fragmented clusters with no links between them, then rearranged into a connected network with the minimum data needed moving along the links.">
+          <g id="p0-adhoc"></g>
+          <g id="p0-edges"></g>
+          <g id="p0-packets"></g>
+          <g id="p0-nodes"></g>
+        </svg>
+
+        <figcaption class="p0-fcap">[ FIG. 01 ] TODAY EVERY ORGANIZATION REGISTERS IN ITS OWN SHAPE, WITH A FEW AD-HOC BILATERAL LINKS. THE TARGET STATE: THE SHAPES CONVERGE ON A COMMON MINIMUM DATASET WHILE THE SYSTEMS STAY SEPARATE, EXCHANGING ONLY THE DATA NEEDED, UNDER AGREED GOVERNANCE. SELECT EITHER STATE ABOVE. ILLUSTRATIVE.</figcaption>
+      </figure>
+
+    </div>
+  </div>
+</section>
+
+<section class="plate" id="plate-1">
+  <div class="wrap">
+    <div class="p1-head">
+      <h2>The problem and the approach</h2>
+      <span class="lbl">[ FIG. 02 ]</span>
+    </div>
+    <div class="p1-grid">
+
+      <div class="p1-cell">
+        <span class="lbl">01 / What the project addressed</span>
+        <h3>Every organization registers alone</h3>
+        <p>A humanitarian response in South Sudan involves many partners, each running its own registration and its own assessments against its own list.</p>
+        <p>The results are familiar: households counted twice or missed entirely, assistance delayed while lists are reconciled, survey fatigue among the people being registered, a wider opening for post-delivery diversion, and data-sharing agreements that take months to negotiate for each new pairing of organizations.</p>
+      </div>
+
+      <div class="p1-cell">
+        <span class="lbl">02 / What IDEHA worked on</span>
+        <h3>Register once, recognise across systems</h3>
+        <p>IDEHA worked toward a collaborative ecosystem for coordinated registration, targeting, and delivery, built on secure and interoperable data exchange between partners rather than on a single shared database.</p>
+        <p>Partners keep their own systems and their own mandates. What changes is that a record created in one system can be recognised in another, under agreed governance and a common minimum dataset.</p>
+      </div>
+
+      <div class="p1-cell">
+        <span class="lbl">03 / What it was aiming at</span>
+        <h3>A framework partners can actually join</h3>
+        <p>An institutionalised multi-stakeholder registration and data-sharing framework, with the BRaVe system reachable by partners at very different levels of digital maturity.</p>
+        <p>In the target counties: better registration and targeting, faster response times, less duplication, and reduced risk of aid diversion.</p>
+      </div>
+
+      <div class="p1-cell p1-wide">
+        <span class="lbl">04 / What the project did</span>
+        <h3>Four workstreams</h3>
+        <ul class="p1-acts">
+          <li><span class="k">Partner mapping</span><span class="v">Mapped registration partners and data flows, showing which fields each one collects and where they overlap.</span></li>
+          <li><span class="k">Single Registration Form</span><span class="v">Drafted a standardised minimum dataset that partners can register against interoperably.</span></li>
+          <li><span class="k">Pilot data exchange</span><span class="v">Ran an interoperability pilot with a partner to deduplicate beneficiary lists.</span></li>
+          <li><span class="k">BRaVe enhancement</span><span class="v">Improved the agility and interoperability of the BRaVe registration platform.</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <figure class="p0-videofig">
+      <div class="p0-videowrap">
+        <video class="p0-video" controls muted playsinline preload="metadata" poster="media/ideha-overview.jpg">
+          <source src="media/ideha-overview.mp4" type="video/mp4">
+          <track kind="captions" src="media/ideha-captions.vtt" srclang="en" label="English" default>
+          <p>Your browser cannot play this video. <a href="media/ideha-overview.mp4">Download it instead</a>.</p>
+        </video>
+      </div>
+      <figcaption class="p0-fcap">[ FIG. 03 ] PROJECT OVERVIEW &#183; PLAYS MUTED WITH CAPTIONS ON WHEN IT SCROLLS INTO VIEW &#183; USE THE CONTROLS FOR SOUND</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="plate" id="plate-2">
+  <div class="wrap">
+    <div class="p2-head">
+      <h2>Learn more</h2>
+      <span class="lbl">[ FIG. 04 ]</span>
+    </div>
+    <p class="p2-intro">The outputs of the project, and the Single Registration Form workspace, which stays open for comment.</p>
+
+    <div class="p2-grid">
+
+      <div class="p2-cell">
+        <span class="lbl">01 / Analysis</span>
+        <h3>Mapping report</h3>
+        <p>Research into how registration and beneficiary management actually work in South Sudan today: what data partners collect, how much of it is the same data, and how far formal data-sharing agreements currently reach.</p>
+        <div class="p2-meta"><span>Report</span><span>South Sudan</span></div>
+        <a class="p2-go" href="analysis/">Read the analysis -&gt;</a>
+      </div>
+
+      <div class="p2-cell">
+        <span class="lbl">02 / Workshops</span>
+        <h3>Convening the partners</h3>
+        <p>Three convenings over the life of the project. The first put the mapping findings in front of national and international NGOs, UN agencies and cluster representatives; the second took the pilot results back to the same group; the third carried the agenda regionally.</p>
+        <div class="p2-meta"><span>Reports</span><span>3 sessions</span></div>
+        <div class="p2-drop">
+          <button class="p2-go p2-go-btn" type="button" aria-expanded="false" aria-controls="ws-menu">
+            <span>Read the workshop reports</span><span class="p2-caret" aria-hidden="true">&#9662;</span>
+          </button>
+          <ul class="p2-menu" id="ws-menu">
+            <li><a href="workshop1/"><span class="n">Workshop 1 -&gt;</span><span class="t">Understanding the problem</span></a></li>
+            <li><a href="workshop2/"><span class="n">Workshop 2 -&gt;</span><span class="t">Pilot findings</span></a></li>
+            <li><a href="workshop3/"><span class="n">Workshop 3 -&gt;</span><span class="t">Regional engagement</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="p2-cell">
+        <span class="lbl">03 / Pilot</span>
+        <h3>Deduplicating a real list</h3>
+        <p>A live interoperability pilot with a partner organization: exchanging the minimum data needed to identify households already registered elsewhere, under an agreed legal basis, and measuring what the exchange actually removed.</p>
+        <div class="p2-meta"><span>Complete</span><span>2026</span></div>
+        <a class="p2-go" href="pilot/">Read the pilot findings -&gt;</a>
+      </div>
+
+      <div class="p2-cell">
+        <span class="lbl">04 / Single Registration Form</span>
+        <h3>The shared minimum dataset</h3>
+        <p>The working registry of partner forms, the field-by-field comparison behind the mapping report, and the data-sharing graph. The draft is still open for comment, and organizations can still add their own form to the registry.</p>
+        <div class="p2-meta"><span>Workspace</span><span>Still open</span></div>
+        <a class="p2-go" href="SRF/">Open the proposed SRF -&gt;</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="plate" id="plate-4">
+  <div class="wrap">
+    <div class="p4-run">
+      <div class="p4-run-l">
+        <span class="lbl">&gt;&gt;&gt; Get involved</span>
+        <h3>Read the draft SRF. <em>Tell us your feedback</em></h3>
+        <p>The Single Registration Form sets out the minimum dataset organizations would register against. It is still open for comment, and it only works if the people who would have to use it pick it apart: fields that are missing, fields that duplicate what you already collect, and anything that would not survive contact with a registration team in the field.</p>
+        <p>The inbox is still monitored. Feedback, questions, and proposals to take any part of this forward are all welcome.</p>
+        <a class="p4-btn" href="SRF/">Review the draft form -&gt;</a>
+      </div>
+      <div class="p4-run-r">
+        <div class="p4-cmd-head">
+          <span class="lbl">Send your feedback</span>
+          <button class="p4-copy" type="button" hidden>Copy</button>
+        </div>
+        <pre class="p4-cmd"><code><a href="mailto:IDPRegistrationSupport@iom.int">IDPRegistrationSupport@iom.int</a></code></pre>
+        <ul class="p4-spec">
+          <li><span class="k">Project</span><span class="v">IDEHA</span></li>
+          <li><span class="k">Lead</span><span class="v">IOM</span></li>
+          <li><span class="k">Region</span><span class="v">South Sudan</span></li>
+          <li><span class="k">Status</span><span class="v">Completed, June 2026</span></li>
+          <li><span class="k">Co-funded by</span><span class="v">European Union</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="p4-colophon">
+      <div class="p4-col-grid">
+        <a class="p4-link" href="analysis/">Analysis -&gt;</a>
+        <a class="p4-link" href="workshop3">Workshops -&gt;</a>
+        <a class="p4-link" href="pilot/">Pilot -&gt;</a>
+        <a class="p4-link" href="SRF/">Single Registration Form -&gt;</a>
+
+        <div class="p4-logos">
+          <span class="logo logo-iom" role="img" aria-label="IOM &#8212; UN Migration"></span>
+          <span class="logo logo-eu" role="img" aria-label="Co-funded by the European Union"></span>
+        </div>
+
+        <div class="p4-end">/// interoperabledata.xyz ///</div>
+      </div>
+    </footer>
+  </div>
+</section>
+
+<script data-plate="0">
+(function(){
+  var svg=document.getElementById('p0-net');
+  if(!svg) return;
+  var NS='http://www.w3.org/2000/svg';
+  var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var INK='#0033A0', MINT='#5CB8B2', PAPER='#FFFFFF', DIM='#8099D0';
+  var N=12, KEYS='ABCDEFGHIJKL'.split(''), AREA=760, TAU=Math.PI*2;
+  var D2R=Math.PI/180;
+
+  /* ---- shapes -------------------------------------------------------------
+     Fragmented: twelve organizations, twelve different shapes. Interoperable:
+     they converge on one common shape, the shared minimum dataset, while
+     staying twelve separate systems. Every shape is normalised to the same
+     area so none of them looks more important than another. */
+  function ngon(n, rot, inner){        /* inner set => star */
+    var v=[], steps = inner ? n*2 : n;
+    for (var k=0;k<steps;k++){
+      var a=(rot + k*360/steps)*D2R, r=(inner && k%2) ? inner : 1;
+      v.push([Math.cos(a)*r, Math.sin(a)*r]);
+    }
+    return v;
+  }
+  function rect(a){ return [[a,1],[-a,1],[-a,-1],[a,-1]]; }
+  function plus(t){
+    return [[t,t],[t,1],[-t,1],[-t,t],[-1,t],[-1,-t],[-t,-t],[-t,-1],
+            [t,-1],[t,-t],[1,-t],[1,t]];
+  }
+  var SHAPES=[
+    {k:'circle'},
+    {v:ngon(4,45)},          /* square        */
+    {v:ngon(3,-90)},         /* triangle up   */
+    {v:ngon(4,0)},           /* diamond       */
+    {v:ngon(5,-90)},         /* pentagon      */
+    {v:ngon(6,0)},           /* hexagon       */
+    {v:rect(1.6)},           /* wide bar      */
+    {v:rect(0.42)},          /* tall bar      */
+    {v:ngon(8,22.5)},        /* octagon       */
+    {v:ngon(5,-90,0.46)},    /* five-point star */
+    {v:plus(0.34)},          /* cross         */
+    {v:ngon(3,90)}           /* triangle down */
+  ];
+  var TARGET={v:ngon(4,45)};
+
+  function area(v){ var a=0; for (var i=0;i<v.length;i++){ var j=(i+1)%v.length;
+    a += v[i][0]*v[j][1] - v[j][0]*v[i][1]; } return Math.abs(a)/2; }
+  function polar(sh){
+    if (sh.k==='circle') return {circle:Math.sqrt(AREA/Math.PI)};
+    var sc=Math.sqrt(AREA/area(sh.v));
+    var pts=sh.v.map(function(q){
+      var a=Math.atan2(q[1],q[0]); if (a<0) a+=TAU;
+      return [a, Math.hypot(q[0],q[1])*sc];
+    }).sort(function(x,y){ return x[0]-y[0]; });
+    return {pts:pts};
+  }
+  /* distance to the outline along a ray — valid for any shape that is
+     star-shaped about its centre, which all of these are */
+  function radius(P, th){
+    if (P.circle) return P.circle;
+    var v=P.pts, n=v.length, i;
+    for (i=0;i<n;i++){ if (th>=v[i][0] && th<v[(i+1)%n][0]) break; }
+    if (i===n) i=n-1;                       /* wrap segment */
+    var a1=v[i][0], r1=v[i][1], j=(i+1)%n, a2=v[j][0], r2=v[j][1];
+    if (a2<=a1) a2+=TAU;
+    var t=th; if (t<a1) t+=TAU;
+    var den=r1*Math.sin(t-a1)+r2*Math.sin(a2-t);
+    return Math.abs(den)<1e-9 ? r1 : (r1*r2*Math.sin(a2-a1))/den;
+  }
+
+  var P=SHAPES.map(polar), PT=polar(TARGET);
+  var ang=[]; for (var i=0;i<40;i++) ang.push(i*TAU/40);
+  P.concat([PT]).forEach(function(q){ if (q.pts) q.pts.forEach(function(v){ ang.push(v[0]); }); });
+  ang.sort(function(a,b){ return a-b; });
+  var ANG=[]; ang.forEach(function(a){ if(!ANG.length || a-ANG[ANG.length-1]>1e-6) ANG.push(a); });
+
+  function sample(q){ return ANG.map(function(t){ var r=radius(q,t);
+    return [r*Math.cos(t), r*Math.sin(t)]; }); }
+  var SRC=P.map(sample), DST=sample(PT);
+  var BOT=SRC.map(function(pts){ return pts.reduce(function(m,q){ return q[1]>m?q[1]:m; },0); });
+
+  var buf=[];
+  function pathAt(i,e){
+    var a=SRC[i], n=ANG.length; buf.length=0; buf.push('M');
+    for (var k=0;k<n;k++){
+      buf.push(Math.round((a[k][0]+(DST[k][0]-a[k][0])*e)*10)/10, ' ',
+               Math.round((a[k][1]+(DST[k][1]-a[k][1])*e)*10)/10, k<n-1?'L':'Z');
+    }
+    return buf.join('');
+  }
+
+  /* ---- layouts ---- */
+  var COLS=[108,292,470,652], ROWS=[64,152,240];
+  var JIT=[[6,-5],[-8,4],[9,6],[-5,-6],[7,5],[-9,-4],[5,-7],[-6,6],[8,4],[-7,-5],[6,7],[-8,-6]];
+  var MESH=[]; for (var r=0;r<3;r++) for (var c=0;c<4;c++){ var k=r*4+c;
+    MESH.push([COLS[c]+JIT[k][0], ROWS[r]+JIT[k][1]]); }
+
+  /* fragmented: loose scatter, not a tidy grid */
+  var GX=[108,292,470,652], GY=[72,148,224];
+  var FJIT=[[-13,-4],[15,3],[-7,7],[9,-7],[-15,5],[5,9],[-5,-9],[13,5],[-11,3],[7,7],[-9,-5],[11,-3]];
+  var FRAG=[]; for (var g=0;g<4;g++) for (var j=0;j<3;j++){ var i=g*3+j;
+    FRAG.push([GX[g]+FJIT[i][0], GY[j]+FJIT[i][1]]); }
+
+  var PERM=[7,2,10,0,5,11,3,8,1,6,9,4], INV=[];
+  PERM.forEach(function(sl,i){ INV[sl]=i; });
+  var EDGES=[[0,1],[1,2],[2,3],[4,5],[5,6],[6,7],[8,9],[9,10],[10,11],
+             [0,4],[2,6],[5,9],[7,11],[0,5],[2,7],[4,9],[6,11]]
+            .map(function(e){ return [INV[e[0]], INV[e[1]]]; });
+
+  /* the handful of ad-hoc bilateral links that exist today: most organizations
+     have none, a couple have one, one pair reaches across clusters */
+  var ADHOC=[[0,1],[2,3],[3,4],[7,8],[9,11]];
+
+  var gA=document.getElementById('p0-adhoc'), gE=document.getElementById('p0-edges'),
+      gP=document.getElementById('p0-packets'), gN=document.getElementById('p0-nodes'),
+      btnA=document.getElementById('p0-btn-a'), btnB=document.getElementById('p0-btn-b');
+  function el(t,a){ var n=document.createElementNS(NS,t); for(var k in a) n.setAttribute(k,a[k]); return n; }
+
+  var dots=[], shells=[], keys=[], names=[], lines=[], packets=[];
+  ADHOC.forEach(function(){ dots.push(gA.appendChild(el('line',{stroke:DIM,'stroke-width':1.5,
+    'stroke-dasharray':'3 5','stroke-linecap':'round'}))); });
+  EDGES.forEach(function(){ lines.push(gE.appendChild(el('line',{stroke:INK,'stroke-width':1.5,opacity:0}))); });
+  for (var i=0;i<10;i++) packets.push({el:gP.appendChild(el('rect',{width:9,height:9,fill:MINT,opacity:0})),
+    e:EDGES[(i*3+1)%EDGES.length], t:(i*0.13)%1, v:0.11+(i%3)*0.03, dir:(i%2?-1:1)});
+  for (var i=0;i<N;i++){
+    shells.push(gN.appendChild(el('path',{d:pathAt(i,0),fill:PAPER,stroke:INK,'stroke-width':2.5,
+      'stroke-linejoin':'round'})));
+    var kk=el('text',{'class':'nkey','text-anchor':'middle'}); kk.textContent=KEYS[i]; keys.push(gN.appendChild(kk));
+    var tt=el('text',{'class':'nlbl','text-anchor':'middle'}); tt.textContent='ORGANIZATION '+KEYS[i];
+    names.push(gN.appendChild(tt));
+  }
+
+  var pos=FRAG.map(function(q){ return [q[0],q[1]]; }), lastE=-1;
+
+  function layout(e){
+    var morph = e!==lastE; lastE=e;
+    for (var i=0;i<N;i++){
+      var a=FRAG[i], b=MESH[PERM[i]];
+      var x=a[0]+(b[0]-a[0])*e, y=a[1]+(b[1]-a[1])*e;
+      pos[i][0]=x; pos[i][1]=y;
+      shells[i].setAttribute('transform','translate('+(Math.round(x*10)/10)+','+(Math.round(y*10)/10)+')');
+      if (morph) shells[i].setAttribute('d', pathAt(i,e));
+      keys[i].setAttribute('x',x);  keys[i].setAttribute('y',y+5);
+      names[i].setAttribute('x',x); names[i].setAttribute('y', y+(BOT[i]+11)*(1-e)+28*e);
+    }
+    var ao=Math.max(0,1-e*1.6);
+    dots.forEach(function(ln,i){
+      var a=pos[ADHOC[i][0]], b=pos[ADHOC[i][1]];
+      ln.setAttribute('x1',a[0]); ln.setAttribute('y1',a[1]);
+      ln.setAttribute('x2',b[0]); ln.setAttribute('y2',b[1]);
+      ln.setAttribute('opacity',ao);
+    });
+    var eo=Math.max(0,(e-.35)/.65);
+    lines.forEach(function(ln,i){
+      var a=pos[EDGES[i][0]], b=pos[EDGES[i][1]];
+      ln.setAttribute('x1',a[0]); ln.setAttribute('y1',a[1]);
+      ln.setAttribute('x2',b[0]); ln.setAttribute('y2',b[1]);
+      ln.setAttribute('opacity',eo);
+    });
+    btnA.setAttribute('aria-pressed', e<.5 ? 'true' : 'false');
+    btnB.setAttribute('aria-pressed', e<.5 ? 'false' : 'true');
+  }
+  function movePackets(dt,on){
+    packets.forEach(function(q){
+      q.t+=q.v*dt*q.dir; if(q.t>1)q.t-=1; if(q.t<0)q.t+=1;
+      var a=pos[q.e[0]], b=pos[q.e[1]];
+      q.el.setAttribute('x', a[0]+(b[0]-a[0])*q.t-4.5);
+      q.el.setAttribute('y', a[1]+(b[1]-a[1])*q.t-4.5);
+      q.el.setAttribute('opacity', on);
+    });
+  }
+
+  if (reduce){ layout(1); movePackets(0,1); return; }
+
+  /* Plays through once, then the two labels above become the control: the
+     reader can move it back and forth between the states at their own pace. */
+  var ease=function(t){ return t<.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; };
+  var e=0, from=0, to=0, dur=0, t0=null, wait=1000;
+
+  function goTo(v, ms){
+    if (v===to && dur===0) return;
+    from=e; to=v; dur=ms; t0=null;
+  }
+  btnA.addEventListener('click', function(){ wait=0; goTo(0, 2200); });
+  btnB.addEventListener('click', function(){ wait=0; goTo(1, 2600); });
+
+  layout(0);
+  var last=null, raf=null;
+  new IntersectionObserver(function(en){
+    en.forEach(function(x){
+      if (x.isIntersecting && raf===null){ last=null; raf=requestAnimationFrame(frame); }
+      else if (!x.isIntersecting && raf!==null){ cancelAnimationFrame(raf); raf=null; }
+    });
+  },{threshold:.25}).observe(svg);
+
+  function frame(ts){
+    if (last===null) last=ts;
+    var dt=Math.min(.05,(ts-last)/1000); last=ts;
+    if (wait>0){ wait-=dt*1000; if (wait<=0) goTo(1, 4200); }
+    if (dur>0){
+      if (t0===null) t0=ts;
+      var u=Math.min(1,(ts-t0)/dur);
+      e=from+(to-from)*ease(u);
+      if (u>=1){ e=to; dur=0; }
+    }
+    layout(e);
+    movePackets(dt, Math.max(0,(e-.6)/.4));
+    raf=requestAnimationFrame(frame);
+  }
+})();
+</script>
+<script data-plate="1">
+(function(){
+  var v = document.querySelector('.p0-video');
+  if (!v || !('IntersectionObserver' in window)) return;
+
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  /* don't autoplay for anyone who has asked for less motion, or who is on a
+     metered connection with data saver on — it stays on the poster frame and
+     the controls still work */
+  if (reduce || (conn && conn.saveData)) return;
+
+  v.muted = true;                 /* browsers only permit autoplay while muted */
+
+  var programmatic = false, manual = false;
+
+  v.addEventListener('pause', function(){
+    if (programmatic){ programmatic = false; return; }
+    manual = true;                /* the reader paused it; stop taking over */
+  });
+  v.addEventListener('play', function(){ manual = false; });
+
+  new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){
+        if (manual) return;
+        var pr = v.play();
+        if (pr && pr.catch) pr.catch(function(){});   /* blocked: leave the poster */
+      } else if (!v.paused){
+        programmatic = true;
+        v.pause();
+      }
+    });
+  }, {threshold:0.45}).observe(v);
+})();
+</script>
+<script data-plate="2">
+(function(){
+  var drop = document.querySelector('#plate-2 .p2-drop');
+  if (!drop) return;
+  var btn  = drop.querySelector('.p2-go-btn');
+  var menu = drop.querySelector('.p2-menu');
+  if (!btn || !menu) return;
+
+  /* without JS the three reports stay in the flow as a plain list */
+  drop.classList.add('js');
+  menu.hidden = true;
+
+  function setOpen(open){
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menu.hidden = !open;
+  }
+
+  btn.addEventListener('click', function(e){
+    e.stopPropagation();
+    setOpen(menu.hidden);
+  });
+
+  document.addEventListener('click', function(e){
+    if (!drop.contains(e.target)) setOpen(false);
+  });
+
+  drop.addEventListener('keydown', function(e){
+    if (e.key === 'Escape'){ setOpen(false); btn.focus(); return; }
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    var items = Array.prototype.slice.call(menu.querySelectorAll('a'));
+    if (!items.length) return;
+    e.preventDefault();
+    if (menu.hidden){ setOpen(true); items[0].focus(); return; }
+    var i = items.indexOf(document.activeElement);
+    var n = e.key === 'ArrowDown'
+      ? (i + 1) % items.length
+      : (i <= 0 ? items.length - 1 : i - 1);
+    items[n].focus();
+  });
+})();
+</script>
+<script data-plate="4">
+(function(){
+  var btn = document.querySelector('#plate-4 .p4-copy');
+  var cmd = document.querySelector('#plate-4 .p4-cmd code');
+  if (!btn || !cmd || !navigator.clipboard) return;
+  btn.hidden = false;
+  var t;
+  btn.addEventListener('click', function(){
+    navigator.clipboard.writeText(cmd.textContent).then(function(){
+      btn.textContent = 'Copied';
+      btn.classList.add('did');
+      clearTimeout(t);
+      t = setTimeout(function(){
+        btn.textContent = 'Copy';
+        btn.classList.remove('did');
+      }, 1600);
+    }).catch(function(){});
+  });
+})();
+</script>
+</body>
+</html>

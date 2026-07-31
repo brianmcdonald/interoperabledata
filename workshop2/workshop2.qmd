@@ -1,0 +1,6 @@
+---
+title: Workshop 2
+output-file: index.html
+---
+
+Work in progress. Coming soon!

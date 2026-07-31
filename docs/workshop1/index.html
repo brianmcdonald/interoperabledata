@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Registration &amp; Beneficiary Data Interoperability</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../brand/iom-logo-secondary-blue.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-eff3ef135db2d2247c7bb2857de1c0d8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner h1,
+      .quarto-title-block .quarto-title-banner h2,
+      .quarto-title-block .quarto-title-banner h3,
+      .quarto-title-block .quarto-title-banner h4,
+      .quarto-title-block .quarto-title-banner h5,
+      .quarto-title-block .quarto-title-banner h6
+      {
+        color: #FFFFFF;
+      }
+
+      .quarto-title-block .quarto-title-banner {
+        color: #FFFFFF;
+background: #0033A0;
+      }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EFDTPZFSG5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EFDTPZFSG5');
+</script>
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Registration &amp; Beneficiary Data Interoperability</h1>
+            <p class="subtitle lead">South Sudan Workshop Report</p>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">1</span> Summary</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><span class="header-section-number">2</span> Introduction</a>
+  <ul class="collapse">
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background"><span class="header-section-number">2.1</span> Background</a></li>
+  <li><a href="#workshop-objectives" id="toc-workshop-objectives" class="nav-link" data-scroll-target="#workshop-objectives"><span class="header-section-number">2.2</span> Workshop Objectives</a></li>
+  <li><a href="#event-details" id="toc-event-details" class="nav-link" data-scroll-target="#event-details"><span class="header-section-number">2.3</span> Event Details</a></li>
+  <li><a href="#target-audience" id="toc-target-audience" class="nav-link" data-scroll-target="#target-audience"><span class="header-section-number">2.4</span> Target Audience</a></li>
+  </ul></li>
+  <li><a href="#workshop-overview" id="toc-workshop-overview" class="nav-link" data-scroll-target="#workshop-overview"><span class="header-section-number">3</span> Workshop Overview</a>
+  <ul class="collapse">
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">3.1</span> Methodology</a></li>
+  <li><a href="#agenda-summary" id="toc-agenda-summary" class="nav-link" data-scroll-target="#agenda-summary"><span class="header-section-number">3.2</span> Agenda Summary</a></li>
+  <li><a href="#participating-organizations" id="toc-participating-organizations" class="nav-link" data-scroll-target="#participating-organizations"><span class="header-section-number">3.3</span> Participating Organizations</a></li>
+  </ul></li>
+  <li><a href="#session-summaries" id="toc-session-summaries" class="nav-link" data-scroll-target="#session-summaries"><span class="header-section-number">4</span> Session Summaries</a>
+  <ul class="collapse">
+  <li><a href="#opening-session" id="toc-opening-session" class="nav-link" data-scroll-target="#opening-session"><span class="header-section-number">4.1</span> Opening Session</a></li>
+  <li><a href="#survey-findings" id="toc-survey-findings" class="nav-link" data-scroll-target="#survey-findings"><span class="header-section-number">4.2</span> Survey Findings</a></li>
+  <li><a href="#interoperability" id="toc-interoperability" class="nav-link" data-scroll-target="#interoperability"><span class="header-section-number">4.3</span> Interoperability</a></li>
+  <li><a href="#plenary-discussion" id="toc-plenary-discussion" class="nav-link" data-scroll-target="#plenary-discussion"><span class="header-section-number">4.4</span> Plenary Discussion</a></li>
+  </ul></li>
+  <li><a href="#key-findings" id="toc-key-findings" class="nav-link" data-scroll-target="#key-findings"><span class="header-section-number">5</span> Key Findings</a>
+  <ul class="collapse">
+  <li><a href="#shared-understanding-achieved" id="toc-shared-understanding-achieved" class="nav-link" data-scroll-target="#shared-understanding-achieved"><span class="header-section-number">5.1</span> Shared Understanding Achieved</a></li>
+  <li><a href="#progress-on-single-registration-form-development" id="toc-progress-on-single-registration-form-development" class="nav-link" data-scroll-target="#progress-on-single-registration-form-development"><span class="header-section-number">5.2</span> Progress on Single Registration Form Development</a></li>
+  <li><a href="#dpia-template-components-identified" id="toc-dpia-template-components-identified" class="nav-link" data-scroll-target="#dpia-template-components-identified"><span class="header-section-number">5.3</span> DPIA Template Components Identified</a></li>
+  <li><a href="#task-force-decisionroadmap" id="toc-task-force-decisionroadmap" class="nav-link" data-scroll-target="#task-force-decisionroadmap"><span class="header-section-number">5.4</span> Task Force Decision/Roadmap</a></li>
+  </ul></li>
+  <li><a href="#recommendations" id="toc-recommendations" class="nav-link" data-scroll-target="#recommendations"><span class="header-section-number">6</span> Recommendations</a></li>
+  <li><a href="#contact" id="toc-contact" class="nav-link" data-scroll-target="#contact"><span class="header-section-number">7</span> Contact</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements"><span class="header-section-number">8</span> Acknowledgements</a></li>
+  <li><a href="#annexes" id="toc-annexes" class="nav-link" data-scroll-target="#annexes"><span class="header-section-number">9</span> Annexes</a>
+  <ul class="collapse">
+  <li><a href="#annex-a-workshop-agenda" id="toc-annex-a-workshop-agenda" class="nav-link" data-scroll-target="#annex-a-workshop-agenda"><span class="header-section-number">9.1</span> Annex A: Workshop Agenda</a></li>
+  <li><a href="#annex-b-workshop-photos" id="toc-annex-b-workshop-photos" class="nav-link" data-scroll-target="#annex-b-workshop-photos"><span class="header-section-number">9.2</span> Annex B: Workshop Photos</a></li>
+  <li><a href="#annex-c-acronyms-and-definitions" id="toc-annex-c-acronyms-and-definitions" class="nav-link" data-scroll-target="#annex-c-acronyms-and-definitions"><span class="header-section-number">9.3</span> Annex C: Acronyms and Definitions</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+
+<!-- ::: {.callout-note}
+The workshop report is in draft stage and still subject to change.
+::: -->
+<section id="summary" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="summary"><span class="header-section-number">1</span> Summary</h2>
+<p>Held on 19th November 2025, this workshop brought together national NGOs, international NGOs, UN agencies and cluster representatives to review the findings of a study on registration practices, discuss the main challenges, approaches and goals for interoperable registration data in South Sudan and to work on charting a way forward on the aspects of risk mitigation, standardization and governance</p>
+<p>The survey and group work provided the attendees the opportunity to build a shared understanding of the challenge in terms of current registration practices and the current state of data sharing agreements and registration/beneficiary data standardization.</p>
+<p>By collectively examining the practices, organizations were able to reflect on their own registration practices, where they most aligned and diverged from the practices of others.</p>
+<p>There was broad consensus on:</p>
+<ul>
+<li><p>the importance of improving interoperability and the benefits that that would bring, to the individual organizations work, the collective work of the response and how aid is received and perceived by the affected communities.</p></li>
+<li><p>the need to tackle the issues at the whole of response level and the need for engagement at the highest levels of humanitarian decision making.</p></li>
+<li><p>the need for development of a single registration form should be conducted, with organizations doing registration to provide their forms to aid analysis and comparison of data points.</p></li>
+</ul>
+<p>Recommendations from the workshop include:</p>
+<ul>
+<li><p>Continued gathering of registration forms to maintain a registrar to providing analysis of overlaps and informing the development of a Single Registration Form.</p></li>
+<li><p>Expand the data sharing agreement network graph as a means to understand current data sharing routes and monitor improvements.</p></li>
+<li><p>Engage high-level decision makers to ensure response-wide commitment to the interoperability agenda.</p></li>
+<li><p>Continue with a twin track approach of piloting/testing ideas and approaches within a small test group while simultaneously engaging at the entire response level on the work of SRF development and governance.</p></li>
+</ul>
+<p><strong>Participants:</strong> 40 participants from 20 organizations</p>
+</section>
+<section id="introduction" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="introduction"><span class="header-section-number">2</span> Introduction</h2>
+<section id="background" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="background"><span class="header-section-number">2.1</span> Background</h3>
+<p>The humanitarian community in South Sudan faces significant challenges related to beneficiary registration and data management. Current systems operate largely in silos, leading to inefficient referrals, duplicated beneficiary lists, inconsistent vulnerability criteria, and limited data sharing capabilities. These issues prevent effective coordination and increase the burden on crisis-affected populations who often must register multiple times with different organizations.</p>
+<p>The Interoperable Data Ecosystem for Humanitarian Assistance (IDEHA) initiative seeks to address these challenges by promoting standardization, interoperability, and shared resources across humanitarian actors. Building on the mapping exercises and consultations conducted in the third quarter of 2025, this workshop aims to move from analysis to action initiating development of practical tools and frameworks for improved registration data interoperability.</p>
+</section>
+<section id="workshop-objectives" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="workshop-objectives"><span class="header-section-number">2.2</span> Workshop Objectives</h3>
+<p>The workshop aimed to:</p>
+<ol type="1">
+<li>Present findings from recent assessments of registration practices, data sharing patterns, and system capabilities among humanitarian actors in South Sudan</li>
+<li>Build consensus around common registration standards and data sharing protocols</li>
+<li>Begin co-design of practical tools including a Single Registration Form and a Data Protection Impact Assessment template</li>
+<li>Explore the possible establishment of a Task Force on registration data interoperability</li>
+<li>Demonstrate available technological solutions for beneficiary management and data sharing</li>
+<li>Foster collaboration and commitment among humanitarian actors toward a federated approach to beneficiary data management</li>
+</ol>
+</section>
+<section id="event-details" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="event-details"><span class="header-section-number">2.3</span> Event Details</h3>
+<ul>
+<li><strong>Date:</strong> 19th November 2025</li>
+<li><strong>Time:</strong> 09:00 – 15:00 CAT (6 hours)</li>
+<li><strong>Venue:</strong> Imperial Plaza Hotel, Juba, South Sudan</li>
+<li><strong>Organizer:</strong> IOM</li>
+<li><strong>Supported by:</strong> European Civil Protection and Humanitarian Aid Operations (ECHO)</li>
+</ul>
+</section>
+<section id="target-audience" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="target-audience"><span class="header-section-number">2.4</span> Target Audience</h3>
+<p>Primary Participants (Approx 30 people):</p>
+<ul>
+<li><p>Technical registration and information management staff from UN agencies, INGOs, and NGOs implementing cash and voucher assistance or other humanitarian programs in South Sudan</p></li>
+<li><p>Program Managers for Cash programs.</p></li>
+<li><p>Cluster coordinators</p></li>
+<li><p>Data protection and legal officers from humanitarian organizations</p></li>
+</ul>
+</section>
+</section>
+<section id="workshop-overview" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="workshop-overview"><span class="header-section-number">3</span> Workshop Overview</h2>
+<section id="methodology" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="methodology"><span class="header-section-number">3.1</span> Methodology</h3>
+<p>The workshop employed participatory and collaborative methodologies including:</p>
+<ul>
+<li><p>Presentation of evidence-based findings</p></li>
+<li><p>Small group working sessions with structured facilitation</p></li>
+<li><p>Plenary discussions and consensus-building</p></li>
+</ul>
+</section>
+<section id="agenda-summary" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="agenda-summary"><span class="header-section-number">3.2</span> Agenda Summary</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Time</th>
+<th>Session</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>08:30 – 09:00</td>
+<td>Arrival, Registration and Networking</td>
+</tr>
+<tr class="even">
+<td>09:00 – 09:30</td>
+<td>Opening</td>
+</tr>
+<tr class="odd">
+<td>09:30 – 11:00</td>
+<td>Session 1: Survey Findings</td>
+</tr>
+<tr class="even">
+<td>11:00 – 11:30</td>
+<td>Coffee Break</td>
+</tr>
+<tr class="odd">
+<td>11:30 – 13:00</td>
+<td>Session 2: Interoperability</td>
+</tr>
+<tr class="even">
+<td>13:00 – 14:00</td>
+<td>Lunch Break</td>
+</tr>
+<tr class="odd">
+<td>14:00 – 15:00</td>
+<td>Plenary Discussion, Next Steps &amp; Closing</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="participating-organizations" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="participating-organizations"><span class="header-section-number">3.3</span> Participating Organizations</h3>
+<p>The following organizations attended the workshop:</p>
+<p>ADA; Concern Worldwide; DRC; DCA; GOAL; IOM; IRC; Medair; MISSD; Mission Trust Aid; NCA; NRC; RRC; Save the Children International; UNOCHA; UNICEF; World Bank; WFP; WVI</p>
+<p>Along with the FSL Cluster, CCCM Cluster, Cash Working Group and AAP Working Group.</p>
+</section>
+</section>
+<section id="session-summaries" class="level2 page-columns page-full" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="session-summaries"><span class="header-section-number">4</span> Session Summaries</h2>
+<section id="opening-session" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="opening-session"><span class="header-section-number">4.1</span> Opening Session</h3>
+<p><em>(09:00 – 09:30)</em></p>
+<section id="slides" class="level4">
+<h4 class="anchored" data-anchor-id="slides">Slides</h4>
+<iframe src="slides1.html" width="100%" height="600px" style="border: 2px solid #ccc;">
+</iframe>
+</section>
+<section id="welcome-remarks" class="level4">
+<h4 class="anchored" data-anchor-id="welcome-remarks">Welcome Remarks</h4>
+<p>The workshop was opened by Davis Carden, head of office for UNOCHA in South Sudan.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="photos/Presenter-David1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Opening remarks by David Carden from UNOCHA"><img src="photos/Presenter-David1.jpg" class="img-fluid figure-img" alt="Opening remarks by David Carden from UNOCHA"></a></p>
+<figcaption>Opening remarks by David Carden from UNOCHA</figcaption>
+</figure>
+</div>
+</section>
+<section id="introduction-to-data-interoperability-challenge" class="level4">
+<h4 class="anchored" data-anchor-id="introduction-to-data-interoperability-challenge">Introduction to Data Interoperability Challenge</h4>
+<p>Brian Mc Donald, Regional Registration Focal Point for IOM, presented the workshop agenda, its objectives and the “shared problems” that the body of work aims to address:</p>
+<ul>
+<li><p>Clear, timely referrals across organizations are rare or non-existent.</p></li>
+<li><p>Disjointed vulnerability criteria and targeting</p></li>
+<li><p>Non-functioning, slow or impossible deduplication of lists.</p></li>
+<li><p>Data sharing that can’t keep pace with operational realities.</p></li>
+<li><p>Registration is siloed rather than a shared resource/responsibility</p></li>
+<li><p>Large variance in registration standards, practices and system capabilities.</p></li>
+</ul>
+</section>
+<section id="background-recap" class="level4">
+<h4 class="anchored" data-anchor-id="background-recap">Background Recap</h4>
+<p>Amos Doornbos, Humanitarian Digital Adoption and Literacy Technical Director at World Vision International, provided background on the work of the Collaborative Cash Delivery (CCD) Network’s work in South Sudan, which has been a key driver of interoperability efforts in South Sudan.</p>
+<p>The presentation showed the Goverance stack from <a href="https://datastew.org/toolkit/overview/">DataStew.org</a> which illustrates:</p>
+<ul>
+<li><p>The Data Layer defines what data is going to be collected, describes in what format it will be shared with others, and other data-related issues.</p></li>
+<li><p>The Legal Layer includes any legal arrangements and agreements that will be needed, such as multi-party Data Sharing Agreements.</p></li>
+<li><p>The Technical Layer includes the technology (software, and sometimes hardware) that will be needed to be developed or adopted by stakeholders.</p></li>
+<li><p>The Governance Layer describes the institutional arrangements that are needed to make responsible decisions about how the data will be used.</p></li>
+</ul>
+<p>Also included in the presentation was the <a href="https://github.com/CCDNetwork/hotpot/">HotPot</a> deduplication platform.</p>
+</section>
+</section>
+<section id="survey-findings" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="survey-findings"><span class="header-section-number">4.2</span> Survey Findings</h3>
+<p><em>(09:30 – 11:00)</em> Session 1 opened with the findings from the survey conducted with registration partners conducted in Q3 2025 and finished with a group exercise to understand participants perspectives on the end goal, challenges and potential impacts of interoperable registration and beneficiary data.</p>
+<section id="slides-1" class="level4">
+<h4 class="anchored" data-anchor-id="slides-1">Slides</h4>
+<iframe src="slides2.html" width="100%" height="600px" style="border: 2px solid #ccc;">
+</iframe>
+</section>
+<section id="presentation-1-current-practices" class="level4">
+<h4 class="anchored" data-anchor-id="presentation-1-current-practices">Presentation 1: Current Practices</h4>
+<p><strong>Registration Actors Survey Findings:</strong> The analysis (full version is available at <a href="https://interoperabledata.xyz/research.html">interoperabledata.xyz</a>) showed the responses from the 15 organizations that completed the survey, a mix of international NGOs, national NGOs and UN agencies. Key findings of the analysis include:</p>
+<ul>
+<li><p>Overall, registration and beneficiary management practices in South Sudan are significantly varied. Along with limited data-sharing agreements and a low degree of commonality of data fields across registrations forms, these factors limit the interoperability and use of beneficiary data across organizations and sectors in South Sudan.</p></li>
+<li><p>Interoperability of data and systems is a key requirement for cross-organizational and cross-sectoral efforts for targeting, deduplication and referral.</p></li>
+<li><p>While signs of progress are evident from previous in-country efforts, these impacts have mostly been limited to within small consortia of actors or UN agencies. To better address the challenge it should be viewed as an entire response-level challenge that requires as response-level approach to address.</p></li>
+</ul>
+</section>
+<section id="session-1-breakout-groups" class="level4">
+<h4 class="anchored" data-anchor-id="session-1-breakout-groups">Session 1 Breakout Groups</h4>
+<p>The session 1 exercise had the participants split into four groups each starting at a table with an associated question from below.Each group nominated a person to stay with the table, while after ten minutes, each group rotated to the next table to add to the work of the previous group.</p>
+<p>At the end of the session, each table focal point presented the highlighted points for each question.</p>
+<p><strong>Guiding Questions:</strong></p>
+<ol type="1">
+<li><p>What does an ideal humanitarian registration and beneficiary data ecosystem look like?</p></li>
+<li><p>What are the biggest challenges organizations face when doing registration and managing data?</p></li>
+<li><p>How would an ideal registration ecosystem impact your organization’s work and the response as a whole?</p></li>
+<li><p>From the perspective of the affected population, what would the ideal ecosystem look like?</p></li>
+</ol>
+<p><strong>Group Outputs:</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="photos/Q1-ideal.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Group 1 - What does an ideal humanitarian registration and beneficiary data ecosystem look like?"><img src="photos/Q1-ideal.jpeg" class="img-fluid figure-img" alt="Group 1 - What does an ideal humanitarian registration and beneficiary data ecosystem look like?"></a></p>
+<figcaption>Group 1 - What does an ideal humanitarian registration and beneficiary data ecosystem look like?</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="photos/Q2-challenges.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Group 2 - What are the biggest challenges organizations face when doing registration and managing data?"><img src="photos/Q2-challenges.jpeg" class="img-fluid figure-img" alt="Group 2 - What are the biggest challenges organizations face when doing registration and managing data?"></a></p>
+<figcaption>Group 2 - What are the biggest challenges organizations face when doing registration and managing data?</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="photos/Q3-impacts.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Group 3 - How would an ideal registration ecosystem impact your organization’s work and the response as a whole?"><img src="photos/Q3-impacts.jpeg" class="img-fluid figure-img" alt="Group 3 - How would an ideal registration ecosystem impact your organization’s work and the response as a whole?"></a></p>
+<figcaption>Group 3 - How would an ideal registration ecosystem impact your organization’s work and the response as a whole?</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="photos/Q4-affected_perspective.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Group 4 - From the perspective of the affected population, what would the ideal ecosystem look like."><img src="photos/Q4-affected_perspective.jpeg" class="img-fluid figure-img" alt="Group 4 - From the perspective of the affected population, what would the ideal ecosystem look like."></a></p>
+<figcaption>Group 4 - From the perspective of the affected population, what would the ideal ecosystem look like.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="interoperability" class="level3 page-columns page-full" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="interoperability"><span class="header-section-number">4.3</span> Interoperability</h3>
+<p><em>(11:30 – 13:00)</em></p>
+<p>Session 2 began with a presentation of a network graph depicting the data sharing agreements between the organizations that completed the survey. After this a a visualization was shown, comparing the data points containined within five registration forms shared with the survey team.</p>
+<section id="presentation-2-data-sharing-and-interoperability" class="level4 page-columns page-full">
+<h4 class="anchored" data-anchor-id="presentation-2-data-sharing-and-interoperability">Presentation 2: Data Sharing and Interoperability</h4>
+<section id="slides-2" class="level5 page-columns page-full">
+<h5 class="anchored" data-anchor-id="slides-2">Slides</h5>
+<iframe src="slides3.html" width="100%" height="600px" style="border: 2px solid #ccc;">
+</iframe>
+<p>The <a href="https://interoperabledata.xyz/research.html#data-sharing-graph">Data Sharing Network Graph</a> depicting DSA sharing connections provided by the 15 responding organizations showed 4 unconnected groups of shared data, while the largest group, containing 12 organization was loosely connected, mostly held together by DSA’s, with WFP and IOM.</p>
+<div class="column-screen-right">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figures/data_sharing_network.html" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Data sharing agreement network showing fragmentation among surveyed organizations"><embed src="figures/data_sharing_network.html" style="width:100.0%" height="500"></a></p>
+<figcaption>Data sharing agreement network showing fragmentation among surveyed organizations</figcaption>
+</figure>
+</div>
+</div>
+<p>While the network graph is limited to the 15 organizations who completed the survey, it was noted that the tool will remain open for additional organizations to include their DSA connections to the graph.</p>
+<p>The last part of the presentation presented a visualization of the <a href="https://interoperabledata.xyz/research.html#comparing-data-points">data points in registration forms</a> provided by 6 of the survey respondents (3 of whom are from the Cash Consortium). This visual illustrated which fields are most common and least common among them and how many organizations using the same form/set of questions (3).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figures/data_point_overlap.svg" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Registration data field overlaps"><img src="figures/data_point_overlap.svg" class="img-fluid figure-img" alt="Registration data field overlaps"></a></p>
+<figcaption>Registration data field overlaps</figcaption>
+</figure>
+</div>
+<p>While finding from comparing 6 forms are limited, it was agreed that to move forward additional organizations will share their registration forms for inclusion, that it will become a registrar of forms and the visual will be updated to include the additional forms and will inform and support the work on developing a single registration form (SRF) for the response.</p>
+</section>
+</section>
+<section id="breakout-group-2-working-sessions" class="level4">
+<h4 class="anchored" data-anchor-id="breakout-group-2-working-sessions">Breakout Group 2: Working Sessions</h4>
+<p>After the session 2 presentation, the room split into threee groups, each working on one of three tasks around Data Protection Impact Assessments; Standardizationa and Governance.</p>
+<p><strong>Group A: Data Protection Impact Assessment</strong></p>
+<p>The group was given the following task:</p>
+<p><strong>Task:</strong> List out the risks involved in registration and beneficiary management (both single and interagency) and their corresponding mitigation measures</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./photos/group-DPIA.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Group A: Data Protection Impact Assessment"><img src="./photos/group-DPIA.jpeg" class="img-fluid figure-img" alt="Group A: Data Protection Impact Assessment"></a></p>
+<figcaption>Group A: Data Protection Impact Assessment</figcaption>
+</figure>
+</div>
+<p><strong>Group B: Standardization</strong></p>
+<p><strong>Task:</strong> List out the key elements of a standardized registration form and methods . Plan the steps in implementing them.</p>
+<p><strong>Considerations:</strong></p>
+<ul>
+<li><p>What is an appropriate question limit to balance information vs utility</p></li>
+<li><p>Should a forms fields be classified (core, recommended, optional etc)</p></li>
+<li><p>What methods should be standardized (biometric choices, all members of family etc.)</p></li>
+<li><p>How best to collectively revise/update the standards to meet the context</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./photos/group-standardization.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Group B: Standardization"><img src="./photos/group-standardization.jpeg" class="img-fluid figure-img" alt="Group B: Standardization"></a></p>
+<figcaption>Group B: Standardization</figcaption>
+</figure>
+</div>
+<p>To enable easy standardization of registration form, the group started by identifying target population for humanitarian assistance (IDPs, Returnees, Refugees and Host Community). During the discussion, it emerged that some agencies only register head of household details and number of individuals in a household due to the nature of their program focusing on family size. Further discussion lead the group agreeing to capture detail for all household member. The group noted the need to have a lighter tool to uniquely identify target beneficiary enabling faster registration and efficient response during emergencies. Standardized consent clearly informing the beneficiaries of how the data will be protected, utilized and shared across partners of common interest was noted as the first key part for inclusion in SRF.</p>
+<p>In the end questions that emerged included</p>
+<ol type="a">
+<li>Who will have the final say on what goes on the SRF?</li>
+<li>How often will the forms be reviewed?<br>
+</li>
+<li>What minimal data protection principals will be applied?</li>
+<li>How to handle highly sensitive biometric data as use, restriction and capacity vary across agencies?</li>
+</ol>
+<p><strong>Group C: Governance</strong></p>
+<p>This group were given the following task:</p>
+<p><strong>Task:</strong> List out the purposes of data-sharing, the roles and responsibilities and the terms of use in an interoperable data ecosystem that supports timely and secure deduplication, shared targeting, referral</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="./photos/group-governance.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Group C: Governance"><img src="./photos/group-governance.jpeg" class="img-fluid figure-img" alt="Group C: Governance"></a></p>
+<figcaption>Group C: Governance</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="plenary-discussion" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="plenary-discussion"><span class="header-section-number">4.4</span> Plenary Discussion</h3>
+<p><em>(14:00 – 14:45)</em></p>
+<section id="recap-of-group-work" class="level4">
+<h4 class="anchored" data-anchor-id="recap-of-group-work">Recap of Group Work</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="photos/presenter-Kumudu.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Kumudu from OCHA presenting on DPIA"><img src="photos/presenter-Kumudu.jpg" class="img-fluid figure-img" data-max-height="300px" alt="Kumudu from OCHA presenting on DPIA"></a></p>
+<figcaption>Kumudu from OCHA presenting on DPIA</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="photos/presenter-Benson1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Benson from IOM presenting on the standardization of methods and data fields"><img src="photos/presenter-Benson1.jpg" class="img-fluid figure-img" alt="Benson from IOM presenting on the standardization of methods and data fields"></a></p>
+<figcaption>Benson from IOM presenting on the standardization of methods and data fields</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="photos/presenter-Brian1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Brian from IOM presenting on the governance group"><img src="photos/presenter-Brian1.jpg" class="img-fluid figure-img" alt="Brian from IOM presenting on the governance group"></a></p>
+<figcaption>Brian from IOM presenting on the governance group</figcaption>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="key-findings" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="key-findings"><span class="header-section-number">5</span> Key Findings</h2>
+<section id="shared-understanding-achieved" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="shared-understanding-achieved"><span class="header-section-number">5.1</span> Shared Understanding Achieved</h3>
+<p>The survey and group work provided the attendees the opportunity to build a shared understanding of the challenge in terms of current registration practices and the current state of data sharing agreements and registration/beneficiary data standardization.</p>
+<p>By collectively examining the practices, organizations were able to reflect on their own registration practices, where they most aligned and diverged from the practices of others.</p>
+<p>There was broad consensus on the importance of improving interoperability and the benefits that that would bring, to the individual organizations work, the collective work of the response and how aid is received and perceived by the affected communities.</p>
+<p>There was also broad consensus on the need to tackle the issues at the whole of response level and the need for engagement at the highest levels of humanitarian decision making.</p>
+</section>
+<section id="progress-on-single-registration-form-development" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="progress-on-single-registration-form-development"><span class="header-section-number">5.2</span> Progress on Single Registration Form Development</h3>
+<p>There was agreement that development of a single registration form should be conducted, with organizations doing registration to provide their forms to aid analysis and comparison of data points.</p>
+</section>
+<section id="dpia-template-components-identified" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="dpia-template-components-identified"><span class="header-section-number">5.3</span> DPIA Template Components Identified</h3>
+<p>The group identified the key risks and corresponding mitigations measures that require identification and addressing in the development of data protection impact assessment work.</p>
+</section>
+<section id="task-force-decisionroadmap" class="level3" data-number="5.4">
+<h3 data-number="5.4" class="anchored" data-anchor-id="task-force-decisionroadmap"><span class="header-section-number">5.4</span> Task Force Decision/Roadmap</h3>
+<p>It was agreed that the coordination of technical work such as the development of a SRF will convene as part of the Information Management Working Group.</p>
+</section>
+</section>
+<section id="recommendations" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="recommendations"><span class="header-section-number">6</span> Recommendations</h2>
+<ul>
+<li><p>Continue gathering registration forms to maintain a registrar to providing analysis of overlaps and informing the development of a Single Registration Form.</p></li>
+<li><p>Expand the data sharing agreement network graph as a means to understand current data sharing routes and monitor improvements.</p></li>
+<li><p>Engage high-level decision makers to ensure response-wide commitment to the interoperability agenda.</p></li>
+<li><p>Continue with a twin track approach of piloting/testing ideas and approaches within a small test group while simultaneously engaging at the entire response level on the work of SRF development and governance.</p></li>
+</ul>
+</section>
+<section id="contact" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="contact"><span class="header-section-number">7</span> Contact</h2>
+<p>For questions or follow-up regarding this workshop, please contact:</p>
+<ul>
+<li><strong>Daniel HILLAIRE</strong> - dhilaire@iom.int</li>
+<li><strong>Benson MBOGANI</strong> - BMbogani@iom.int</li>
+<li><strong>Brian MC DONALD</strong> - bmcdonald@iom.int</li>
+</ul>
+</section>
+<section id="acknowledgements" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="acknowledgements"><span class="header-section-number">8</span> Acknowledgements</h2>
+<p>The workshop was co-funded by the European Commission’s Civil Protection and Humanitarian Aid Operations (ECHO).</p>
+<p><a href="ECHO.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="ECHO.png" class="img-fluid" width="250"></a></p>
+<p>IOM would like to thank the participants of the workshop for their support and engagement.</p>
+</section>
+<section id="annexes" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="annexes"><span class="header-section-number">9</span> Annexes</h2>
+<!-- ### Annex A: Participant List
+
+| NAME                     | EMAIL                           | ORGANIZATION      |
+|--------------------------|---------------------------------|-------------------|
+| Grema Mustapha           | gmustapha@iom.int               | IOM               |
+| Annie Ingram             | aingram@iom.int                 | IOM               |
+| Mamlo Dennis             |                                 |                   |
+| Gatbel Chot              | gchany@ss.goal.ie               | GOAL              |
+| Silvester Nyang'an       | snyangan@ss.goal.ie             | GOAL              |
+| Wusang Legge Wusang Wule | wusanglegge@ss.goal.ie          | GOAL              |
+| Abubakar Tayib           | abubakartayib@drc.org           | DRC               |
+| Khemis Stephen Pitia     |                                 | HI                |
+| Reec Gabriel             | r.gabriel@forefrika.org         | NC                |
+| Massad Ali               | massad.ali@wfp.org              | WFP               |
+| Tombek                   | tef@dca.dk                      | DCA               |
+| Duku Emmanuel            | duwa@dca.dk                     | DCA               |
+| Joyce Francis            | ashafrancis@on.org              | OCHA              |
+| Elijah Gatdong           | None                            | UNOCHA            |
+| Mila Julius              | lokuta@unchcr.org               | UNHCR             |
+| Yel Diit                 | dutghergel@jmjuba               | OCHA              |
+| James Ruai               |                                 | UNICEF            |
+| Deng Gatpan              |                                 | OCHA              |
+| Mukulish Arafat          |                                 | World Bank        |
+| John Garang              |                                 | CSD               |
+| Mori Jane                | dssd@missiontrustaid.org        | MISSION TRUST AID |
+| Rayan Yaghi              | rayan.yaghi@savethechildren.org | SCI               |
+| Abraham Asefa            | abraham-asefa@savethechildren.org                  | FSLC              |
+| Dan Langoya              | langoyadan@gmail.com            | ADA               |
+| Pan Benard               | pan.Benard@malteser.org           | MISSD             |
+| Majdi Abudurahaman       |                                 | NCA               |
+| Arop Mathiang            | amiyockarop@gmail.com           | IOM/RRC           |
+| Chido Musinga            | chidomusinga@medair.org          | MEB AIR           |
+| Stephen Oguwa            | stephen.oguwa@nrc.no            | ERRM/NRC          |
+| Daniel Musa              | Daniel.Musa@rescue.org          | IRC               |
+| Sultan Mahmud            | sultan.mahmud@nrc.no             | NRC               |
+| Kennedy Ayuku            | kennedy.stephen@nrc.no          | NRC               |
+| Chika Oneli              | ochika@iom.int                  | IOM               |
+| Cecilia Chazitana        | cchanzitana@iom.int            | IOM               |
+| Brian Mc Donald          | bmcdonald@iom.int               | IOM               |
+| Opoka Thomas             | topoka@iom.int                  | IOM               |
+| Ropani Joice             | rjladu@iom.int                  | IOM               |
+| Delil Manas              | mdelil@iom.int                  | IOM               |
+| Benson Mbogani           | bmbogani@iom.int                | IOM               |
+|                          |                                 |                   | -->
+<section id="annex-a-workshop-agenda" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="annex-a-workshop-agenda"><span class="header-section-number">9.1</span> Annex A: Workshop Agenda</h3>
+<p>The full agenda is available in the Workshop Overview section and in the workshop <a href="https://interoperabledata.xyz/workshop.html#agenda">invitation</a></p>
+</section>
+<section id="annex-b-workshop-photos" class="level3" data-number="9.2">
+<h3 data-number="9.2" class="anchored" data-anchor-id="annex-b-workshop-photos"><span class="header-section-number">9.2</span> Annex B: Workshop Photos</h3>
+<div id="fig-photos" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-photos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="photos/Presenter-David1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Opening remarks by David Carden from UNOCHA"><img src="photos/Presenter-David1.jpg" class="img-fluid figure-img"></a></p>
+<figcaption>Opening remarks by David Carden from UNOCHA</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="photos/Q1-ideal.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Group 1 - What does an ideal humanitarian registration and beneficiary data ecosystem look like?"><img src="photos/Q1-ideal.jpeg" class="img-fluid figure-img"></a></p>
+<figcaption>Group 1 - What does an ideal humanitarian registration and beneficiary data ecosystem look like?</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="photos/Q2-challenges.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Group 2 - What are the biggest challenges organizations face when doing registration and managing data?"><img src="photos/Q2-challenges.jpeg" class="img-fluid figure-img"></a></p>
+<figcaption>Group 2 - What are the biggest challenges organizations face when doing registration and managing data?</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="photos/Q3-impacts.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Group 3 - How would an ideal registration ecosystem impact your organization’s work and the response as a whole?"><img src="photos/Q3-impacts.jpeg" class="img-fluid figure-img"></a></p>
+<figcaption>Group 3 - How would an ideal registration ecosystem impact your organization’s work and the response as a whole?</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="photos/Q4-affected_perspective.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-19" title="Group 4 - From the perspective of the affected population, what would the ideal ecosystem look like."><img src="photos/Q4-affected_perspective.jpeg" class="img-fluid figure-img"></a></p>
+<figcaption>Group 4 - From the perspective of the affected population, what would the ideal ecosystem look like.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="photos/group-DPIA.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-20" title="Figure&nbsp;1: "><img src="photos/group-DPIA.jpeg" class="img-fluid figure-img"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="photos/group-standardization.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-21" title="Figure&nbsp;1: "><img src="photos/group-standardization.jpeg" class="img-fluid figure-img"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="photos/group-governance.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Figure&nbsp;1: "><img src="photos/group-governance.jpeg" class="img-fluid figure-img"></a></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="photos/presenter-Benson1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Figure&nbsp;1: "><img src="photos/presenter-Benson1.jpg" class="img-fluid figure-img"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="photos/presenter-Brian1.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="Figure&nbsp;1: "><img src="photos/presenter-Brian1.jpg" class="img-fluid figure-img"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="photos/presenter-Brian2.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-25" title="Figure&nbsp;1: "><img src="photos/presenter-Brian2.jpg" class="img-fluid figure-img"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="photos/presenter-Kumudu.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="Figure&nbsp;1: "><img src="photos/presenter-Kumudu.jpg" class="img-fluid figure-img"></a></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="photos/presenter-Rayan.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-27" title="Figure&nbsp;1: "><img src="photos/presenter-Rayan.jpeg" class="img-fluid figure-img"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="photos/room.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-28" title="Figure&nbsp;1: "><img src="photos/room.jpg" class="img-fluid figure-img"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="photos/group1.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-29" title="Figure&nbsp;1: "><img src="photos/group1.jpeg" class="img-fluid figure-img"></a></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="photos/group2.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-30" title="Figure&nbsp;1: "><img src="photos/group2.jpeg" class="img-fluid figure-img"></a></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: center;">
+<p><a href="photos/group3.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-31" title="Figure&nbsp;1: "><img src="photos/group3.jpeg" class="img-fluid figure-img"></a></p>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-photos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <a href="photos/group4.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-32" title="Figure&nbsp;1: "><img src="photos/group4.jpeg" class="img-fluid figure-img"></a>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="annex-c-acronyms-and-definitions" class="level3" data-number="9.3">
+<h3 data-number="9.3" class="anchored" data-anchor-id="annex-c-acronyms-and-definitions"><span class="header-section-number">9.3</span> Annex C: Acronyms and Definitions</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 45%">
+<col style="width: 55%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Acronym</th>
+<th>Full Form</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>CAT</td>
+<td>Central Africa Time</td>
+</tr>
+<tr class="even">
+<td>CCD</td>
+<td>Collaborative Cash Delivery Network</td>
+</tr>
+<tr class="odd">
+<td>CVA</td>
+<td>Cash and Voucher Assistance</td>
+</tr>
+<tr class="even">
+<td>DPIA</td>
+<td>Data Protection Impact Assessment</td>
+</tr>
+<tr class="odd">
+<td>DTM</td>
+<td>Displacement Tracking Matrix</td>
+</tr>
+<tr class="even">
+<td>ECHO</td>
+<td>European Commission’s Civil Protection and Humanitarian Aid Operations department</td>
+</tr>
+<tr class="odd">
+<td>IDEHA</td>
+<td>Interoperable Data Ecosystem for Humanitarian Assistance</td>
+</tr>
+<tr class="even">
+<td>INGO</td>
+<td>International Non-Governmental Organization</td>
+</tr>
+<tr class="odd">
+<td>IOM</td>
+<td>International Organization for Migration</td>
+</tr>
+<tr class="even">
+<td>NGO</td>
+<td>Non-Governmental Organization</td>
+</tr>
+<tr class="odd">
+<td>SCOPE</td>
+<td>[Full form]</td>
+</tr>
+<tr class="even">
+<td>UN</td>
+<td>United Nations</td>
+</tr>
+<tr class="odd">
+<td>SRF</td>
+<td>Single Registration Form</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Report prepared by:</strong> Brian Mc Donald (IOM) | <strong>Date:</strong> 3 December 2025 | <strong>Version:</strong> 1</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><img src="../brand/iom-logo.png" alt="IOM — UN Migration" style="height:40px;width:auto;"></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p><img src="../brand/eu-logo.png" alt="Co-funded by the European Union" style="height:30px;width:auto;"></p>
+</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>

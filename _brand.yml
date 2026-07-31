@@ -1,0 +1,61 @@
+meta:
+  name:
+    full: International Organization for Migration
+    short: IOM
+  link:
+    home: https://www.iom.int
+
+# Palette from the IOM Brand Style Guide, 2nd Edition (August 2023).
+color:
+  palette:
+    iom-blue: "#0033A0"
+    iom-blue-80: "#4066B8"
+    iom-blue-60: "#8099D0"
+    iom-blue-40: "#B3C2E3"
+    iom-blue-20: "#D9E0F1"
+    mint-green: "#5CB8B2"
+    mint-green-40: "#CEEAE8"
+    orange: "#FF671F"
+    orange-40: "#FFD1BC"
+    light-blue: "#5B92E5"
+    yellow: "#FFB81C"
+    red: "#D22630"
+    grey-40: "#999999"
+    off-white: "#E9EBF6"
+
+  # IOM blue is the primary. Mint green is the preferred secondary, orange next.
+  primary: iom-blue
+  secondary: mint-green
+  tertiary: orange
+
+  foreground: "#1A1A1A"
+  background: "#FFFFFF"
+  link: iom-blue
+
+  success: mint-green
+  info: light-blue
+  warning: yellow
+  danger: red
+  light: off-white
+  dark: iom-blue
+
+
+
+logo:
+  images:
+    iom-primary-blue:
+      path: brand/iom-logo-primary-blue.svg
+      alt: IOM — UN Migration
+    iom-primary-white:
+      path: brand/iom-logo-primary-white.svg
+      alt: IOM — UN Migration
+    iom-secondary-blue:
+      path: brand/iom-logo-secondary-blue.png
+      alt: IOM — UN Migration
+    iom-secondary-white:
+      path: brand/iom-logo-secondary-white.png
+      alt: IOM — UN Migration
+  # No light/dark variants: the brand is declared light-only in _quarto.yml.
+  small: iom-secondary-blue
+  medium: iom-secondary-blue
+  large: iom-primary-blue

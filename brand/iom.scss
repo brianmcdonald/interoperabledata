@@ -1,0 +1,61 @@
+/*-- scss:defaults --*/
+// Colours mirror _brand.yml so this file is readable on its own.
+$iom-blue:  #0033A0;
+$iom-green: #5CB8B2;
+$iom-grey-dark: #4D4D4D;
+
+// The original Quarto (cosmo) stack. It lives here rather than in _brand.yml
+// because a CSS font stack is HTML-only — brand typography is also handed to
+// typst, which cannot resolve browser aliases like -apple-system and warns on
+// every one of them before silently falling back to whatever it can find.
+$font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+/*-- scss:rules --*/
+
+// ---- Title banner: IOM blue, carrying the IOM and EU logos ----
+
+.quarto-title-banner {
+  background: $iom-blue;
+  color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+// Everything inside the banner stays white, overriding the green heading colour.
+.quarto-title-banner .title,
+.quarto-title-banner .subtitle,
+.quarto-title-banner h1,
+.quarto-title-banner h2,
+.quarto-title-banner .quarto-title-meta,
+.quarto-title-banner .quarto-title-meta-heading,
+.quarto-title-banner .quarto-title-meta-contents,
+.quarto-title-banner .quarto-categories .quarto-category {
+  color: #fff;
+}
+
+.quarto-title-banner a {
+  color: #fff;
+  text-decoration-color: rgba(255, 255, 255, 0.6);
+}
+
+
+
+// ---- Section numbering ----
+// Quarto derives this from the brand secondary (mint green); override to grey.
+// Applies to both the body headings and the sidebar contents list.
+.header-section-number {
+  color: $iom-grey-dark;
+}
+
+
+// ---- Page footer: IOM and EU logos ----
+// Same assets as the landing index.html page. Both are blue-on-transparent,
+// so the footer keeps a light background rather than reversing them out.
+// Logo sizing is set inline in _quarto.yml so it holds on every page.
+.nav-footer {
+  background-color: #fff;
+  border-top: 3px solid $iom-blue;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}

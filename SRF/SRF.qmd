@@ -1,0 +1,317 @@
+---
+title: "South Sudan Single Registration Form"
+subtitle: "Proposed Response-level Single Registration Form — Request for Comment"
+author:
+  - name: "IOM"
+date: 21-May-2026
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    number-sections: true
+    embed-resources: true
+    theme: cosmo
+    fig-align: center
+    output-file: index.html
+  typst:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    fig-align: center
+    section-numbering: 1.1.1
+    output-file: SRF.pdf
+    mainfont: "Source Sans 3"
+  docx:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    fig-align: center
+    highlight-style: github
+format-links:
+  - format: typst
+    text: PDF
+    icon: file-pdf
+  - docx
+other-links:
+  - text: SRF (printable)
+    href: "Response-level SRF (draft).pdf"
+    icon: file-pdf
+  - text: SRF (xlsform)
+    href: "Response-level SRF (draft).xlsx"
+    icon: file-excel
+---
+
+# Executive Summary
+
+This document proposes a **Single Registration Form (SRF)** and accompanying methodological guidance for use across humanitarian agencies operating in South Sudan. It is issued as a Request for Comment.
+
+The proposal builds on a comparative review of the registration forms used in South Sudan by IOM, WFP, the Cash Consortium, the Emergency Rapid Response Mechanism (ERRM), along with the joint UNHCR–WFP Minimum Core Assistance Delivery Dataset. That review shows significant overlap in the data points each agency already collects but with a degree of variance that still presents a significant barrier to cross-agency interoperability deduplication, reuse and referral.
+
+The SRF organizes fields by **categories** (Consent, Metadata, Biographic, Household survey, Individual survey, Biometrics) and classifies each field as **Core** or **Optional**. Methodological guidance proposes a deduplication fallback ladder (two-thumb biometric → photo biometrics → data-field matching) and opens for discussion design choice such as whether registration should be mandatory at the individual level for all household members, or whether collecting head-of-household details (with aggregate household attributes) is sufficient.
+
+The document is open for comment. Standalone information boxes flag the decision points where comments and consensus are most needed. These include: which data fields to include and which should be *Core* or *Optional*; if Core and Optional are sufficient for classification; the choice of digits for fingerprint biometrics; and the fallback options when fingerprint biometrics are not available/feasible.
+
+# Introduction
+
+## Objective
+
+The objective of this document is to present a proposed Single Registration Form and accompanying methodological guidance to support improved registration, targeting, coordination and referral of registration/beneficiary data in South Sudan.
+
+## Problem Statement
+
+- Affected populations are often required to register multiple times between different organizations, creating registration fatigue and exposing the same individuals to repeated data collection.
+- There is limited ability to identify overlaps in beneficiaries between organizations due to limited common data points and limited data sharing agreements.
+- Deduplication of beneficiary lists across agencies is limited.
+- Referrals between agencies, for specific needs, or complementary assistance, are constrained by the absence of a shared identifier and shared minimum dataset.
+
+## Background
+
+The following initiatives provide background of past and present initiatives relevant to the creation of a Single Registration in South Sudan.
+
+- **IDEHA project** - the overarching interoperability initiative, co-funded by ECHO, under which this SRF proposal is being developed.
+
+- **SRF efforts in Somalia** - earlier work on a Single Registration Form in Somalia provides the closest precedent and several of the design choices below (categorization, the Core/Optional split) are inherited from that effort.
+
+- **Collaborative Cash Delivery Network** - whose Data Stewardship Toolkit[^stew] was used as part of a previous pilot in South Sudan.
+
+- **UN80** - Ongoing discussions within the UN80 workstream on Benificary Data touch on the topic of interoperability.[^un80]
+
+[^stew]: [https://datastew.org](https://datastew.org)
+[^un80]: [https://un80actions.un.org/?action=24](https://un80actions.un.org/?action=24)
+
+## Feedback
+
+While the entire document is open for review and inputs, some key discussion points are highlighted in standalone information boxes.
+
+To provide comments or feedback: please email Brian Mc Donald | [bmcdonald@iom.int](mailto:bmcdonald@iom.int)
+
+# Review of different sources
+
+This section summarizes the registration forms and reference documents reviewed in the preparation of the SRF. Each entry describes the source, the population it covers, and the data points it contributes to the overlap analysis in the next section.
+
+{{< include _tables/tbl-sources.md >}}
+
+## IOM
+
+IOM's registration form in South Sudan are used across DTM and operational programmes. Along with WFP, they are the only two forms that include biometrics (fingerprint).
+
+## WFP
+
+WFP's registration form is comparable to IOM's.
+
+## Cash Consortium
+
+The Cash Consortium (CC), chaired by Save the Children International (SCI), brings together a set of partners delivering multi-purpose cash assistance. Its shared registration form has been used by all Cash Consortium members.
+
+## Emergency Rapid Response Mechanism
+
+The Emergency Rapid Response Mechanism (ERRM) also has a standard form that has been in use by ERRM partners.
+
+## UNHCR–WFP Minimum Core Assistance Delivery Dataset for Affected Populations
+
+The joint UNHCR–WFP Minimum Core Assistance Delivery Dataset for Affected Populations[^mcad] sets out the minimum data items UNHCR and WFP capture when delivering core assistance, operationalising the joint UNHCR–WFP Common Cash Statement[^ccs]. While most of its data fields are relevant to South Sudan and reflect fields already collected by most organization, some fields, such as bank account numbers, are less relevant for resource constrained contexts such as South Sudan.
+
+[^mcad]: [Minimum Core Assistance Delivery Dataset for Affected Populations](https://www.unhcr.org/media/minimum-core-assistance-delivery-dataset-affected-populations) (UNHCR).
+
+[^ccs]: [Common Cash Statement](https://www.unhcr.org/sites/default/files/legacy-pdf/615c44634.pdf) (UNHCR–WFP).
+
+# Overlaps in Data Points
+
+Across the registration forms reviewed — IOM, WFP, Cash Consortium and ERRM, the following were observed:
+
+- Only WFP and IOM gather either fingerprint biometrics or photos.
+
+- Labels and choice lists varied among all forms. Examples include differing labels for the terms used on whether a person/household is displaced,refugee, host community etc. and the use of different age cohorts in different forms
+
+- Structures of the forms differed considerably. Some such as the ERRM form used a summary format to capture household composition and characteristics, whereas the IOM form gathers information for each individual household member. 
+
+
+![Overlapping data points](./figures/data_point_overlap.svg){.lightbox}
+
+The comparison of these registration forms and their commonalities and differences formed the basis for the draft Single Registration Form presented in Section 7.
+
+::: {.callout-note title="Discussion point — additional sources"}
+Are there other forms or reference documents that should be added to this review before the overlap mapping is considered complete?
+:::
+
+# Categorization of Data Points
+
+## Proposal
+
+Every field on the SRF is assigned one of seven **categories**. Categories are logical grouping of the different types of data fields collected or generated during registration and associated workflows.  
+
+{{< include _tables/tbl-categories.md >}}
+
+Categories are **independent of the record level** (Household vs. Individual). A single category can contain both household- and individual-level fields — for example *Biographic* covers both the household address (household level) and the head-of-household name (individual level).
+
+## Alternatives
+
+The following alternative approaches to categorisation were considered:
+
+- **Group by record level only** (Household vs. Individual). Simpler, but loses the operational grouping that lets a programme switch on (e.g.) biometrics or payment fields as a block.
+
+- **Group by sensitivity tier** (non-sensitive / sensitive / highly sensitive). Useful for data-protection review, but does not give the form a usable structure for enumerators or partners.
+
+::: {.callout-note title="Discussion point — categories"}
+Are the seven categories a useful way to organize and communicate registration data? Should additional categories be introduced (e.g. a separate *Assistance* category distinct from *Individual survey*, or a *Location* category distinct from *Biographic*)?
+:::
+
+# Core & Optional
+
+## Proposal
+
+Each field on the SRF is classified as **Core** or **Optional**. The classification is about *what the form needs in order to function as a shared minimum dataset*, not about whether a single organization or sector happens to find the field useful.
+
+{{< include _tables/tbl-classification.md >}}
+
+
+**Optional ≠ unimportant.** Optional fields are simply not part of the agreed shared minimum. Agencies can keep collecting them internally.
+
+## Alternatives
+
+The two-option classification of Core/Optional, while simple, does have limitations in that 
+
+- **Three-tier (Core / Recommended / Optional).** Introduces an intermediate *Recommended* tier — shown by default but skippable with a documented reason — for fields that are "better than optional but not strictly required" (e.g. phone number, civil ID, place of origin, disability screen). Adds expressive power but also complexity for partners and enumerators, and shifts the locus of disagreement from "is this Core?" to "is this Core or Recommended?" without resolving the underlying question.
+
+- **Per-modality classification.** Each field carries a classification per programme modality (cash, in-kind, protection referral). More precise but unwieldy on a shared form; preferred approach is to keep one classification and use the *Optional* tier with per-programme switches.
+
+::: {.callout-note title="Discussion point — two tiers or three?"}
+The pilot draft is two-tier (Core / Optional). Should an intermediate *Recommended* tier be added, or does the two-tier split remain the simplest workable basis for agreement?
+:::
+
+# Single Registration Form
+
+The draft SRF is a single field list in which each row is one field, tagged with:
+
+- **Field ID** — stable identifier within the SRF (e.g. `B7`, `HH10`).
+- **Field label** — the prompt as it appears on the form.
+- **Field name** — short machine-readable variable name.
+- **Response options** — for closed-response fields, the permitted values.
+- **Category** — see *Categorization of Data Points* above.
+- **Record level** — Household or Individual.
+- **Class** — Core or Optional.
+- **Sources** — the form(s) reviewed in which an equivalent field appears.
+
+The full field list is maintained in `Response-level SRF (draft).xlsx` — available alongside this document as a printable PDF and as an XLSForm (see *Other Links* in the sidebar). Two derived views are most useful for discussion:
+
+- **The full draft** — every field, with class and section, for line-by-line review.
+- **The Core-only view** — the proposed shared minimum dataset, i.e. the subset every participating agency would be expected to collect.
+
+The Core-only view is the smallest unit of agreement the SRF needs in order to function. Comments are particularly welcome on whether any field currently classed as Core should be demoted, or whether any Optional field is in fact required for deduplication or referral and should be promoted to Core.
+
+{{< include _tables/tbl-srf-fields.md >}}
+
+::: {.callout-note title="Discussion point — Core vs Optional"}
+What fields marked as Optional should be Core and Core fields that should be optional.
+:::
+
+The length of the form is an important. At 47 data fields, the proposed form is an attempt to balance information needs, providing sufficient actionable data, against the challenges of assessment fatigue, cost, and data quality associated with forms that are overly long.
+
+::: {.callout-note title="Discussion point — Core vs Optional"}
+What fields are missing that should to be included and what fields could be removed?
+:::
+
+# Methodological Guidance
+
+## Deduplication
+
+Deduplication is the key factor of why a Single Registration Form exists: the same household should not have to be register multiple times and in a context of limited funding, where possible mechanisms should exists to anticipate or identify overlapping beneficiary lists, to reduce cases of unintended assistance and to ensure that assistance reaches those with the greatest need. Deduplication of beneficiary lists can take two forms: 
+
+- it is done at the organizational-level to minimize duplicate beneficiaries. An output of this process are identifiers for each household or individual that are generated.
+
+- it is also conducted between organizations
+
+Different organizations operate under different legal frameworks, have different operational modalities and have differing risk postures when it comes to the data they collect, store and use. This is evident in the use of biometrics and the capturing of photos. Taking this into account, the SRF specifies a **fallback ladder** — for deduplication where organizations are presented with 3 methods, in an order of preference based on accuracy and reliability for deduplication, but can choose fallback options where any of the primary options are not feasible.
+
+{{< include _tables/tbl-dedup-ladder.md >}}
+
+**Operating rules for the ladder:**
+
+- The tier actually used **must be recorded on the registration record**, so downstream matching knows what to trust.
+- Falling back is allowed; **skipping deduplication is not**. Every record exits registration with at least a Tier-3 match attempted.
+- Tier 3 should never be treated as "good enough" when Tier 1 or 2 was actually feasible — fallback is a documented exception, not a default.
+
+For Tier 3, it is important to note that data field-based deduplication heavily relied on fields that have high availability, have high correlation with individuals or households, and have a degree of verifiability. An example of high availability would be if everybody or the vast majority of people have a phone number. An example of correlation would be where a national ID card is used. An example of verifiability could be a phone number, where the phone can be called to confirm ownership or use of the claimed number. In South Sudan, the low availability of data fields that match these three criteria, significantly impact the feasibility of Tier 3 for deduplication. This is compounded by the lack of photos in some existing registrations, a key requirement for adjudication of duplicates, both from an internal and intra organizational perspective. 
+
+## Specificity
+
+A second methodological question — and arguably the most consequential one still open — is the **unit of registration**: whether registration is enforced at the individual level for every household member, or whether collecting head-of-household details (with aggregate household attributes) is sufficient.
+
+- **Option A — Head of household only.** Only the primary recipient (and optionally an alternate collector) is registered as an individual. Other household members are represented through aggregate fields: household size, sex-age cohort, disability screen.
+- **Option B — All household members.** A full member roster is captured, with name, sex, date of birth and relationship for each person.
+
+The two options have very different implications:
+
+{{< include _tables/tbl-hoh-vs-all.md >}}
+
+The proposed guidance is to **default to all-members registration in locations where household splitting is anticipated to be a considerable issue, or where there are clear deduplication or referral benefits**, and to allow head-of-household-only registration elsewhere where the operational cost is high and the marginal benefit low. Either way, the choice must be recorded against each registration record, so downstream users know what level of granularity to expect.
+
+This decision affects the *Record level* column of every roster field in the draft SRF and the weight given to Tier-3 (data-field) deduplication. It should be resolved before the SRF is finalized.
+
+::: {.callout-note title="Discussion point — unit of registration"}
+Should the SRF require all-member registration as the default, with head-of-household-only allowed by exception? Or should the choice be left to the context and location?
+:::
+
+## Alternatives
+
+Alternatives considered to the proposed guidance:
+
+- **Single mandated method** (e.g. biometric only, or data-field only). Rejected as unworkable across the range of South Sudan operating environments — biometric-only excludes operations without hardware or safeguards, and data-field-only forfeits the much higher accuracy of biometric matching where it is available.
+- **No inter-agency deduplication; per-agency only.** This is the status quo. Rejected as it does not address the problem statement.
+- **Probabilistic matching service instead of a fallback ladder.** A shared probabilistic matching service could in principle absorb the tier logic. Worth revisiting in a later phase, but out of scope for the initial SRF.
+- **Mandate all-members registration with no exception.** Rejected on operational grounds: the cost in registration time and data-protection surface is not justified in every context.
+
+# Annex 1: Glossary
+
+SRF
+:   Single Registration Form — the shared form proposed by this document.
+
+IDEHA
+:   The overarching interoperability project, co-funded by ECHO.
+
+BRaVe
+:   IOM's institutional platform for humanitarian registration, deduplication, and beneficiary management.
+
+DTM
+:   Displacement Tracking Matrix (IOM programme).
+
+ECHO
+:   European Civil Protection and Humanitarian Aid Operations (donor).
+
+ERRM
+:   Emergency Rapid Response Mechanism. Partner grouping including NRC and DRC.
+
+Cash Consortium (CC)
+:   Partner grouping chaired by Save the Children International (SCI), delivering multi-purpose cash assistance.
+
+DPIA
+:   Data Protection Impact Assessment. Being drafted for the pilot with ERRM and Cash Consortium partners.
+
+DSA
+:   Data Sharing Agreement between pilot partners.
+
+HoH
+:   Head of household.
+
+Core / Optional
+:   The two-tier classification applied to each SRF field. See *Core & Optional* above.
+
+Category
+:   The grouping each SRF field is assigned to (Consent, Metadata, Biographic, Household survey, Individual survey, Biometrics, Other).
+
+Identifier
+:   A value used to refer to a person or household.
+
+Org identifier
+:   An identifier assigned by a specific organisation, unique within that organisation's systems but not across agencies.
+
+Unique identifier
+:   An identifier intended to be unique across all participating agencies — the target of the deduplication process.
+
+Tier 1 / 2 / 3
+:   The deduplication fallback ladder: two-thumb biometric → photo → data-field matching.
+
+Record level
+:   Whether a field is captured per household or per individual. Independent of category.
+

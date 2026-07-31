@@ -1,0 +1,60 @@
+---
+format: revealjs
+toc: false
+slide-number: true
+number-sections: false
+---
+
+## {background-image="slides/presentation1/Slide1.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide2.png" background-size="contain" background-color="#83B4B1"}
+
+## {background-image="slides/presentation1/Slide3.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide4.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide5.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide6.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide7.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide8.png" background-size="contain" background-color="#83B4B1"}
+
+## {background-image="slides/presentation1/Slide9.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide10.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide11.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide12.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide13.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide14.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide15.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide16.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide17.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide18.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide19.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide20.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide21.png" background-size="contain" background-color="#83B4B1"}
+
+## {background-image="slides/presentation1/Slide22.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide23.png" background-size="cover"}
+
+## {background-image="slides/presentation1/Slide24.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide25.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide26.png" background-size="contain"}
+
+## {background-image="slides/presentation1/Slide27.png" background-size="contain" background-color="#83B4B1"}

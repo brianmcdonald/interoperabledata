@@ -1,0 +1,268 @@
+[
+  {
+    "objectID": "SRF/index.html",
+    "href": "SRF/index.html",
+    "title": "South Sudan Single Registration Form",
+    "section": "",
+    "text": "This document proposes a Single Registration Form (SRF) and accompanying methodological guidance for use across humanitarian agencies operating in South Sudan. It is issued as a Request for Comment.\nThe proposal builds on a comparative review of the registration forms used in South Sudan by IOM, WFP, the Cash Consortium, the Emergency Rapid Response Mechanism (ERRM), along with the joint UNHCR–WFP Minimum Core Assistance Delivery Dataset. That review shows significant overlap in the data points each agency already collects but with a degree of variance that still presents a significant barrier to cross-agency interoperability deduplication, reuse and referral.\nThe SRF organizes fields by categories (Consent, Metadata, Biographic, Household survey, Individual survey, Biometrics) and classifies each field as Core or Optional. Methodological guidance proposes a deduplication fallback ladder (two-thumb biometric → photo biometrics → data-field matching) and opens for discussion design choice such as whether registration should be mandatory at the individual level for all household members, or whether collecting head-of-household details (with aggregate household attributes) is sufficient.\nThe document is open for comment. Standalone information boxes flag the decision points where comments and consensus are most needed. These include: which data fields to include and which should be Core or Optional; if Core and Optional are sufficient for classification; the choice of digits for fingerprint biometrics; and the fallback options when fingerprint biometrics are not available/feasible."
+  },
+  {
+    "objectID": "SRF/index.html#objective",
+    "href": "SRF/index.html#objective",
+    "title": "South Sudan Single Registration Form",
+    "section": "2.1 Objective",
+    "text": "2.1 Objective\nThe objective of this document is to present a proposed Single Registration Form and accompanying methodological guidance to support improved registration, targeting, coordination and referral of registration/beneficiary data in South Sudan."
+  },
+  {
+    "objectID": "SRF/index.html#problem-statement",
+    "href": "SRF/index.html#problem-statement",
+    "title": "South Sudan Single Registration Form",
+    "section": "2.2 Problem Statement",
+    "text": "2.2 Problem Statement\n\nAffected populations are often required to register multiple times between different organizations, creating registration fatigue and exposing the same individuals to repeated data collection.\nThere is limited ability to identify overlaps in beneficiaries between organizations due to limited common data points and limited data sharing agreements.\nDeduplication of beneficiary lists across agencies is limited.\nReferrals between agencies, for specific needs, or complementary assistance, are constrained by the absence of a shared identifier and shared minimum dataset."
+  },
+  {
+    "objectID": "SRF/index.html#background",
+    "href": "SRF/index.html#background",
+    "title": "South Sudan Single Registration Form",
+    "section": "2.3 Background",
+    "text": "2.3 Background\nThe following initiatives provide background of past and present initiatives relevant to the creation of a Single Registration in South Sudan.\n\nIDEHA project - the overarching interoperability initiative, co-funded by ECHO, under which this SRF proposal is being developed.\nSRF efforts in Somalia - earlier work on a Single Registration Form in Somalia provides the closest precedent and several of the design choices below (categorization, the Core/Optional split) are inherited from that effort.\nCollaborative Cash Delivery Network - whose Data Stewardship Toolkit1 was used as part of a previous pilot in South Sudan.\nUN80 - Ongoing discussions within the UN80 workstream on Benificary Data touch on the topic of interoperability.2"
+  },
+  {
+    "objectID": "SRF/index.html#feedback",
+    "href": "SRF/index.html#feedback",
+    "title": "South Sudan Single Registration Form",
+    "section": "2.4 Feedback",
+    "text": "2.4 Feedback\nWhile the entire document is open for review and inputs, some key discussion points are highlighted in standalone information boxes.\nTo provide comments or feedback: please email Brian Mc Donald | bmcdonald@iom.int"
+  },
+  {
+    "objectID": "SRF/index.html#iom",
+    "href": "SRF/index.html#iom",
+    "title": "South Sudan Single Registration Form",
+    "section": "3.1 IOM",
+    "text": "3.1 IOM\nIOM’s registration form in South Sudan are used across DTM and operational programmes. Along with WFP, they are the only two forms that include biometrics (fingerprint)."
+  },
+  {
+    "objectID": "SRF/index.html#wfp",
+    "href": "SRF/index.html#wfp",
+    "title": "South Sudan Single Registration Form",
+    "section": "3.2 WFP",
+    "text": "3.2 WFP\nWFP’s registration form is comparable to IOM’s."
+  },
+  {
+    "objectID": "SRF/index.html#cash-consortium",
+    "href": "SRF/index.html#cash-consortium",
+    "title": "South Sudan Single Registration Form",
+    "section": "3.3 Cash Consortium",
+    "text": "3.3 Cash Consortium\nThe Cash Consortium (CC), chaired by Save the Children International (SCI), brings together a set of partners delivering multi-purpose cash assistance. Its shared registration form has been used by all Cash Consortium members."
+  },
+  {
+    "objectID": "SRF/index.html#emergency-rapid-response-mechanism",
+    "href": "SRF/index.html#emergency-rapid-response-mechanism",
+    "title": "South Sudan Single Registration Form",
+    "section": "3.4 Emergency Rapid Response Mechanism",
+    "text": "3.4 Emergency Rapid Response Mechanism\nThe Emergency Rapid Response Mechanism (ERRM) also has a standard form that has been in use by ERRM partners."
+  },
+  {
+    "objectID": "SRF/index.html#unhcrwfp-minimum-core-assistance-delivery-dataset-for-affected-populations",
+    "href": "SRF/index.html#unhcrwfp-minimum-core-assistance-delivery-dataset-for-affected-populations",
+    "title": "South Sudan Single Registration Form",
+    "section": "3.5 UNHCR–WFP Minimum Core Assistance Delivery Dataset for Affected Populations",
+    "text": "3.5 UNHCR–WFP Minimum Core Assistance Delivery Dataset for Affected Populations\nThe joint UNHCR–WFP Minimum Core Assistance Delivery Dataset for Affected Populations3 sets out the minimum data items UNHCR and WFP capture when delivering core assistance, operationalising the joint UNHCR–WFP Common Cash Statement4. While most of its data fields are relevant to South Sudan and reflect fields already collected by most organization, some fields, such as bank account numbers, are less relevant for resource constrained contexts such as South Sudan."
+  },
+  {
+    "objectID": "SRF/index.html#proposal",
+    "href": "SRF/index.html#proposal",
+    "title": "South Sudan Single Registration Form",
+    "section": "5.1 Proposal",
+    "text": "5.1 Proposal\nEvery field on the SRF is assigned one of seven categories. Categories are logical grouping of the different types of data fields collected or generated during registration and associated workflows.\n\n\n\n\n\n\nCategories\n\n\n\n\nThe category each SRF field is grouped under\n\n\n\n\nCategory\n\n\nWhat it covers\n\n\n\n\n\n\nConsent\n\n\nInformed consent to collect, use, share, and refer case data.\n\n\n\n\nMetadata\n\n\nForm, project and process data: registration date, enumerator, IDs, source.\n\n\n\n\nBiographic\n\n\nPerson and place data: names, sex, DOB, location, nationality, civil ID.\n\n\n\n\nHousehold survey\n\n\nHousehold-level questions: size, sex-age cohort, disability screen, drivers of displacement.\n\n\n\n\nIndividual survey\n\n\nIndividual-level questions: disability / accessibility, special needs.\n\n\n\n\nBiometrics\n\n\nFingerprints and photos used for identity matching.\n\n\n\n\nOther\n\n\nPayment instrument data (account / wallet, expiry).\n\n\n\n\n\nCategories are independent of the record level (Household vs. Individual). A single category can contain both household- and individual-level fields — for example Biographic covers both the household address (household level) and the head-of-household name (individual level)."
+  },
+  {
+    "objectID": "SRF/index.html#alternatives",
+    "href": "SRF/index.html#alternatives",
+    "title": "South Sudan Single Registration Form",
+    "section": "5.2 Alternatives",
+    "text": "5.2 Alternatives\nThe following alternative approaches to categorisation were considered:\n\nGroup by record level only (Household vs. Individual). Simpler, but loses the operational grouping that lets a programme switch on (e.g.) biometrics or payment fields as a block.\nGroup by sensitivity tier (non-sensitive / sensitive / highly sensitive). Useful for data-protection review, but does not give the form a usable structure for enumerators or partners.\n\n\n\n\n\n\n\nNoteDiscussion point — categories\n\n\n\nAre the seven categories a useful way to organize and communicate registration data? Should additional categories be introduced (e.g. a separate Assistance category distinct from Individual survey, or a Location category distinct from Biographic)?"
+  },
+  {
+    "objectID": "SRF/index.html#proposal-1",
+    "href": "SRF/index.html#proposal-1",
+    "title": "South Sudan Single Registration Form",
+    "section": "6.1 Proposal",
+    "text": "6.1 Proposal\nEach field on the SRF is classified as Core or Optional. The classification is about what the form needs in order to function as a shared minimum dataset, not about whether a single organization or sector happens to find the field useful.\n\n\n\n\n\n\nField classification\n\n\n\n\nTwo tiers determine whether a field is shown by default\n\n\n\n\nClass\n\n\nMeaning\n\n\nBehaviour on the form\n\n\n\n\n\n\nCore\n\n\nRequired for the SRF to do its job: identify the household, enable referral, and support deduplication.\n\n\nAlways shown. Cannot be skipped.\n\n\n\n\nOptional\n\n\nConditional, programme-specific, or sensitive. Only collected when the operation actually needs it.\n\n\nHidden by default. Switched on per programme / per modality.\n\n\n\n\n\nOptional ≠ unimportant. Optional fields are simply not part of the agreed shared minimum. Agencies can keep collecting them internally."
+  },
+  {
+    "objectID": "SRF/index.html#alternatives-1",
+    "href": "SRF/index.html#alternatives-1",
+    "title": "South Sudan Single Registration Form",
+    "section": "6.2 Alternatives",
+    "text": "6.2 Alternatives\nThe two-option classification of Core/Optional, while simple, does have limitations in that\n\nThree-tier (Core / Recommended / Optional). Introduces an intermediate Recommended tier — shown by default but skippable with a documented reason — for fields that are “better than optional but not strictly required” (e.g. phone number, civil ID, place of origin, disability screen). Adds expressive power but also complexity for partners and enumerators, and shifts the locus of disagreement from “is this Core?” to “is this Core or Recommended?” without resolving the underlying question.\nPer-modality classification. Each field carries a classification per programme modality (cash, in-kind, protection referral). More precise but unwieldy on a shared form; preferred approach is to keep one classification and use the Optional tier with per-programme switches.\n\n\n\n\n\n\n\nNoteDiscussion point — two tiers or three?\n\n\n\nThe pilot draft is two-tier (Core / Optional). Should an intermediate Recommended tier be added, or does the two-tier split remain the simplest workable basis for agreement?"
+  },
+  {
+    "objectID": "SRF/index.html#deduplication",
+    "href": "SRF/index.html#deduplication",
+    "title": "South Sudan Single Registration Form",
+    "section": "8.1 Deduplication",
+    "text": "8.1 Deduplication\nDeduplication is the key factor of why a Single Registration Form exists: the same household should not have to be register multiple times and in a context of limited funding, where possible mechanisms should exists to anticipate or identify overlapping beneficiary lists, to reduce cases of unintended assistance and to ensure that assistance reaches those with the greatest need. Deduplication of beneficiary lists can take two forms:\n\nit is done at the organizational-level to minimize duplicate beneficiaries. An output of this process are identifiers for each household or individual that are generated.\nit is also conducted between organizations\n\nDifferent organizations operate under different legal frameworks, have different operational modalities and have differing risk postures when it comes to the data they collect, store and use. This is evident in the use of biometrics and the capturing of photos. Taking this into account, the SRF specifies a fallback ladder — for deduplication where organizations are presented with 3 methods, in an order of preference based on accuracy and reliability for deduplication, but can choose fallback options where any of the primary options are not feasible.\n\n\n\n\n\n\nDeduplication fallback ladder\n\n\n\n\nTwo-thumb biometric is preferred; photo is the fallback; data-field matching is the last resort\n\n\n\n\nTier\n\n\nStatus\n\n\nMethod\n\n\nWhen to use it\n\n\n\n\n\n\n1\n\n\nPreferred\n\n\nTwo-thumb biometric capture\n\n\nDefault at any registration site that has working biometric capture devices\n\n\n\n\n2\n\n\nFallback\n\n\nPhoto biometric capture\n\n\nWhen fingerprint capture is not possible — fingerprints unreadable, amputation, equipment failure, or unavailable hardware\n\n\n\n\n3\n\n\nLast fallback\n\n\nData-field based matching\n\n\nWhen neither fingerprints nor a usable photo can be captured. Matching is then performed on combinations of biographic fields (name, DOB, location, phone, civil ID, household composition).\n\n\n\n\n\nOperating rules for the ladder:\n\nThe tier actually used must be recorded on the registration record, so downstream matching knows what to trust.\nFalling back is allowed; skipping deduplication is not. Every record exits registration with at least a Tier-3 match attempted.\nTier 3 should never be treated as “good enough” when Tier 1 or 2 was actually feasible — fallback is a documented exception, not a default.\n\nFor Tier 3, it is important to note that data field-based deduplication heavily relied on fields that have high availability, have high correlation with individuals or households, and have a degree of verifiability. An example of high availability would be if everybody or the vast majority of people have a phone number. An example of correlation would be where a national ID card is used. An example of verifiability could be a phone number, where the phone can be called to confirm ownership or use of the claimed number. In South Sudan, the low availability of data fields that match these three criteria, significantly impact the feasibility of Tier 3 for deduplication. This is compounded by the lack of photos in some existing registrations, a key requirement for adjudication of duplicates, both from an internal and intra organizational perspective."
+  },
+  {
+    "objectID": "SRF/index.html#specificity",
+    "href": "SRF/index.html#specificity",
+    "title": "South Sudan Single Registration Form",
+    "section": "8.2 Specificity",
+    "text": "8.2 Specificity\nA second methodological question — and arguably the most consequential one still open — is the unit of registration: whether registration is enforced at the individual level for every household member, or whether collecting head-of-household details (with aggregate household attributes) is sufficient.\n\nOption A — Head of household only. Only the primary recipient (and optionally an alternate collector) is registered as an individual. Other household members are represented through aggregate fields: household size, sex-age cohort, disability screen.\nOption B — All household members. A full member roster is captured, with name, sex, date of birth and relationship for each person.\n\nThe two options have very different implications:\n\n\n\n\n\n\nHead-of-household only vs. all members\n\n\n\n\nTradeoffs to resolve before the SRF is locked\n\n\n\n\nDimension\n\n\nRegistration option\n\n\n\n\nHead-of-household only\n\n\nAll members roster\n\n\n\n\n\n\nRegistration time per HH\n\n\nShort\n\n\nSignificantly longer\n\n\n\n\nDeduplication strength\n\n\nWeaker — relies on HoH match + HH attributes\n\n\nStronger — every member becomes a matchable record\n\n\n\n\nData protection surface\n\n\nSmaller dataset to safeguard\n\n\nLarger dataset; child data and sensitive attributes at scale\n\n\n\n\nTargeting / referral\n\n\nAdequate for HH-level transfers\n\n\nRequired for child-focused, nutrition, or per-person assistance\n\n\n\n\nCross-agency reuse\n\n\nLimited — hard to follow individuals across agencies\n\n\nHigh — supports member-level case management\n\n\n\n\nVulnerability to splitting\n\n\nHigh — a household can split between agencies undetected\n\n\nLow — individuals re-appear under a known name / DOB\n\n\n\n\n\nThe proposed guidance is to default to all-members registration in locations where household splitting is anticipated to be a considerable issue, or where there are clear deduplication or referral benefits, and to allow head-of-household-only registration elsewhere where the operational cost is high and the marginal benefit low. Either way, the choice must be recorded against each registration record, so downstream users know what level of granularity to expect.\nThis decision affects the Record level column of every roster field in the draft SRF and the weight given to Tier-3 (data-field) deduplication. It should be resolved before the SRF is finalized.\n\n\n\n\n\n\nNoteDiscussion point — unit of registration\n\n\n\nShould the SRF require all-member registration as the default, with head-of-household-only allowed by exception? Or should the choice be left to the context and location?"
+  },
+  {
+    "objectID": "SRF/index.html#alternatives-2",
+    "href": "SRF/index.html#alternatives-2",
+    "title": "South Sudan Single Registration Form",
+    "section": "8.3 Alternatives",
+    "text": "8.3 Alternatives\nAlternatives considered to the proposed guidance:\n\nSingle mandated method (e.g. biometric only, or data-field only). Rejected as unworkable across the range of South Sudan operating environments — biometric-only excludes operations without hardware or safeguards, and data-field-only forfeits the much higher accuracy of biometric matching where it is available.\nNo inter-agency deduplication; per-agency only. This is the status quo. Rejected as it does not address the problem statement.\nProbabilistic matching service instead of a fallback ladder. A shared probabilistic matching service could in principle absorb the tier logic. Worth revisiting in a later phase, but out of scope for the initial SRF.\nMandate all-members registration with no exception. Rejected on operational grounds: the cost in registration time and data-protection surface is not justified in every context."
+  },
+  {
+    "objectID": "SRF/index.html#footnotes",
+    "href": "SRF/index.html#footnotes",
+    "title": "South Sudan Single Registration Form",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nhttps://datastew.org↩︎\nhttps://un80actions.un.org/?action=24↩︎\nMinimum Core Assistance Delivery Dataset for Affected Populations (UNHCR).↩︎\nCommon Cash Statement (UNHCR–WFP).↩︎"
+  },
+  {
+    "objectID": "workshop3/index.html",
+    "href": "workshop3/index.html",
+    "title": "Workshop 3",
+    "section": "",
+    "text": "Test 3"
+  },
+  {
+    "objectID": "analysis/index.html",
+    "href": "analysis/index.html",
+    "title": "Registration & Beneficiary Management Practices",
+    "section": "",
+    "text": "This goal of this analysis is to understand registration and beneficiary analysis in South Sudan, specifically: 1\n\nwhat data do organizations collect during registrations and to what degree of commonality exist among the data points collected?\nwhat are the practices, processes and tools that organizations use and to how are they similar or differ?\nwhat organizations have Data Sharing Agreements with each other and what does it look like as a network?\n\nInformation from this analysis2 came from a survey to South Sudan organizations, individual and group interviews and observations, in Juba and Malakal in June and September 2025.\n\n\nThis analysis was co-funded by the European Commission’s Humanitarian Office (ECHO)."
+  },
+  {
+    "objectID": "analysis/index.html#acknowledgements",
+    "href": "analysis/index.html#acknowledgements",
+    "title": "Registration & Beneficiary Management Practices",
+    "section": "",
+    "text": "This analysis was co-funded by the European Commission’s Humanitarian Office (ECHO)."
+  },
+  {
+    "objectID": "analysis/index.html#profile-of-respondents",
+    "href": "analysis/index.html#profile-of-respondents",
+    "title": "Registration & Beneficiary Management Practices",
+    "section": "2.1 Profile of respondents",
+    "text": "2.1 Profile of respondents\nResponses were received from international NGO’s nation NGO’s and UN entities.\n\n\n\nSurvey respondent organizations by type\n\n\nThe respondents represent organizations responding across 11 sectors, with Food Security and Cash Based Interventions most prominently. 11 of the 16 respondents work in CBI.\nThere was significant diversity in the organization as only two worked in the same combination of sectors.\n\n\n\nRespondent organizations by sector, with CBI and Food Security most common\n\n\nAll bar one organization work with both host communities and IDPs.\n\n\n\nTarget populations served by respondent organizations"
+  },
+  {
+    "objectID": "analysis/index.html#registration",
+    "href": "analysis/index.html#registration",
+    "title": "Registration & Beneficiary Management Practices",
+    "section": "2.2 Registration",
+    "text": "2.2 Registration\nOnly two respondents do not conduct registration activities.\n\n\n\nProportion of respondents conducting registration activities)\n\n\nAccountability as per the organizations procedures was the most cited purpose for registration, The purposes were also significantly varied - only 5 respondents shared the same set of purposes.\n\n2.2.1 Purpose and basis\nAccountability as per internal organizational procedures was the most cited purpose, appearing in all but one response.\n\n\n\nPrimary purposes for registration, with accountability most cited\n\n\nOf the organizations that conduct registration, only 29% (4) consider their registration efforts as inter-agency.\n\n\n\nInter-agency registration activities\n\n\nThe majority (70%) cited both informed consent and organizational manadate as the basis for registration activities.\n\n\n\nLegal basis cited by organizations for registration activities, with organizational procedures most frequently referenced\n\n\nSimilar to the responses on “purpose”, the primary policy for personbal information collection cited by 85% of respondents was their organizational data protection or data governance policy.\n\n\n\nPrimary policy frameworks cited by respondent organizations for personal information collection\n\n\n\n\n2.2.2 Deduplication\nThe methods use to deduplicate4 show extreme variance across all respondents, with only two responding organizations using the same set of deduplication methods. Tokens were the most prominent method used for deduplication, used by all except two respondents.\n\n\n\nDeduplication mechanisms used by respondent organizations for registration and beneficiary data management\n\n\nFor deduplication across organizations over a third of respondents referred to performing deduplication against WFP’s SCOPE system, the largest resistration system in SOuth Sudan.\n\n\n\nDeduplication methods used by respondent organizations when comparing beneficiary data against other organizations\n\n\n\n\n2.2.3 Methods\n38% of respondents only register head of household with information on household composition, along with registering alternative recipients from the same household.\n\n\n\nRegistration types used by respondent organizations, with multi-purpose registration systems most common\n\n\nPaper tokens are the primary means on confirmation, used by 62% of respondents.\n\n\n\nMeans of confirmation used by respondent organizations to verify beneficiary identity during registration\n\n\nComplaint and feedback mechanisms seen a wide variety of selections, with no two respondents using the same combination of methods.\n\n\n\nComplaint and feedback mechanisms used by respondent organizations for beneficiary engagement and accountability\n\n\n\n\n2.2.4 Authentication\n\n\n\nAuthentication before assistance\n\n\nWhile 85% of organizations authenticate before assistance, there is a large variance in the methods used for authentication, with producing a token the most cited of these.\n\n\n\nThe authentication mechanisms used by organizations before providing assistance to beneficiaries\n\n\n\n\n2.2.5 Data sharing\n46% of respondents make their data accessible to other agencies, subject to the signing of a data sharing agreement.\n\n\n\nData accessibility for other agencies among respondent organizations\n\n\nHowever only 46% of organizations share data with others and only 38% having formalized data sharing agreements.\n\n\n\nProportion of organizations sharing registration data with partner organizations\n\n\n\n\n\nProportion of organizations with formalized data sharing agreements among surveyed respondents"
+  },
+  {
+    "objectID": "analysis/index.html#non-registrations-actors",
+    "href": "analysis/index.html#non-registrations-actors",
+    "title": "Registration & Beneficiary Management Practices",
+    "section": "2.3 Non registrations actors",
+    "text": "2.3 Non registrations actors\nOf the two respondent that do not conduct registration activities, both have activities that include direct assistance, with only sourcing their lists from community leaders and the other from both leader and from camp management personnel.\n\n\n\nOrganizations providing direct assistance at household or individual level\n\n\n\n\n\nBeneficiary list sources for non-registering organizations"
+  },
+  {
+    "objectID": "analysis/index.html#systems-information",
+    "href": "analysis/index.html#systems-information",
+    "title": "Registration & Beneficiary Management Practices",
+    "section": "2.4 Systems information",
+    "text": "2.4 Systems information\n73% of respondents manage their data inside a database system.\n\n\n\nUse of database systems for registration and beneficiary data management\n\n\nCommcare appeared as the most common system, however the question allowed the selection of only 1 system per response, some systems that are used by a number of organization but not not nescessairly as the organizations primary tool were not caputed.\n\n\n\nDatabase management systems used by respondent organizations\n\n\nOnly 23% of respondents consider their system to be interoperable with other systems.\n\n\n\nInteroperability of the system"
+  },
+  {
+    "objectID": "analysis/index.html#footnotes",
+    "href": "analysis/index.html#footnotes",
+    "title": "Registration & Beneficiary Management Practices",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis analysis builds upon previous work done by the Collaborative Cash Delivery Network (CCD) and DIGID↩︎\nTo identify patterns, this analysis makes use of Upsetplots The selected dots represent selected values, the bars on the left represent the count of each value and the bars on top represent the count of intersecting/matching sets of values.↩︎\nOrganizations who did not participate in the initial survey or share their registration forms are welcome to to add their responses here if interested. The survey analysis will be updated on request, to reflect additional responses.↩︎\nDeduplication refers to its two main forms - deduplication of records of individuals or households in or across systems, and deduplication in reference to planned or received assistance.↩︎"
+  },
+  {
+    "objectID": "workshop1/index.html",
+    "href": "workshop1/index.html",
+    "title": "Registration & Beneficiary Data Interoperability",
+    "section": "",
+    "text": "Held on 19th November 2025, this workshop brought together national NGOs, international NGOs, UN agencies and cluster representatives to review the findings of a study on registration practices, discuss the main challenges, approaches and goals for interoperable registration data in South Sudan and to work on charting a way forward on the aspects of risk mitigation, standardization and governance\nThe survey and group work provided the attendees the opportunity to build a shared understanding of the challenge in terms of current registration practices and the current state of data sharing agreements and registration/beneficiary data standardization.\nBy collectively examining the practices, organizations were able to reflect on their own registration practices, where they most aligned and diverged from the practices of others.\nThere was broad consensus on:\n\nthe importance of improving interoperability and the benefits that that would bring, to the individual organizations work, the collective work of the response and how aid is received and perceived by the affected communities.\nthe need to tackle the issues at the whole of response level and the need for engagement at the highest levels of humanitarian decision making.\nthe need for development of a single registration form should be conducted, with organizations doing registration to provide their forms to aid analysis and comparison of data points.\n\nRecommendations from the workshop include:\n\nContinued gathering of registration forms to maintain a registrar to providing analysis of overlaps and informing the development of a Single Registration Form.\nExpand the data sharing agreement network graph as a means to understand current data sharing routes and monitor improvements.\nEngage high-level decision makers to ensure response-wide commitment to the interoperability agenda.\nContinue with a twin track approach of piloting/testing ideas and approaches within a small test group while simultaneously engaging at the entire response level on the work of SRF development and governance.\n\nParticipants: 40 participants from 20 organizations"
+  },
+  {
+    "objectID": "workshop1/index.html#summary",
+    "href": "workshop1/index.html#summary",
+    "title": "Registration & Beneficiary Data Interoperability",
+    "section": "",
+    "text": "Held on 19th November 2025, this workshop brought together national NGOs, international NGOs, UN agencies and cluster representatives to review the findings of a study on registration practices, discuss the main challenges, approaches and goals for interoperable registration data in South Sudan and to work on charting a way forward on the aspects of risk mitigation, standardization and governance\nThe survey and group work provided the attendees the opportunity to build a shared understanding of the challenge in terms of current registration practices and the current state of data sharing agreements and registration/beneficiary data standardization.\nBy collectively examining the practices, organizations were able to reflect on their own registration practices, where they most aligned and diverged from the practices of others.\nThere was broad consensus on:\n\nthe importance of improving interoperability and the benefits that that would bring, to the individual organizations work, the collective work of the response and how aid is received and perceived by the affected communities.\nthe need to tackle the issues at the whole of response level and the need for engagement at the highest levels of humanitarian decision making.\nthe need for development of a single registration form should be conducted, with organizations doing registration to provide their forms to aid analysis and comparison of data points.\n\nRecommendations from the workshop include:\n\nContinued gathering of registration forms to maintain a registrar to providing analysis of overlaps and informing the development of a Single Registration Form.\nExpand the data sharing agreement network graph as a means to understand current data sharing routes and monitor improvements.\nEngage high-level decision makers to ensure response-wide commitment to the interoperability agenda.\nContinue with a twin track approach of piloting/testing ideas and approaches within a small test group while simultaneously engaging at the entire response level on the work of SRF development and governance.\n\nParticipants: 40 participants from 20 organizations"
+  },
+  {
+    "objectID": "workshop1/index.html#introduction",
+    "href": "workshop1/index.html#introduction",
+    "title": "Registration & Beneficiary Data Interoperability",
+    "section": "2 Introduction",
+    "text": "2 Introduction\n\n2.1 Background\nThe humanitarian community in South Sudan faces significant challenges related to beneficiary registration and data management. Current systems operate largely in silos, leading to inefficient referrals, duplicated beneficiary lists, inconsistent vulnerability criteria, and limited data sharing capabilities. These issues prevent effective coordination and increase the burden on crisis-affected populations who often must register multiple times with different organizations.\nThe Interoperable Data Ecosystem for Humanitarian Assistance (IDEHA) initiative seeks to address these challenges by promoting standardization, interoperability, and shared resources across humanitarian actors. Building on the mapping exercises and consultations conducted in the third quarter of 2025, this workshop aims to move from analysis to action initiating development of practical tools and frameworks for improved registration data interoperability.\n\n\n2.2 Workshop Objectives\nThe workshop aimed to:\n\nPresent findings from recent assessments of registration practices, data sharing patterns, and system capabilities among humanitarian actors in South Sudan\nBuild consensus around common registration standards and data sharing protocols\nBegin co-design of practical tools including a Single Registration Form and a Data Protection Impact Assessment template\nExplore the possible establishment of a Task Force on registration data interoperability\nDemonstrate available technological solutions for beneficiary management and data sharing\nFoster collaboration and commitment among humanitarian actors toward a federated approach to beneficiary data management\n\n\n\n2.3 Event Details\n\nDate: 19th November 2025\nTime: 09:00 – 15:00 CAT (6 hours)\nVenue: Imperial Plaza Hotel, Juba, South Sudan\nOrganizer: IOM\nSupported by: European Civil Protection and Humanitarian Aid Operations (ECHO)\n\n\n\n2.4 Target Audience\nPrimary Participants (Approx 30 people):\n\nTechnical registration and information management staff from UN agencies, INGOs, and NGOs implementing cash and voucher assistance or other humanitarian programs in South Sudan\nProgram Managers for Cash programs.\nCluster coordinators\nData protection and legal officers from humanitarian organizations"
+  },
+  {
+    "objectID": "workshop1/index.html#workshop-overview",
+    "href": "workshop1/index.html#workshop-overview",
+    "title": "Registration & Beneficiary Data Interoperability",
+    "section": "3 Workshop Overview",
+    "text": "3 Workshop Overview\n\n3.1 Methodology\nThe workshop employed participatory and collaborative methodologies including:\n\nPresentation of evidence-based findings\nSmall group working sessions with structured facilitation\nPlenary discussions and consensus-building\n\n\n\n3.2 Agenda Summary\n\n\n\nTime\nSession\n\n\n\n\n08:30 – 09:00\nArrival, Registration and Networking\n\n\n09:00 – 09:30\nOpening\n\n\n09:30 – 11:00\nSession 1: Survey Findings\n\n\n11:00 – 11:30\nCoffee Break\n\n\n11:30 – 13:00\nSession 2: Interoperability\n\n\n13:00 – 14:00\nLunch Break\n\n\n14:00 – 15:00\nPlenary Discussion, Next Steps & Closing\n\n\n\n\n\n3.3 Participating Organizations\nThe following organizations attended the workshop:\nADA; Concern Worldwide; DRC; DCA; GOAL; IOM; IRC; Medair; MISSD; Mission Trust Aid; NCA; NRC; RRC; Save the Children International; UNOCHA; UNICEF; World Bank; WFP; WVI\nAlong with the FSL Cluster, CCCM Cluster, Cash Working Group and AAP Working Group."
+  },
+  {
+    "objectID": "workshop1/index.html#session-summaries",
+    "href": "workshop1/index.html#session-summaries",
+    "title": "Registration & Beneficiary Data Interoperability",
+    "section": "4 Session Summaries",
+    "text": "4 Session Summaries\n\n4.1 Opening Session\n(09:00 – 09:30)\n\nSlides\n\n\n\n\nWelcome Remarks\nThe workshop was opened by Davis Carden, head of office for UNOCHA in South Sudan.\n\n\n\nOpening remarks by David Carden from UNOCHA\n\n\n\n\nIntroduction to Data Interoperability Challenge\nBrian Mc Donald, Regional Registration Focal Point for IOM, presented the workshop agenda, its objectives and the “shared problems” that the body of work aims to address:\n\nClear, timely referrals across organizations are rare or non-existent.\nDisjointed vulnerability criteria and targeting\nNon-functioning, slow or impossible deduplication of lists.\nData sharing that can’t keep pace with operational realities.\nRegistration is siloed rather than a shared resource/responsibility\nLarge variance in registration standards, practices and system capabilities.\n\n\n\nBackground Recap\nAmos Doornbos, Humanitarian Digital Adoption and Literacy Technical Director at World Vision International, provided background on the work of the Collaborative Cash Delivery (CCD) Network’s work in South Sudan, which has been a key driver of interoperability efforts in South Sudan.\nThe presentation showed the Goverance stack from DataStew.org which illustrates:\n\nThe Data Layer defines what data is going to be collected, describes in what format it will be shared with others, and other data-related issues.\nThe Legal Layer includes any legal arrangements and agreements that will be needed, such as multi-party Data Sharing Agreements.\nThe Technical Layer includes the technology (software, and sometimes hardware) that will be needed to be developed or adopted by stakeholders.\nThe Governance Layer describes the institutional arrangements that are needed to make responsible decisions about how the data will be used.\n\nAlso included in the presentation was the HotPot deduplication platform.\n\n\n\n4.2 Survey Findings\n(09:30 – 11:00) Session 1 opened with the findings from the survey conducted with registration partners conducted in Q3 2025 and finished with a group exercise to understand participants perspectives on the end goal, challenges and potential impacts of interoperable registration and beneficiary data.\n\nSlides\n\n\n\n\nPresentation 1: Current Practices\nRegistration Actors Survey Findings: The analysis (full version is available at interoperabledata.xyz) showed the responses from the 15 organizations that completed the survey, a mix of international NGOs, national NGOs and UN agencies. Key findings of the analysis include:\n\nOverall, registration and beneficiary management practices in South Sudan are significantly varied. Along with limited data-sharing agreements and a low degree of commonality of data fields across registrations forms, these factors limit the interoperability and use of beneficiary data across organizations and sectors in South Sudan.\nInteroperability of data and systems is a key requirement for cross-organizational and cross-sectoral efforts for targeting, deduplication and referral.\nWhile signs of progress are evident from previous in-country efforts, these impacts have mostly been limited to within small consortia of actors or UN agencies. To better address the challenge it should be viewed as an entire response-level challenge that requires as response-level approach to address.\n\n\n\nSession 1 Breakout Groups\nThe session 1 exercise had the participants split into four groups each starting at a table with an associated question from below.Each group nominated a person to stay with the table, while after ten minutes, each group rotated to the next table to add to the work of the previous group.\nAt the end of the session, each table focal point presented the highlighted points for each question.\nGuiding Questions:\n\nWhat does an ideal humanitarian registration and beneficiary data ecosystem look like?\nWhat are the biggest challenges organizations face when doing registration and managing data?\nHow would an ideal registration ecosystem impact your organization’s work and the response as a whole?\nFrom the perspective of the affected population, what would the ideal ecosystem look like?\n\nGroup Outputs:\n\n\n\nGroup 1 - What does an ideal humanitarian registration and beneficiary data ecosystem look like?\n\n\n\n\n\nGroup 2 - What are the biggest challenges organizations face when doing registration and managing data?\n\n\n\n\n\nGroup 3 - How would an ideal registration ecosystem impact your organization’s work and the response as a whole?\n\n\n\n\n\nGroup 4 - From the perspective of the affected population, what would the ideal ecosystem look like.\n\n\n\n\n\n4.3 Interoperability\n(11:30 – 13:00)\nSession 2 began with a presentation of a network graph depicting the data sharing agreements between the organizations that completed the survey. After this a a visualization was shown, comparing the data points containined within five registration forms shared with the survey team.\n\nPresentation 2: Data Sharing and Interoperability\n\nSlides\n\n\nThe Data Sharing Network Graph depicting DSA sharing connections provided by the 15 responding organizations showed 4 unconnected groups of shared data, while the largest group, containing 12 organization was loosely connected, mostly held together by DSA’s, with WFP and IOM.\n\n\n\n\nData sharing agreement network showing fragmentation among surveyed organizations\n\n\n\nWhile the network graph is limited to the 15 organizations who completed the survey, it was noted that the tool will remain open for additional organizations to include their DSA connections to the graph.\nThe last part of the presentation presented a visualization of the data points in registration forms provided by 6 of the survey respondents (3 of whom are from the Cash Consortium). This visual illustrated which fields are most common and least common among them and how many organizations using the same form/set of questions (3).\n\n\n\nRegistration data field overlaps\n\n\nWhile finding from comparing 6 forms are limited, it was agreed that to move forward additional organizations will share their registration forms for inclusion, that it will become a registrar of forms and the visual will be updated to include the additional forms and will inform and support the work on developing a single registration form (SRF) for the response.\n\n\n\nBreakout Group 2: Working Sessions\nAfter the session 2 presentation, the room split into threee groups, each working on one of three tasks around Data Protection Impact Assessments; Standardizationa and Governance.\nGroup A: Data Protection Impact Assessment\nThe group was given the following task:\nTask: List out the risks involved in registration and beneficiary management (both single and interagency) and their corresponding mitigation measures\n\n\n\nGroup A: Data Protection Impact Assessment\n\n\nGroup B: Standardization\nTask: List out the key elements of a standardized registration form and methods . Plan the steps in implementing them.\nConsiderations:\n\nWhat is an appropriate question limit to balance information vs utility\nShould a forms fields be classified (core, recommended, optional etc)\nWhat methods should be standardized (biometric choices, all members of family etc.)\nHow best to collectively revise/update the standards to meet the context\n\n\n\n\nGroup B: Standardization\n\n\nTo enable easy standardization of registration form, the group started by identifying target population for humanitarian assistance (IDPs, Returnees, Refugees and Host Community). During the discussion, it emerged that some agencies only register head of household details and number of individuals in a household due to the nature of their program focusing on family size. Further discussion lead the group agreeing to capture detail for all household member. The group noted the need to have a lighter tool to uniquely identify target beneficiary enabling faster registration and efficient response during emergencies. Standardized consent clearly informing the beneficiaries of how the data will be protected, utilized and shared across partners of common interest was noted as the first key part for inclusion in SRF.\nIn the end questions that emerged included\n\nWho will have the final say on what goes on the SRF?\nHow often will the forms be reviewed?\n\nWhat minimal data protection principals will be applied?\nHow to handle highly sensitive biometric data as use, restriction and capacity vary across agencies?\n\nGroup C: Governance\nThis group were given the following task:\nTask: List out the purposes of data-sharing, the roles and responsibilities and the terms of use in an interoperable data ecosystem that supports timely and secure deduplication, shared targeting, referral\n\n\n\nGroup C: Governance\n\n\n\n\n\n4.4 Plenary Discussion\n(14:00 – 14:45)\n\nRecap of Group Work\n\n\n\nKumudu from OCHA presenting on DPIA\n\n\n\n\n\nBenson from IOM presenting on the standardization of methods and data fields\n\n\n\n\n\nBrian from IOM presenting on the governance group"
+  },
+  {
+    "objectID": "workshop1/index.html#key-findings",
+    "href": "workshop1/index.html#key-findings",
+    "title": "Registration & Beneficiary Data Interoperability",
+    "section": "5 Key Findings",
+    "text": "5 Key Findings\n\n5.1 Shared Understanding Achieved\nThe survey and group work provided the attendees the opportunity to build a shared understanding of the challenge in terms of current registration practices and the current state of data sharing agreements and registration/beneficiary data standardization.\nBy collectively examining the practices, organizations were able to reflect on their own registration practices, where they most aligned and diverged from the practices of others.\nThere was broad consensus on the importance of improving interoperability and the benefits that that would bring, to the individual organizations work, the collective work of the response and how aid is received and perceived by the affected communities.\nThere was also broad consensus on the need to tackle the issues at the whole of response level and the need for engagement at the highest levels of humanitarian decision making.\n\n\n5.2 Progress on Single Registration Form Development\nThere was agreement that development of a single registration form should be conducted, with organizations doing registration to provide their forms to aid analysis and comparison of data points.\n\n\n5.3 DPIA Template Components Identified\nThe group identified the key risks and corresponding mitigations measures that require identification and addressing in the development of data protection impact assessment work.\n\n\n5.4 Task Force Decision/Roadmap\nIt was agreed that the coordination of technical work such as the development of a SRF will convene as part of the Information Management Working Group."
+  },
+  {
+    "objectID": "workshop1/index.html#recommendations",
+    "href": "workshop1/index.html#recommendations",
+    "title": "Registration & Beneficiary Data Interoperability",
+    "section": "6 Recommendations",
+    "text": "6 Recommendations\n\nContinue gathering registration forms to maintain a registrar to providing analysis of overlaps and informing the development of a Single Registration Form.\nExpand the data sharing agreement network graph as a means to understand current data sharing routes and monitor improvements.\nEngage high-level decision makers to ensure response-wide commitment to the interoperability agenda.\nContinue with a twin track approach of piloting/testing ideas and approaches within a small test group while simultaneously engaging at the entire response level on the work of SRF development and governance."
+  },
+  {
+    "objectID": "workshop1/index.html#contact",
+    "href": "workshop1/index.html#contact",
+    "title": "Registration & Beneficiary Data Interoperability",
+    "section": "7 Contact",
+    "text": "7 Contact\nFor questions or follow-up regarding this workshop, please contact:\n\nDaniel HILLAIRE - dhilaire@iom.int\nBenson MBOGANI - BMbogani@iom.int\nBrian MC DONALD - bmcdonald@iom.int"
+  },
+  {
+    "objectID": "workshop1/index.html#acknowledgements",
+    "href": "workshop1/index.html#acknowledgements",
+    "title": "Registration & Beneficiary Data Interoperability",
+    "section": "8 Acknowledgements",
+    "text": "8 Acknowledgements\nThe workshop was co-funded by the European Commission’s Civil Protection and Humanitarian Aid Operations (ECHO).\n\nIOM would like to thank the participants of the workshop for their support and engagement."
+  },
+  {
+    "objectID": "workshop1/index.html#annexes",
+    "href": "workshop1/index.html#annexes",
+    "title": "Registration & Beneficiary Data Interoperability",
+    "section": "9 Annexes",
+    "text": "9 Annexes\n\n\n9.1 Annex A: Workshop Agenda\nThe full agenda is available in the Workshop Overview section and in the workshop invitation\n\n\n9.2 Annex B: Workshop Photos\n\n\n\n\n\n\n\n\nOpening remarks by David Carden from UNOCHA\n\n\n\n\n\n\n\nGroup 1 - What does an ideal humanitarian registration and beneficiary data ecosystem look like?\n\n\n\n\n\n\n\nGroup 2 - What are the biggest challenges organizations face when doing registration and managing data?\n\n\n\n\n\n\n\nGroup 3 - How would an ideal registration ecosystem impact your organization’s work and the response as a whole?\n\n\n\n\n\n\n\n\n\nGroup 4 - From the perspective of the affected population, what would the ideal ecosystem look like.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: \n\n\n\n\n\n9.3 Annex C: Acronyms and Definitions\n\n\n\n\n\n\n\nAcronym\nFull Form\n\n\n\n\nCAT\nCentral Africa Time\n\n\nCCD\nCollaborative Cash Delivery Network\n\n\nCVA\nCash and Voucher Assistance\n\n\nDPIA\nData Protection Impact Assessment\n\n\nDTM\nDisplacement Tracking Matrix\n\n\nECHO\nEuropean Commission’s Civil Protection and Humanitarian Aid Operations department\n\n\nIDEHA\nInteroperable Data Ecosystem for Humanitarian Assistance\n\n\nINGO\nInternational Non-Governmental Organization\n\n\nIOM\nInternational Organization for Migration\n\n\nNGO\nNon-Governmental Organization\n\n\nSCOPE\n[Full form]\n\n\nUN\nUnited Nations\n\n\nSRF\nSingle Registration Form\n\n\n\nReport prepared by: Brian Mc Donald (IOM) | Date: 3 December 2025 | Version: 1"
+  },
+  {
+    "objectID": "workshop2/index.html",
+    "href": "workshop2/index.html",
+    "title": "Workshop 2",
+    "section": "",
+    "text": "Work in progress. Coming soon!"
+  },
+  {
+    "objectID": "pilot/index.html",
+    "href": "pilot/index.html",
+    "title": "Pilot",
+    "section": "",
+    "text": "Work in progress. Coming soon!"
+  }
+]

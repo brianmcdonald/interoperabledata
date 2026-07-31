@@ -1,0 +1,237 @@
+---
+title: Registration & Beneficiary Management Practices
+output-file: index.html
+subtitle: Exploring registration & beneficiary management practices in South Sudan
+date: 19-Nov-2025
+date-format: "D MMMM, YYYY"
+# date-modified: today
+author: IOM
+abstract: "This research examined current registration and beneficiary management practices in South Sudan, to better understand registration data collection and management practices, the commonality of data fields, and the current extent of data sharing agreements among organizations.
+<br><br>
+It was conducted by the International Organization for Migration and supported with funding from ECHO and the collaboration from humanitarian organizations in South Sudan through a series of interviews, a survey and direct observation.
+<br><br>
+The study found a large variance in in all aspects of registration and beneficiary management, the practices around registration data collection, the data fields collected and systems capabilities that support the processes.
+<br><br>
+The implications of this variance pose significant challenges to targeted, coordinated multi-sectoral action, but by highlighting the key barriers and framing them through a lens of interoperability this study can support the collective effort in improving targeting, deduplication and referral practices in South Sudan."
+license: CC BY NC
+keywords:
+- Registration
+- Interoperability
+author-meta: Brian Mc Donald
+reference-location: document
+bibliography: references.bib
+citeproc: true
+nocite: |
+  @*
+lightbox: true
+format:
+  typst:
+    toc: true
+    toc-depth: 3
+    output-file: analysis.pdf
+    template-partials:
+      # Must be one of Quarto's seven partial names: numbering.typ,
+      # definitions.typ, typst-template.typ, page.typ, typst-show.typ,
+      # notes.typ, biblio.typ. This file overrides `article` to add the
+      # full-page cover built from cover.png.
+      - typst-template.typ
+  epub:
+    toc: true
+    number-sections: true
+    cover-image: cover.png
+    output-file: analysis.epub
+  html:
+    toc: true
+    number-sections: true
+    number-depth: 3
+    link-external-icon: true
+    title-block-banner: "#0033A0"
+    title-block-banner-color: "#FFFFFF"
+format-links:
+  - format: typst
+    text: PDF
+    icon: file-pdf
+---
+
+<!-- ::: {.callout-caution}
+Note that this research is a working draft.
+::: -->
+
+# Introduction
+
+This goal of this analysis is to understand registration and beneficiary analysis in South Sudan, specifically: [^1]
+
+- what data do organizations collect during registrations and to what degree of commonality exist among the data points collected?
+
+- what are the practices, processes and tools that organizations use and to how are they similar or differ?
+
+- what organizations have Data Sharing Agreements with each other and what does it look like as a network?
+
+Information from this analysis[^2] came from a survey to South Sudan organizations, individual and group interviews and observations, in Juba and Malakal in June and September 2025. 
+
+## Acknowledgements
+
+This analysis was co-funded by the European Commission's Humanitarian Office (ECHO).
+
+![](ECHO.png){width="250px"}
+
+
+# Survey Analysis
+
+The survey was conducted between 27th June and 14th October 2025 and contains responses from 16 organization.[^3]
+
+## Profile of respondents
+
+Responses were received from international NGO’s nation NGO’s and UN entities.
+
+![Survey respondent organizations by type](figures/Organization%20Types.svg)
+
+The respondents represent organizations responding across 11 sectors, with Food Security and Cash Based Interventions most prominently. 11 of the 16 respondents work in CBI.
+
+There was significant diversity in the organization as only two worked in the same combination of sectors.
+
+![Respondent organizations by sector, with CBI and Food Security most common](figures/Respondents%20by%20Sector.svg)
+
+All bar one organization work with both host communities and IDPs.
+
+![Target populations served by respondent organizations](figures/Populations.svg)
+
+
+## Registration 
+
+Only two respondents do not conduct registration activities.
+
+![Proportion of respondents conducting registration activities)](figures/Do%20you%20conduct%20a%20registration%20activity.svg)
+
+Accountability as per the organizations procedures was the most cited purpose for registration, The purposes were also significantly varied - only 5 respondents shared the same set of purposes.
+
+### Purpose and basis
+Accountability as per internal organizational procedures was the most cited purpose, appearing in all but one response. 
+
+![Primary purposes for registration, with accountability most cited](figures/Purpose%20of%20the%20Registration.svg)
+
+Of the organizations that conduct registration, only 29% (4) consider their registration efforts as inter-agency.
+
+![Inter-agency registration activities ](figures/Is%20it%20inter-agency.svg){width="400px"}
+
+The majority (70%) cited both informed consent and organizational manadate as the basis for registration activities.
+
+![Legal basis cited by organizations for registration activities, with organizational procedures most frequently referenced](figures/Legal%20Basis.svg)
+
+Similar to the responses on "purpose", the primary policy for personbal information collection cited by 85% of respondents was their organizational data protection or data governance policy.
+
+![Primary policy frameworks cited by respondent organizations for personal information collection](figures/Primary%20Policy%20for%20PI%20collection.svg)
+
+### Deduplication
+
+The methods use to deduplicate[^4] show extreme variance across all respondents, with only two responding organizations using the same set of deduplication methods. Tokens were the most prominent method used for deduplication, used by all except two respondents.
+
+![Deduplication mechanisms used by respondent organizations for registration and beneficiary data management](figures/Deduplication%20mechanisms.svg)
+
+For deduplication across organizations over a third of respondents referred to performing deduplication against WFP's SCOPE system, the largest resistration system in SOuth Sudan.
+
+![Deduplication methods used by respondent organizations when comparing beneficiary data against other organizations](figures/Deduplication%20against%20others.svg)
+
+### Methods
+
+38% of respondents only register head of household with information on household composition, along with registering alternative recipients from the same household.
+
+![Registration types used by respondent organizations, with multi-purpose registration systems most common](figures/Type%20of%20registration.svg)
+
+Paper tokens are the primary means on confirmation, used by 62% of respondents.
+
+![Means of confirmation used by respondent organizations to verify beneficiary identity during registration](figures/Means%20of%20confirmation.svg)
+
+Complaint and feedback mechanisms seen a wide variety of selections, with no two respondents using the same combination of methods.
+
+![Complaint and feedback mechanisms used by respondent organizations for beneficiary engagement and accountability](figures/Complaint%20and%20Feedback%20Mechanisms.svg)
+
+### Authentication
+
+![Authentication before assistance](figures/Authentication%20before%20assistance.svg)
+
+While 85% of organizations authenticate before assistance, there is a large variance in the methods used for authentication, with producing a token the most cited of these.
+
+![The authentication mechanisms used by organizations before providing assistance to beneficiaries](figures/Authentication%20Mechanism.svg)
+
+### Data sharing
+
+46% of respondents make their data accessible to other agencies, subject to the signing of a data sharing agreement.
+
+![Data accessibility for other agencies among respondent organizations](figures/Data%20accessible%20for%20other%20agencies.svg)
+
+However only 46% of organizations share data with others and only 38% having formalized data sharing agreements.
+
+![Proportion of organizations sharing registration data with partner organizations](figures/Do%20you%20share%20the%20registration%20data%20with%20partners.svg)
+
+![Proportion of organizations with formalized data sharing agreements among surveyed respondents](figures/Formalized%20Data%20Sharing%20Agreement.svg){width="400px"}
+
+
+## Non registrations actors
+
+Of the two respondent that do not conduct registration activities, both have activities that include direct assistance, with only sourcing their lists from community leaders and the other from both leader and from camp management personnel.
+
+![Organizations providing direct assistance at household or individual level](figures/Does%20the%20organization's%20humanitarian%20response%20activities%20include%20direct%20assistance%20to%20the%20household%20or%20individual%20level.svg){width="400px"}
+
+![Beneficiary list sources for non-registering organizations](figures/Source%20of%20lists%20without%20registration.svg)
+
+## Systems information
+
+73% of respondents manage their data inside a database system.
+
+![Use of database systems for registration and beneficiary data management](figures/Is%20the%20registration%20or%20beneficiary%20personal%20data%20managed%20in%20a%20database%20system.svg){width="400"}
+
+Commcare appeared as the most common system, however the question allowed the selection of only 1 system per response, some systems that are used by a number of organization but not not nescessairly as the organizations primary tool were not caputed.
+
+![Database management systems used by respondent organizations](figures/Name%20of%20system.svg)
+
+Only 23% of respondents consider their system to be interoperable with other systems.
+
+![Interoperability of the system](figures/Is%20this%20system%20interoperable%20with%20other%20systems%20used%20in%20South%20Sudan.svg){width="400px"}
+
+
+# Data Sharing Graph
+
+Examining the surveyed organization, we can visualize which organizations have data sharing agreements with each other.
+
+::: {.content-visible when-format="html"}
+:::{.column-screen-right}
+![Data sharing agreement network showing fragmentation among surveyed organizations](figures/data_sharing_network.html){width="100%" height="500px"}
+:::
+:::
+
+::: {.content-visible unless-format="html"}
+![Data sharing agreement network showing fragmentation among surveyed organizations](figures/data_sharing_network.png)
+:::
+
+Even among the small number of organizations surveys we can see significant fragmentation and loosely connected data sharing networks.
+
+# Comparing Data Points
+
+The following plot visualizes each data point collected by each organization. The histogram on the left show the count of datapoints among organizations - for instance, a 5 beside "Full name" means that 5 organizations gather that same data point. The top histogram show the number of organizations that collect the exact same data.
+
+![Registration data field overlaps across organizations. Left: frequency of each field; top: organizations with identical field sets. *Note: Some fields were normalized for variations in wording*](figures/data_point_overlap.svg)
+
+# Conclusion
+
+Overall, registration and beneficiary management practices are significantly varied. Along with limited data-sharing agreements and a low degree of commonality of data fields across registrations forms, these factors limit the interoperability and use of beneficiary data across organizations and sectors in South Sudan. 
+
+Interoperability of data and systems is a key requirement for cross-organizational and cross-sectoral efforts for targeting, deduplication and referral.
+
+While signs of progress are evident from  previous in-country efforts , these impacts have mostly been limited to within small consortia of actors or UN agencies. To better address the challenge its should be viewed as an entire response-level challenge that requires as response-level approach to address.
+
+# References
+
+::: {#refs}
+:::
+
+<!-- Footnotes -->
+
+[^1]: This analysis builds upon previous work done by the [Collaborative Cash Delivery Network (CCD)](https://datastew.org) and DIGID
+
+[^2]: To identify patterns, this analysis makes use of [Upsetplots](https://arxiv.org/abs/2503.17517)
+The selected dots represent selected values, the bars on the left represent the count of each value and the bars on top represent the count of intersecting/matching sets of values.
+
+[^3]: Organizations who did not participate in the initial survey or share their registration forms are welcome to to add their responses [here](https://forms.office.com/e/WTqY4cDaKu) if interested. The survey analysis will be updated on request, to reflect additional responses. 
+
+[^4]: Deduplication refers to its two main forms - deduplication of records of individuals or households in or across systems, and deduplication in reference to planned or received assistance.

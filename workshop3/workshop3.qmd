@@ -1,0 +1,6 @@
+---
+title: Workshop 3
+output-file: index.html
+---
+
+Test 3

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+                <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+
+    
+</head>
+<body >
+    <div id="1904c9447fda403bbd52af342267bedd" class="chart-container" style="width:100%; height:670px; "></div>
+    <script>
+        var chart_1904c9447fda403bbd52af342267bedd = echarts.init(
+            document.getElementById('1904c9447fda403bbd52af342267bedd'), 'white', {renderer: 'canvas', locale: 'ZH'});
+        var option_1904c9447fda403bbd52af342267bedd = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "graph",
+            "layout": "force",
+            "symbolSize": 10,
+            "circular": {
+                "rotateLabel": false
+            },
+            "force": {
+                "repulsion": 1000,
+                "gravity": 0.2,
+                "edgeLength": 150,
+                "friction": 0.6,
+                "layoutAnimation": true
+            },
+            "label": {
+                "show": true,
+                "position": "right",
+                "margin": 8,
+                "fontSize": 10,
+                "valueAnimation": false
+            },
+            "lineStyle": {
+                "show": true,
+                "width": 2,
+                "opacity": 0.7,
+                "curveness": 0.3,
+                "type": "solid",
+                "color": "source"
+            },
+            "roam": true,
+            "draggable": true,
+            "focusNodeAdjacency": true,
+            "data": [
+                {
+                    "name": "IOM",
+                    "symbolSize": 30,
+                    "category": 0
+                },
+                {
+                    "name": "WFP",
+                    "symbolSize": 50,
+                    "category": 0
+                },
+                {
+                    "name": "Save the Children",
+                    "symbolSize": 25,
+                    "category": 1
+                },
+                {
+                    "name": "FAO",
+                    "symbolSize": 30,
+                    "category": 0
+                },
+                {
+                    "name": "HI",
+                    "symbolSize": 25,
+                    "category": 1
+                },
+                {
+                    "name": "NRC",
+                    "symbolSize": 25,
+                    "category": 1
+                },
+                {
+                    "name": "UNHCR",
+                    "symbolSize": 30,
+                    "category": 0
+                },
+                {
+                    "name": "Concern",
+                    "symbolSize": 25,
+                    "category": 1
+                },
+                {
+                    "name": "Medair",
+                    "symbolSize": 25,
+                    "category": 1
+                },
+                {
+                    "name": "ADRA",
+                    "symbolSize": 25,
+                    "category": 1
+                },
+                {
+                    "name": "DRC",
+                    "symbolSize": 25,
+                    "category": 1
+                },
+                {
+                    "name": "SI",
+                    "symbolSize": 25,
+                    "category": 1
+                },
+                {
+                    "name": "Oxfam",
+                    "symbolSize": 25,
+                    "category": 1
+                },
+                {
+                    "name": "GOAL",
+                    "symbolSize": 25,
+                    "category": 1
+                },
+                {
+                    "name": "Women Advancement Organization",
+                    "symbolSize": 25,
+                    "category": 2
+                },
+                {
+                    "name": "Augustinian brotherhood",
+                    "symbolSize": 25,
+                    "category": 1
+                },
+                {
+                    "name": "IRC",
+                    "symbolSize": 25,
+                    "category": 1
+                },
+                {
+                    "name": "ACF",
+                    "symbolSize": 25,
+                    "category": 1
+                },
+                {
+                    "name": "JRS",
+                    "symbolSize": 25,
+                    "category": 1
+                }
+            ],
+            "categories": [
+                {
+                    "name": "UN"
+                },
+                {
+                    "name": "INGO"
+                },
+                {
+                    "name": "NNGO"
+                }
+            ],
+            "edgeLabel": {
+                "show": false,
+                "margin": 8,
+                "valueAnimation": false
+            },
+            "edgeSymbol": [
+                null,
+                null
+            ],
+            "edgeSymbolSize": 10,
+            "links": [
+                {
+                    "source": "IOM",
+                    "target": "UNHCR"
+                },
+                {
+                    "source": "IOM",
+                    "target": "WFP"
+                },
+                {
+                    "source": "IOM",
+                    "target": "Concern"
+                },
+                {
+                    "source": "IOM",
+                    "target": "Medair"
+                },
+                {
+                    "source": "FAO",
+                    "target": "WFP"
+                },
+                {
+                    "source": "WFP",
+                    "target": "UNHCR"
+                },
+                {
+                    "source": "WFP",
+                    "target": "Oxfam"
+                },
+                {
+                    "source": "WFP",
+                    "target": "GOAL"
+                },
+                {
+                    "source": "Women Advancement Organization",
+                    "target": "ADRA"
+                },
+                {
+                    "source": "Women Advancement Organization",
+                    "target": "Augustinian brotherhood"
+                },
+                {
+                    "source": "HI",
+                    "target": "UNHCR"
+                },
+                {
+                    "source": "NRC",
+                    "target": "DRC"
+                },
+                {
+                    "source": "NRC",
+                    "target": "SI"
+                },
+                {
+                    "source": "NRC",
+                    "target": "Medair"
+                },
+                {
+                    "source": "NRC",
+                    "target": "IOM"
+                },
+                {
+                    "source": "NRC",
+                    "target": "TERM"
+                },
+                {
+                    "source": "NRC",
+                    "target": "CINA"
+                },
+                {
+                    "source": "Save the Children",
+                    "target": "IRC"
+                },
+                {
+                    "source": "Save the Children",
+                    "target": "ACF"
+                }
+            ]
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "UN",
+                "INGO",
+                "NNGO"
+            ],
+            "selected": {},
+            "show": true,
+            "left": "left",
+            "top": "middle",
+            "orient": "vertical",
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "South Sudan DSA Network",
+            "target": "blank",
+            "subtext": "A network graph of Data Sharing Agreements in South Sudan",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ]
+};
+        chart_1904c9447fda403bbd52af342267bedd.setOption(option_1904c9447fda403bbd52af342267bedd);
+            window.addEventListener('resize', function(){
+                chart_1904c9447fda403bbd52af342267bedd.resize();
+            })
+    </script>
+</body>
+</html>
