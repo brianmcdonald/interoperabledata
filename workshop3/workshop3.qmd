@@ -1,6 +1,24 @@
 ---
-title: Workshop 3
+title: Regional Workshop
+subtitle: Regional workshop to bring together regional perscpective and share lessons learned.
 output-file: index.html
+format:
+  html:
+    toc: true
+    number-sections: true
+    number-depth: 3
+    link-external-icon: true
+    title-block-banner: "#0033A0"
+    title-block-banner-color: "#FFFFFF"
+    lightbox: true
+format-links:
+  - html
+  - format: typst
+    text: PDF
+    icon: file-pdf-fill
+  - format: docx
+    text: Word
+    icon: file-text-fill
 ---
 
-Test 3
+*The workshop report will be added here soon.*

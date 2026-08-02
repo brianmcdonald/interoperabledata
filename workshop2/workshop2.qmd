@@ -1,6 +1,26 @@
 ---
-title: Workshop 2
+title: Project end Workshop
+subtitle: Lessons learned & validation workshop for the IDEHA pilot. Juba, South Sudan.
 output-file: index.html
+format:
+  html:
+    toc: true
+    number-sections: true
+    number-depth: 3
+    link-external-icon: true
+    title-block-banner: "#0033A0"
+    title-block-banner-color: "#FFFFFF"
+    lightbox: true
+  # docx:
+  #   toc: false
+format-links:
+  - html
+  - format: typst
+    text: PDF
+    icon: file-pdf-fill
+  - format: docx
+    text: Word
+    icon: file-text-fill
 ---
 
-Work in progress. Coming soon!
+*The workshop report will be added here soon.*

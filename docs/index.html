@@ -167,8 +167,10 @@
 
   /* activity strip inside the wide cell */
   #plate-1 .p1-acts{list-style:none;margin:14px 0 0;padding:0;
-    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--ink);border:1px solid var(--ink)}
+    display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--ink);border:1px solid var(--ink)}
   #plate-1 .p1-acts li{background:var(--paper2);padding:14px 16px}
+  /* 5 items in a 3-wide grid: a filler grid item keeps row 2 flush */
+  #plate-1 .p1-acts::after{content:"";background:var(--paper2)}
   #plate-1 .p1-acts .k{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;
     text-transform:uppercase;color:var(--ink2);margin-bottom:6px}
   #plate-1 .p1-acts .v{font-size:14.5px;line-height:1.45}
@@ -180,6 +182,7 @@
     #plate-1 .p1-grid{grid-template-columns:1fr}
     #plate-1 .p1-cell{padding:16px 16px 18px}
     #plate-1 .p1-acts{grid-template-columns:1fr}
+    #plate-1 .p1-acts::after{display:none}
   }
 </style>
 <style data-plate="2">
@@ -419,33 +422,35 @@
 
       <div class="p1-cell">
         <span class="lbl">01 / What the project addressed</span>
-        <h3>Every organization registers alone</h3>
-        <p>A humanitarian response in South Sudan involves many partners, each running its own registration and its own assessments against its own list.</p>
-        <p>The results are familiar: households counted twice or missed entirely, assistance delayed while lists are reconciled, survey fatigue among the people being registered, a wider opening for post-delivery diversion, and data-sharing agreements that take months to negotiate for each new pairing of organizations.</p>
+        <h3>Disjointed registration & beneficiary management</h3>
+        <p>Non-functioning, slow or impossible deduplication of lists; </p><p></p>Clear, timely referrals across organizations are rare or non-existent;</p><p> Disjointed vulnerability criteria and targeting;</p><p></p> Data sharing that can’t keep pace with operational realities;</p><p></p> Large variance in registration standards, practices and system capabilities.</p>
       </div>
 
       <div class="p1-cell">
         <span class="lbl">02 / What IDEHA worked on</span>
-        <h3>Register once, recognise across systems</h3>
-        <p>IDEHA worked toward a collaborative ecosystem for coordinated registration, targeting, and delivery, built on secure and interoperable data exchange between partners rather than on a single shared database.</p>
-        <p>Partners keep their own systems and their own mandates. What changes is that a record created in one system can be recognised in another, under agreed governance and a common minimum dataset.</p>
+        <h3>Standardize registration, reuse across organizations</h3>
+        <p>IDEHA piloted a collaborative ecosystem for coordinated registration, targeting, and delivery, by using a standardized core registration form, with accompanying data protection impact assessment and data sharing agreements</p>
+        
       </div>
 
       <div class="p1-cell">
-        <span class="lbl">03 / What it was aiming at</span>
-        <h3>A framework partners can actually join</h3>
-        <p>An institutionalised multi-stakeholder registration and data-sharing framework, with the BRaVe system reachable by partners at very different levels of digital maturity.</p>
-        <p>In the target counties: better registration and targeting, faster response times, less duplication, and reduced risk of aid diversion.</p>
+        <span class="lbl">03 / The vision</span>
+        <h3>A federated ecosystem</h3>
+        <p>No deduplication of registration activities.</p>
+        <p>Data moves from where it collected to where it's needed.</p>
+        <p>Intersectoral, inter-agency referral.</p>
+        <p>Harmonized vulnerability-based targeting.</p>
       </div>
 
       <div class="p1-cell p1-wide">
         <span class="lbl">04 / What the project did</span>
-        <h3>Four workstreams</h3>
+        <h3>Five Activites</h3>
         <ul class="p1-acts">
-          <li><span class="k">Partner mapping</span><span class="v">Mapped registration partners and data flows, showing which fields each one collects and where they overlap.</span></li>
-          <li><span class="k">Single Registration Form</span><span class="v">Drafted a standardised minimum dataset that partners can register against interoperably.</span></li>
-          <li><span class="k">Pilot data exchange</span><span class="v">Ran an interoperability pilot with a partner to deduplicate beneficiary lists.</span></li>
-          <li><span class="k">BRaVe enhancement</span><span class="v">Improved the agility and interoperability of the BRaVe registration platform.</span></li>
+          <li><span class="k">Framework</span><span class="v">Development of IOM Framework for Registration, Targeting, aid delivery, and data sharing for humanitarian response.</span></li>
+          <li><span class="k">BRaVe system development</span><span class="v">Enhancement of the BRaVe system for agility and interoperability with various systems, and it is accessible to partners based on their digital maturity.</span></li>
+          <li><span class="k">Mapping Analysis</span><span class="v">Mapping of all registration partners and activities.</span></li>
+          <li><span class="k">Single Registration Form</span><span class="v">Prepare a draft Single Registration Form (SRF) to standardize the data points and methodology.</span></li>
+          <li><span class="k">Pilot</span><span class="v">Implementation of a pilot to exchange the data at least with one partner through interoperability to deduplicate the beneficiary list.</span></li>
         </ul>
       </div>
 
@@ -477,7 +482,7 @@
       <div class="p2-cell">
         <span class="lbl">01 / Analysis</span>
         <h3>Mapping report</h3>
-        <p>Research into how registration and beneficiary management actually work in South Sudan today: what data partners collect, how much of it is the same data, and how far formal data-sharing agreements currently reach.</p>
+        <p>Analysis of registration and beneficiary management practices in South Sudan today: what data partners collect, what are their processes for collecting and managging the data, and who do their share with.</p>
         <div class="p2-meta"><span>Report</span><span>South Sudan</span></div>
         <a class="p2-go" href="analysis/">Read the analysis -&gt;</a>
       </div>
@@ -485,7 +490,7 @@
       <div class="p2-cell">
         <span class="lbl">02 / Workshops</span>
         <h3>Convening the partners</h3>
-        <p>Three convenings over the life of the project. The first put the mapping findings in front of national and international NGOs, UN agencies and cluster representatives; the second took the pilot results back to the same group; the third carried the agenda regionally.</p>
+        <p>Three convenings over the life of the project. The first put the mapping findings in front of South Sudan stakeholders; the second took the pilot results back to the same group; the third brought together actors from the wider region.</p>
         <div class="p2-meta"><span>Reports</span><span>3 sessions</span></div>
         <div class="p2-drop">
           <button class="p2-go p2-go-btn" type="button" aria-expanded="false" aria-controls="ws-menu">
@@ -501,8 +506,8 @@
 
       <div class="p2-cell">
         <span class="lbl">03 / Pilot</span>
-        <h3>Deduplicating a real list</h3>
-        <p>A live interoperability pilot with a partner organization: exchanging the minimum data needed to identify households already registered elsewhere, under an agreed legal basis, and measuring what the exchange actually removed.</p>
+        <h3>Testing the concept</h3>
+        <p>A live interoperability pilot to test the standarized registration fields, and the implementation of data protection impact assessment and data sharing agreements. </p>
         <div class="p2-meta"><span>Complete</span><span>2026</span></div>
         <a class="p2-go" href="pilot/">Read the pilot findings -&gt;</a>
       </div>
@@ -511,7 +516,7 @@
         <span class="lbl">04 / Single Registration Form</span>
         <h3>The shared minimum dataset</h3>
         <p>The working registry of partner forms, the field-by-field comparison behind the mapping report, and the data-sharing graph. The draft is still open for comment, and organizations can still add their own form to the registry.</p>
-        <div class="p2-meta"><span>Workspace</span><span>Still open</span></div>
+        <div class="p2-meta"><span>Platform</span><span>Still open</span></div>
         <a class="p2-go" href="SRF/">Open the proposed SRF -&gt;</a>
       </div>
 
@@ -524,9 +529,9 @@
     <div class="p4-run">
       <div class="p4-run-l">
         <span class="lbl">&gt;&gt;&gt; Get involved</span>
-        <h3>Read the draft SRF. <em>Tell us your feedback</em></h3>
-        <p>The Single Registration Form sets out the minimum dataset organizations would register against. It is still open for comment, and it only works if the people who would have to use it pick it apart: fields that are missing, fields that duplicate what you already collect, and anything that would not survive contact with a registration team in the field.</p>
-        <p>The inbox is still monitored. Feedback, questions, and proposals to take any part of this forward are all welcome.</p>
+        <h3>Read the draft SRF <em>Share feedback</em></h3>
+        <p>The Single Registration Form sets out the minimum data fields and methods for starndardized registration. It is still open for comment, and we welcome feedback: fields that are missing, classifications or steps that should be adapted, and anything that would not work for your registration teams in the field.</p>
+        <p>Feedback, questions, and proposals to take any part of this forward are all welcome.</p>
         <a class="p4-btn" href="SRF/">Review the draft form -&gt;</a>
       </div>
       <div class="p4-run-r">
@@ -538,9 +543,9 @@
         <ul class="p4-spec">
           <li><span class="k">Project</span><span class="v">IDEHA</span></li>
           <li><span class="k">Lead</span><span class="v">IOM</span></li>
-          <li><span class="k">Region</span><span class="v">South Sudan</span></li>
+          <li><span class="k">Location</span><span class="v">South Sudan</span></li>
           <li><span class="k">Status</span><span class="v">Completed, June 2026</span></li>
-          <li><span class="k">Co-funded by</span><span class="v">European Union</span></li>
+          <li><span class="k">Co-funded by</span><span class="v">ECHO</span></li>
         </ul>
       </div>
     </div>

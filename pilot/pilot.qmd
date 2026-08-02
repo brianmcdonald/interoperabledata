@@ -1,36 +1,24 @@
 ---
 title: Pilot
-subtitle: test
+subtitle: Overview of the IEDHA pilot
+output-file: index.html
 format:
-    html:
-        # Per-format output names. A single top-level `output-file: index.html`
-        # would make typst emit "index.html.pdf" — a double extension that some
-        # servers and embedded PDF viewers fail to resolve.
-        output-file: index.html
-        toc: true
-        number-sections: true
-        number-depth: 3
-        link-external-icon: true
-        title-block-banner: "#0033A0"
-        title-block-banner-color: "#FFFFFF"
-        lightbox: true
-    typst:
-        output-file: pilot.pdf
-        toc: true
-        toc-depth: 3
-        number-sections: true
-        fig-align: center
-        section-numbering: 1.1.1
+  html:
+    toc: true
+    number-sections: true
+    number-depth: 3
+    link-external-icon: true
+    title-block-banner: "#0033A0"
+    title-block-banner-color: "#FFFFFF"
+    lightbox: true
 format-links:
-  # The bare `html` entry matters: a format-links list made up only of objects
-  # is treated as extra custom links, so Quarto keeps its auto-generated
-  # "Typst" link as well and the menu shows the same PDF twice. Including a
-  # plain format name switches it to filtering, and the object below then
-  # relabels typst rather than duplicating it.
   - html
   - format: typst
     text: PDF
-    icon: file-pdf
+    icon: file-pdf-fill
+  - format: docx
+    text: Word
+    icon: file-text-fill
 ---
 
 Work in progress. Coming soon!
