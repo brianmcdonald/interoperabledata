@@ -1,3 +1,5 @@
+::: {.content-visible when-format="html"}
+
 <div id="gt-sources" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>
 #gt-sources table {
@@ -108,3 +110,17 @@
 </tbody>
 </table>
 </div>
+
+:::
+
+::: {.content-visible when-format="typst"}
+
+![](_tables/tbl-sources.pdf){width=100%}
+
+:::
+
+::: {.content-visible when-format="docx"}
+
+![](_tables/tbl-sources.png){width=100%}
+
+:::

@@ -1,3 +1,5 @@
+::: {.content-visible when-format="html"}
+
 <div id="gt-classification" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>
 #gt-classification table {
@@ -87,3 +89,17 @@
 </tbody>
 </table>
 </div>
+
+:::
+
+::: {.content-visible when-format="typst"}
+
+![](_tables/tbl-classification.pdf){width=100%}
+
+:::
+
+::: {.content-visible when-format="docx"}
+
+![](_tables/tbl-classification.png){width=100%}
+
+:::

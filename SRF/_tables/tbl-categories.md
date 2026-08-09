@@ -1,3 +1,5 @@
+::: {.content-visible when-format="html"}
+
 <div id="gt-categories" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>
 #gt-categories table {
@@ -104,3 +106,17 @@
 </tbody>
 </table>
 </div>
+
+:::
+
+::: {.content-visible when-format="typst"}
+
+![](_tables/tbl-categories.pdf){width=100%}
+
+:::
+
+::: {.content-visible when-format="docx"}
+
+![](_tables/tbl-categories.png){width=100%}
+
+:::

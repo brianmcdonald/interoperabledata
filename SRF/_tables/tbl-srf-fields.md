@@ -1,3 +1,5 @@
+::: {.content-visible when-format="html"}
+
 <div id="gt-srf-fields" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>
 #gt-srf-fields table {
@@ -420,3 +422,25 @@
 <tfoot><tr class="gt_sourcenotes"><td class="gt_sourcenote" colspan="5"><span class="gt_from_md">Source: <code>Response-level SRF (draft).xlsx</code>, sheet <code>Fields</code>.</span></td></tr></tfoot>
 </table>
 </div>
+
+:::
+
+::: {.content-visible when-format="typst"}
+
+![](_tables/tbl-srf-fields-part1.pdf){width=100%}
+
+![](_tables/tbl-srf-fields-part2.pdf){width=100%}
+
+![](_tables/tbl-srf-fields-part3.pdf){width=100%}
+
+:::
+
+::: {.content-visible when-format="docx"}
+
+![](_tables/tbl-srf-fields-part1.png){width=100%}
+
+![](_tables/tbl-srf-fields-part2.png){width=100%}
+
+![](_tables/tbl-srf-fields-part3.png){width=100%}
+
+:::

@@ -1,12 +1,47 @@
-"""Regenerate the great_tables HTML fragments embedded in SRF.qmd.
+# /// script
+# requires-python = ">=3.10"
+# dependencies = [
+#     "polars",
+#     "great-tables>=0.23",
+#     "fastexcel",
+#     "nokap",
+# ]
+# ///
+"""Regenerate the great_tables fragments embedded in SRF.qmd.
 
 The tables live outside the document so that SRF.qmd contains no Python and
 renders without a Jupyter kernel. Run this after editing the workbook:
 
-    uv run python SRF/generate_tables.py
+    uv run SRF/generate_tables.py
+
+Three renderings are produced per table, one per output format:
+
+* HTML gets great_tables' own markup, so the fills and striping are exactly as
+  generated.
+* typst gets a vector PDF of the table. Raw HTML in the document body is
+  dropped or flattened by the typst writer, and a pandoc grid table would lose
+  the colour fills, so a picture is the only rendering that survives intact —
+  but typst 0.14 embeds PDFs as images natively, so the picture can be vector.
+  The type stays sharp at any zoom and remains real, selectable, searchable
+  text in the exported PDF.
+* docx gets a PNG of the same table, because Word cannot place a PDF as an
+  image.
+
+Both go through great_tables' `.gtsave()`, which drives a headless Chrome via
+the `nokap` package — no selenium, no Pillow. nokap sizes the PDF page to the
+table's bounding box with zero margins, so the output is cropped to the table
+rather than being a table adrift on a letter page. Chrome or Chromium must be
+installed on the machine running this script; the Python side is declared in
+the script metadata above.
+
+Each image is printed with the height it will occupy on the page, so it is
+obvious when a table has grown past what fits and needs splitting.
+
+Note that typst cannot embed PDF images when exporting to a PDF standard such
+as PDF/A-3 or PDF/UA-1. If this document ever needs one of those, the typst
+branch has to fall back to the PNGs.
 """
 
-import subprocess
 from pathlib import Path
 
 import polars as pl
@@ -18,6 +53,26 @@ WORKBOOK = HERE / "Response-level SRF (draft).xlsx"
 
 class_colors = {"Core": "#1b7837", "Optional": "#999999"}
 tier_colors = {1: "#1b7837", 2: "#f4a261", 3: "#999999"}
+
+# Print geometry. The typst page is us-letter with 1.25in margins, so the text
+# block is 432pt (6in) wide and 612pt (8.5in) tall.
+TEXT_WIDTH_PT = 432
+TEXT_HEIGHT_IN = 8.5
+
+# Each image is emitted at width=100%, i.e. stretched to the 432pt text block.
+# That means the on-page size of the type is fixed by how many CSS pixels wide
+# the table is, not by the font size on its own: rendering the table into a
+# narrower viewport makes it wrap more and come out *larger* in print.
+#
+# So the viewport is derived from the point size we want rather than chosen by
+# hand — vwidth = font_px * 432 / target_pt. The SRF field list is six columns
+# of long text and only fits a portrait page at the smaller target.
+RENDER_FONT_PX = 16
+TARGET_PT = 10
+TARGET_PT_DENSE = 8
+
+# Raster scale, for the docx PNGs only. The typst PDFs are vector.
+PNG_ZOOM = 3
 
 
 def tbl_sources() -> GT:
@@ -144,8 +199,8 @@ def tbl_classification() -> GT:
     )
 
 
-def tbl_srf_fields() -> GT:
-    srf_fields = (
+def _srf_fields_data() -> pl.DataFrame:
+    return (
         pl.read_excel(WORKBOOK, sheet_name="Fields")
         .select([
             "Field ID",
@@ -158,11 +213,29 @@ def tbl_srf_fields() -> GT:
         .with_columns(pl.col("Record level").fill_null("—").replace({"-": "—"}))
     )
 
+
+def tbl_srf_fields(categories: list[str] | None = None, part: str | None = None) -> GT:
+    """The SRF field list, optionally restricted to a subset of categories.
+
+    The full table is 46 rows and cannot page-break once it is a PNG, so the
+    print rendering is emitted in parts (see SRF_FIELD_PARTS). `categories`
+    selects the rows; `part` is appended to the subtitle so each image says
+    which slice of the form it shows.
+    """
+    srf_fields = _srf_fields_data()
+    total = srf_fields.height
+    if categories is not None:
+        srf_fields = srf_fields.filter(pl.col("Category").is_in(categories))
+
+    subtitle = f"All {total} fields proposed for the Single Registration Form, grouped by category"
+    if part is not None:
+        subtitle = f"{subtitle} — {part}"
+
     return (
         GT(srf_fields, groupname_col="Category", id="gt-srf-fields")
         .tab_header(
             title="Draft Single Registration Form — data fields",
-            subtitle=f"All {srf_fields.height} fields proposed for the Single Registration Form, grouped by category",
+            subtitle=subtitle,
         )
         .tab_style(
             style=style.fill(color=class_colors["Core"]),
@@ -294,6 +367,15 @@ def tbl_hoh_vs_all() -> GT:
     )
 
 
+# The SRF field list is split for print: a single 46-row PNG is far taller than
+# a page and an image cannot break across pages. Three parts, split on category
+# boundaries, each comfortably inside the 8.5in text block.
+SRF_FIELD_PARTS = [
+    ("part1", ["Consent", "Metadata"], "part 1 of 3: consent and metadata"),
+    ("part2", ["Biographic"], "part 2 of 3: biographic"),
+    ("part3", ["Biometrics", "Individual survey", "Household survey"], "part 3 of 3: biometrics, individual and household survey"),
+]
+
 TABLES = {
     "tbl-sources": tbl_sources,
     "tbl-categories": tbl_categories,
@@ -303,51 +385,83 @@ TABLES = {
     "tbl-hoh-vs-all": tbl_hoh_vs_all,
 }
 
+# Tables whose print rendering is a set of PNGs rather than one, and tables
+# that need the smaller target point size to fit the page.
+PRINT_PARTS = {"tbl-srf-fields": SRF_FIELD_PARTS}
+DENSE = {"tbl-srf-fields"}
 
-def _to_markdown(html: str) -> str:
-    """Convert a table's HTML into a pandoc grid table.
 
-    Quarto only turns HTML tables into native tables for computational cell
-    output — raw HTML in the document body is dropped entirely by the typst and
-    docx writers. Doing the conversion here, with the same pandoc Quarto
-    renders with, is what the old Jupyter pipeline was getting for free.
+def _png_size(path: Path) -> tuple[int, int]:
+    """Width and height of a PNG, read straight out of the IHDR chunk."""
+    blob = path.read_bytes()
+    return int.from_bytes(blob[16:20], "big"), int.from_bytes(blob[20:24], "big")
+
+
+def _render(table: GT, stem: Path, target_pt: int) -> float:
+    """Render a table to both `stem.pdf` and `stem.png`.
+
+    Returns the height it will occupy on the page, in inches, measured off the
+    PNG — the two files are the same table at the same viewport, so they share
+    an aspect ratio, and PNG dimensions are trivially readable where a PDF's
+    are buried in a compressed object stream.
+
+    `gtsave` drives headless Chrome through the `nokap` package, cropping to
+    the table element. It replaces the deprecated `save`, which needed selenium
+    and Pillow and could not write PDF.
     """
-    result = subprocess.run(
-        ["quarto", "pandoc", "-f", "html", "-t", "markdown", "--wrap=none"],
-        input=html,
-        capture_output=True,
-        text=True,
-        check=True,
-    )
-    return result.stdout.strip()
+    vwidth = round(RENDER_FONT_PX * TEXT_WIDTH_PT / target_pt)
+    sized = table.tab_options(table_font_size=f"{RENDER_FONT_PX}px")
+
+    for suffix in (".pdf", ".png"):
+        # vheight is generous so a long table is never clipped to the viewport.
+        # zoom is ignored for PDF, which has nothing to rasterise.
+        sized.gtsave(
+            str(stem.with_suffix(suffix)), zoom=PNG_ZOOM, vwidth=vwidth, vheight=6000, expand=0
+        )
+
+    width, height = _png_size(stem.with_suffix(".png"))
+    height_in = TEXT_WIDTH_PT / 72 * height / width
+    flag = "  << TALLER THAN THE TEXT BLOCK, SPLIT IT" if height_in > TEXT_HEIGHT_IN else ""
+    print(f"wrote {stem.relative_to(HERE.parent)}.{{pdf,png}} — {height_in:.2f}in tall at {target_pt}pt{flag}")
+    return height_in
 
 
-def as_include(table: GT) -> str:
-    """Build one include file holding both renderings of a table.
+def as_include(name: str, table: GT) -> str:
+    """Build one include file holding all three renderings of a table.
 
-    HTML output gets great_tables' own markup, so the fills and striping are
-    exactly as generated. The typst and docx outputs get the pandoc grid table,
-    which carries the content but not the CSS.
+    HTML gets great_tables' own markup, so the fills and striping are exactly
+    as generated. typst gets vector PDFs and docx gets PNGs, written alongside
+    this file and referenced relative to SRF.qmd.
 
     Blank lines are stripped from the HTML because pandoc's markdown reader
     ends an HTML block at the first one, which would split the table apart.
     """
     html = "\n".join(line for line in table.as_raw_html().splitlines() if line.strip())
-    return (
-        '::: {.content-visible when-format="html"}\n\n'
-        f"{html}\n\n"
-        ":::\n\n"
-        '::: {.content-hidden when-format="html"}\n\n'
-        f"{_to_markdown(html)}\n\n"
-        ":::\n"
-    )
+
+    target_pt = TARGET_PT_DENSE if name in DENSE else TARGET_PT
+    pdfs, pngs = [], []
+    for suffix, categories, part in PRINT_PARTS.get(name, [(None, None, None)]):
+        stem = name if suffix is None else f"{name}-{suffix}"
+        part_table = table if suffix is None else TABLES[name](categories=categories, part=part)
+        _render(part_table, OUT / stem, target_pt)
+        pdfs.append(f"![](_tables/{stem}.pdf){{width=100%}}")
+        pngs.append(f"![](_tables/{stem}.png){{width=100%}}")
+
+    def block(condition: str, body: list[str]) -> str:
+        return f"::: {{{condition}}}\n\n" + "\n\n".join(body) + "\n\n:::\n"
+
+    return "\n".join([
+        block('.content-visible when-format="html"', [html]),
+        block('.content-visible when-format="typst"', pdfs),
+        block('.content-visible when-format="docx"', pngs),
+    ])
 
 
 def main() -> None:
     OUT.mkdir(exist_ok=True)
     for name, build in TABLES.items():
         target = OUT / f"{name}.md"
-        target.write_text(as_include(build()))
+        target.write_text(as_include(name, build()))
         print(f"wrote {target.relative_to(HERE.parent)}")
 
 
