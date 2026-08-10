@@ -101,13 +101,7 @@
 
 :::
 
-::: {.content-visible when-format="typst"}
-
-![](_tables/tbl-dedup-ladder.pdf){width=100%}
-
-:::
-
-::: {.content-visible when-format="docx"}
+::: {.content-hidden when-format="html"}
 
 ![](_tables/tbl-dedup-ladder.png){width=100%}
 

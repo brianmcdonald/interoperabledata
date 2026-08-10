@@ -425,17 +425,7 @@
 
 :::
 
-::: {.content-visible when-format="typst"}
-
-![](_tables/tbl-srf-fields-part1.pdf){width=100%}
-
-![](_tables/tbl-srf-fields-part2.pdf){width=100%}
-
-![](_tables/tbl-srf-fields-part3.pdf){width=100%}
-
-:::
-
-::: {.content-visible when-format="docx"}
+::: {.content-hidden when-format="html"}
 
 ![](_tables/tbl-srf-fields-part1.png){width=100%}
 

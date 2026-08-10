@@ -109,13 +109,7 @@
 
 :::
 
-::: {.content-visible when-format="typst"}
-
-![](_tables/tbl-categories.pdf){width=100%}
-
-:::
-
-::: {.content-visible when-format="docx"}
+::: {.content-hidden when-format="html"}
 
 ![](_tables/tbl-categories.png){width=100%}
 

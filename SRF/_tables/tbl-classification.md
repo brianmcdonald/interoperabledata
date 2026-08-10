@@ -92,13 +92,7 @@
 
 :::
 
-::: {.content-visible when-format="typst"}
-
-![](_tables/tbl-classification.pdf){width=100%}
-
-:::
-
-::: {.content-visible when-format="docx"}
+::: {.content-hidden when-format="html"}
 
 ![](_tables/tbl-classification.png){width=100%}
 

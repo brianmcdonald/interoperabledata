@@ -14,32 +14,22 @@ renders without a Jupyter kernel. Run this after editing the workbook:
 
     uv run SRF/generate_tables.py
 
-Three renderings are produced per table, one per output format:
+Two renderings are produced per table:
 
 * HTML gets great_tables' own markup, so the fills and striping are exactly as
   generated.
-* typst gets a vector PDF of the table. Raw HTML in the document body is
-  dropped or flattened by the typst writer, and a pandoc grid table would lose
-  the colour fills, so a picture is the only rendering that survives intact —
-  but typst 0.14 embeds PDFs as images natively, so the picture can be vector.
-  The type stays sharp at any zoom and remains real, selectable, searchable
-  text in the exported PDF.
-* docx gets a PNG of the same table, because Word cannot place a PDF as an
-  image.
+* typst (PDF) and docx get a PNG of the same table. Raw HTML in the document
+  body is dropped or flattened by the typst writer, and a pandoc grid table
+  would lose the colour fills, so a picture is the only rendering that survives
+  with the formatting intact.
 
-Both go through great_tables' `.gtsave()`, which drives a headless Chrome via
-the `nokap` package — no selenium, no Pillow. nokap sizes the PDF page to the
-table's bounding box with zero margins, so the output is cropped to the table
-rather than being a table adrift on a letter page. Chrome or Chromium must be
-installed on the machine running this script; the Python side is declared in
-the script metadata above.
+PNG export goes through great_tables' `.gtsave()`, which drives a headless
+Chrome via the `nokap` package — no selenium, no Pillow — and crops to the
+table element. Chrome or Chromium must be installed on the machine running
+this script; the Python side is declared in the script metadata above.
 
-Each image is printed with the height it will occupy on the page, so it is
+Each PNG is printed with the height it will occupy on the page, so it is
 obvious when a table has grown past what fits and needs splitting.
-
-Note that typst cannot embed PDF images when exporting to a PDF standard such
-as PDF/A-3 or PDF/UA-1. If this document ever needs one of those, the typst
-branch has to fall back to the PNGs.
 """
 
 from pathlib import Path
@@ -71,7 +61,8 @@ RENDER_FONT_PX = 16
 TARGET_PT = 10
 TARGET_PT_DENSE = 8
 
-# Raster scale, for the docx PNGs only. The typst PDFs are vector.
+# Raster scale. 3x keeps the type clean once typst scales the PNG to the text
+# block; the files stay a few hundred KB each.
 PNG_ZOOM = 3
 
 
@@ -397,41 +388,33 @@ def _png_size(path: Path) -> tuple[int, int]:
     return int.from_bytes(blob[16:20], "big"), int.from_bytes(blob[20:24], "big")
 
 
-def _render(table: GT, stem: Path, target_pt: int) -> float:
-    """Render a table to both `stem.pdf` and `stem.png`.
-
-    Returns the height it will occupy on the page, in inches, measured off the
-    PNG — the two files are the same table at the same viewport, so they share
-    an aspect ratio, and PNG dimensions are trivially readable where a PDF's
-    are buried in a compressed object stream.
+def _render(table: GT, path: Path, target_pt: int) -> float:
+    """Render a table to PNG; return the height it will occupy, in inches.
 
     `gtsave` drives headless Chrome through the `nokap` package, cropping to
     the table element. It replaces the deprecated `save`, which needed selenium
-    and Pillow and could not write PDF.
+    and Pillow.
     """
     vwidth = round(RENDER_FONT_PX * TEXT_WIDTH_PT / target_pt)
-    sized = table.tab_options(table_font_size=f"{RENDER_FONT_PX}px")
+    # vheight is generous so a long table is never clipped to the viewport.
+    (
+        table.tab_options(table_font_size=f"{RENDER_FONT_PX}px")
+        .gtsave(str(path), zoom=PNG_ZOOM, vwidth=vwidth, vheight=6000, expand=0)
+    )
 
-    for suffix in (".pdf", ".png"):
-        # vheight is generous so a long table is never clipped to the viewport.
-        # zoom is ignored for PDF, which has nothing to rasterise.
-        sized.gtsave(
-            str(stem.with_suffix(suffix)), zoom=PNG_ZOOM, vwidth=vwidth, vheight=6000, expand=0
-        )
-
-    width, height = _png_size(stem.with_suffix(".png"))
+    width, height = _png_size(path)
     height_in = TEXT_WIDTH_PT / 72 * height / width
     flag = "  << TALLER THAN THE TEXT BLOCK, SPLIT IT" if height_in > TEXT_HEIGHT_IN else ""
-    print(f"wrote {stem.relative_to(HERE.parent)}.{{pdf,png}} — {height_in:.2f}in tall at {target_pt}pt{flag}")
+    print(f"wrote {path.relative_to(HERE.parent)} — {height_in:.2f}in tall at {target_pt}pt{flag}")
     return height_in
 
 
 def as_include(name: str, table: GT) -> str:
-    """Build one include file holding all three renderings of a table.
+    """Build one include file holding both renderings of a table.
 
     HTML gets great_tables' own markup, so the fills and striping are exactly
-    as generated. typst gets vector PDFs and docx gets PNGs, written alongside
-    this file and referenced relative to SRF.qmd.
+    as generated. typst and docx get PNGs, written alongside this file and
+    referenced relative to SRF.qmd.
 
     Blank lines are stripped from the HTML because pandoc's markdown reader
     ends an HTML block at the first one, which would split the table apart.
@@ -439,22 +422,21 @@ def as_include(name: str, table: GT) -> str:
     html = "\n".join(line for line in table.as_raw_html().splitlines() if line.strip())
 
     target_pt = TARGET_PT_DENSE if name in DENSE else TARGET_PT
-    pdfs, pngs = [], []
+    images = []
     for suffix, categories, part in PRINT_PARTS.get(name, [(None, None, None)]):
         stem = name if suffix is None else f"{name}-{suffix}"
         part_table = table if suffix is None else TABLES[name](categories=categories, part=part)
-        _render(part_table, OUT / stem, target_pt)
-        pdfs.append(f"![](_tables/{stem}.pdf){{width=100%}}")
-        pngs.append(f"![](_tables/{stem}.png){{width=100%}}")
+        _render(part_table, OUT / f"{stem}.png", target_pt)
+        images.append(f"![](_tables/{stem}.png){{width=100%}}")
 
-    def block(condition: str, body: list[str]) -> str:
-        return f"::: {{{condition}}}\n\n" + "\n\n".join(body) + "\n\n:::\n"
-
-    return "\n".join([
-        block('.content-visible when-format="html"', [html]),
-        block('.content-visible when-format="typst"', pdfs),
-        block('.content-visible when-format="docx"', pngs),
-    ])
+    return (
+        '::: {.content-visible when-format="html"}\n\n'
+        f"{html}\n\n"
+        ":::\n\n"
+        '::: {.content-hidden when-format="html"}\n\n'
+        + "\n\n".join(images)
+        + "\n\n:::\n"
+    )
 
 
 def main() -> None:

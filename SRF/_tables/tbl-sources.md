@@ -113,13 +113,7 @@
 
 :::
 
-::: {.content-visible when-format="typst"}
-
-![](_tables/tbl-sources.pdf){width=100%}
-
-:::
-
-::: {.content-visible when-format="docx"}
+::: {.content-hidden when-format="html"}
 
 ![](_tables/tbl-sources.png){width=100%}
 
