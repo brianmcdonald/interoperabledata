@@ -19,6 +19,8 @@ project:
       - analysisslides3.qmd
       - pilot/pilot.qmd
       - SRF/SRF.qmd
+      - trust-framework/trust-framework.qmd
+      - trust-framework/implementation-guidelines/implementation-guidelines.qmd
 
 # Declaring the brand as light-only stops Quarto generating a dark theme,
 # which is what puts the colour-scheme toggle in the top right of every page.
