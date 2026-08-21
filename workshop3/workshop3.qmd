@@ -219,11 +219,7 @@ The afternoon presentation set out the governance and framework for data exchang
 
 **Presenter:** Chandan Nayak, IOM.
 
-This presentation after provided an overview of UN80 and its component workstreams, the Humanitarian Reset, and then provided linkages to the IDEHA interoperatbility around 5 questions:
-1. Are disconnected systems still affordable?
-2. Can we reduce duplication without one large centralized database?
-3. Is interoperability mainly a technology challenge?
-4. How can IDEHA inform UN80 IDM and CIO decisions?
+Following an overview of UN80, its three workstreams, and the Humanitarian Reset, the presentation explored how lessons from the IDEHA interoperability initiative can inform broader humanitarian reform efforts. Using five framing questions, it examined whether disconnected systems remain affordable in the current humanitarian environment; how duplication can be reduced without creating a centralized database; whether interoperability is primarily a technology or governance challenge; how operational evidence and lessons from IDEHA can inform UN80 Identity Management (IDM) and Chief Information Officer (CIO) discussions and decision-making; and how interoperability learning can be scaled without creating additional platforms, structures or reporting burdens. The presentation emphasized federated approaches, common standards, governance, trust, and responsible data exchange as key enablers of more effective, coherent and accountable humanitarian operations
 
 ### Breakout Groups and Plenary Report-Back
 
