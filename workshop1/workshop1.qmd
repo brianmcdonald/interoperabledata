@@ -1,7 +1,30 @@
 ---
 title: Registration & Beneficiary Data Interoperability
 subtitle: South Sudan Workshop Report
-output-file: index.html
+running-title: "IDEHA Workshop 1 Report"
+author: "IOM"
+
+publisher-address: |
+  International Organization for Migration (IOM) \
+  Regional Office for East Horn and Southern Africa \
+  Sri Aurobindo Avenue, Off Mzima Spring Road \
+  Lavington \
+  Nairobi \
+  Kenya
+required-citation: "International Organization for Migration (IOM), 2025. *Registration & Beneficiary Data Interoperability: South Sudan Workshop Report*. IOM, Juba."
+copyright-year: "2025"
+unedited: true          # set when PUB has not formally edited the text
+
+# Brand assets - supply your own files.
+cover-logo-left: assets/cover-logo1.png
+cover-logo-right: assets/cover-logo2.png
+cover-logo-height: 1cm
+# No cover-image set, so the template falls back to a solid IOM-blue cover.
+# The cover title is white with no scrim behind it, so a photo only works
+# here if it is dark in the top-left; banner.jpg and the workshop photos
+# are all too pale there and swallow the title.
+# cover-image: assets/coverimage.png
+
 format:
   html:
     toc: true
@@ -11,16 +34,23 @@ format:
     title-block-banner: "#0033A0"
     title-block-banner-color: "#FFFFFF"
     lightbox: true
-  # docx:
-  #   toc: false
-format-links:
-  - html
-  - format: typst
-    text: PDF
-    icon: file-pdf-fill
-  - format: docx
-    text: Word
-    icon: file-text-fill
+    output-file: index.html
+
+    format-links:
+      - text: PDF
+        href: workshop1.pdf
+        icon: file-pdf
+      # Naming a format here makes Quarto filter its auto-generated list rather
+      # than append to it; html is the current format, so nothing extra shows.
+      - html
+  iom-report-typst:
+    toc: true
+    toc-title: "CONTENTS"
+    toc-depth: 3
+    number-sections: true
+    section-numbering: "1.1.1"
+  # iom-report-docx:
+  #   toc: true
 ---
 
 <!-- ::: {.callout-note}

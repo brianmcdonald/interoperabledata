@@ -42,15 +42,18 @@ format:
     output-file: analysis.epub
   html:
     toc: true
+    toc-depth: 3
+    toc-location: left
     number-sections: true
-    number-depth: 3
+    theme: cosmo
+    fig-align: center
     link-external-icon: true
     title-block-banner: "#0033A0"
     title-block-banner-color: "#FFFFFF"
-format-links:
-  - format: typst
-    text: PDF
-    icon: file-pdf
+    format-links:
+      - format: typst
+        text: PDF
+        icon: file-pdf
 ---
 
 <!-- ::: {.callout-caution}

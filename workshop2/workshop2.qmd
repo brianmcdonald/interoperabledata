@@ -66,7 +66,7 @@ format:
 | **Organizer**     | International Organization for Migration (IOM) |
 | **Co-funding**    | ECHO                                           |
 | **Report author** | Brian Mc Donald, IDEHA Project Manager         |
-| **Report status** | Draft - v1                                     |
+| **Report status** | Published                                     |
 
 ------------------------------------------------------------------------
 

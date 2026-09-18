@@ -42,6 +42,14 @@ format:
     title-block-banner-color: "#FFFFFF"
     lightbox: true
     output-file: index.html
+
+    format-links:
+      - text: PDF
+        href: workshop3.pdf
+        icon: file-pdf
+      # Naming a format here makes Quarto filter its auto-generated list rather
+      # than append to it; html is the current format, so nothing extra shows.
+      - html
   iom-report-typst:
     toc: true
     toc-title: "CONTENTS"
@@ -50,13 +58,6 @@ format:
     section-numbering: "1.1.1"
   # iom-report-docx:
   #   toc: true
-
-# Top level, not under format.html: nested here Quarto adds these to the
-# auto-generated list instead of replacing it, giving a duplicate PDF entry.
-format-links:
-  - format: iom-report-typst
-    text: PDF
-    icon: file-pdf
 ---
 
 |                   |                                                         |
@@ -68,7 +69,7 @@ format-links:
 | **Format**        | In-person, with limited virtual participation           |
 | **Co-funding**    | European Civil Protection and Humanitarian Aid Operations (ECHO)                  |
 | **Report author** | Brian Mc Donald, IDEHA Project Manager                  |
-| **Report status** | Draft - v1                                              |
+| **Report status** | Published                                              |
 
 ------------------------------------------------------------------------
 

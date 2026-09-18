@@ -41,11 +41,13 @@ format:
     lightbox: true
     output-file: index.html
     format-links:
-      # Naming the format makes this list a filter rather than an addition to
-      # the auto-generated links, so only the one PDF entry is emitted.
-      - format: iom-report-typst
-        text: PDF
+      - text: PDF
+        href: implementation-guidelines.pdf
         icon: file-pdf
+      # A bare format NAME is what makes Quarto filter its auto-generated list
+      # rather than append to it; the `- format:` override form above did not.
+      # html is the current format, so nothing extra shows.
+      - html
   iom-report-typst:
     toc: true
     toc-title: "CONTENTS"

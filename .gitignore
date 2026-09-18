@@ -1,9 +1,12 @@
 # Python-generated files
 __pycache__/
 *.py[oc]
-build/
-dist/
-wheels/
+# Anchored to the repo root: unanchored "dist/" also matched
+# docs/site_libs/revealjs/dist/, which silently kept reveal.js out of the
+# published site and left every revealjs deck blank.
+/build/
+/dist/
+/wheels/
 *.egg-info
 
 # Virtual environments
