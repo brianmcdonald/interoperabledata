@@ -43,29 +43,15 @@ format:
     lightbox: true
     output-file: index.html
     format-links:
-      - text: PDF
-        href: trust-framework.pdf
+      - format: iom-report-typst
+        text: PDF
         icon: file-pdf
-      - text: ePub
-        href: trust-framework.epub
-        icon: book
-      # A bare format NAME is what makes Quarto filter its auto-generated list
-      # rather than append to it; the `- format:` override form above did not.
-      # html is the current format, so nothing extra shows.
-      - html
   iom-report-typst:
     toc: true
     toc-title: "CONTENTS"
     toc-depth: 3
     number-sections: false
     output-file: trust-framework.pdf
-  epub:
-    toc: true
-    toc-depth: 3
-    number-sections: false
-    # cover-image is set at the top level for the typst cover; epub picks up
-    # the same key, so the ePub gets the same cover art.
-    output-file: trust-framework.epub
 ---
 
 ::: {.callout-note title="Document identity"}
@@ -74,7 +60,7 @@ format:
 - **Prepared for:** International Organization for Migration (IOM)
 - **Publishing year:** 2026
 - **Status:** Initial draft
-- **Confidentiality status:** Confidential
+- **Confidentiality status:** Public
 :::
 
 ::: {.callout-important title="Use statement and licence"}
