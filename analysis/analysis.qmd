@@ -30,16 +30,7 @@ format:
     toc-depth: 3
     output-file: analysis.pdf
     template-partials:
-      # Must be one of Quarto's seven partial names: numbering.typ,
-      # definitions.typ, typst-template.typ, page.typ, typst-show.typ,
-      # notes.typ, biblio.typ. This file overrides `article` to add the
-      # full-page cover built from cover.png.
       - typst-template.typ
-  epub:
-    toc: true
-    number-sections: true
-    cover-image: cover.png
-    output-file: analysis.epub
   html:
     toc: true
     toc-depth: 3
@@ -51,9 +42,10 @@ format:
     title-block-banner: "#0033A0"
     title-block-banner-color: "#FFFFFF"
     format-links:
-      - format: typst
-        text: PDF
+      - text: PDF
+        href: analysis.pdf
         icon: file-pdf
+      - html
 ---
 
 <!-- ::: {.callout-caution}
